@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#0047bf", "surface": "#f8f9ff", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#4edea3", "primary-fixed-dim": "#7bd8b1", "on-tertiary-container": "#e6e9ff", "on-error": "#ffffff", "on-surface": "#0b1c30", "error-container": "#ffdad6", "inverse-on-surface": "#eaf1ff", "outline": "#6e7a73", "tertiary-container": "#1e5fe7", "on-primary-fixed": "#002115", "on-tertiary-fixed-variant": "#003ea8", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#00513a", "on-primary-container": "#9ffdd3", "tertiary-fixed": "#dbe1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "primary": "#005d42", "outline-variant": "#bdc9c1", "inverse-surface": "#213145", "on-secondary-container": "#00714d", "on-error-container": "#93000a", "on-primary": "#ffffff", "surface-bright": "#f8f9ff", "primary-fixed": "#97f5cc", "on-tertiary-fixed": "#00174b", "surface-container-lowest": "#ffffff", "secondary-container": "#6cf8bb", "secondary-fixed": "#6ffbbe", "background": "#f8f9ff", "surface-variant": "#d3e4fe", "surface-dim": "#cbdbf5", "on-surface-variant": "#3e4943", "on-secondary-fixed": "#002113", "on-background": "#0b1c30", "inverse-primary": "#7bd8b1", "primary-container": "#047857", "surface-tint": "#006c4e", "tertiary-fixed-dim": "#b4c5ff", "on-secondary-fixed-variant": "#005236", "error": "#ba1a1a", "surface-container": "#e5eeff", "secondary": "#006c49", "surface-container-low": "#eff4ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "margin": "1.5rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "margin-mobile": "1rem", "gutter-mobile": "0.75rem", "space-md": "1rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Inter"], "currency-display": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-gutter-mobile"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="পিছনে যান / Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0 pr-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Employee List</h1><span class="font-label-sm text-label-sm text-on-surface-variant truncate">কর্মচারী ও পারমিশন • Vet সেবা</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="অনুসন্ধান / Search Staff" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Top Metrics Bar -->
+<section class="px-margin-mobile pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface">লাইসেন্স ও টিম ওভারভিউ</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">৩/৫ কর্মী যুক্ত</span>
+</div>
+<!-- 3 Small Summary Tiles -->
+<div class="grid grid-cols-3 gap-gutter-mobile">
+<div class="bg-surface-container-lowest rounded-lg p-2.5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">কর্মী</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">৩ জন</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">সক্রিয় লাইসেন্স</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-2.5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-tertiary mb-1">
+<span class="material-symbols-outlined text-[18px]">point_of_sale</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">কাউন্টার</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">২ জন</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">সেলস রানিং</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-2.5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">অ্যাডমিন</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">১ জন</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">মালিক নিয়ন্ত্রণ</div>
+</div>
+</div>
+</div>
+<!-- License Progress Indicator -->
+<div class="mt-space-sm pt-2 flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm truncate">প্ল্যান: প্রিমিয়াম অ্যাগ্রোফার্মাসি (৫ আসন)</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline shrink-0" type="button">আপগ্রেড</button>
+</div>
+</div>
+</section>
+<!-- Quick Action & Search Section -->
+<section class="px-margin-mobile pt-space-md flex flex-col gap-space-sm">
+<!-- Primary Add Employee Button -->
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>নতুন কর্মী যুক্ত করুন / আমন্ত্রণ জানান</span>
+</button>
+<!-- Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-10 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant shadow-sm focus:outline-none focus:bg-surface-container-lowest" id="employeeSearchInput" placeholder="কর্মীর নাম বা মোবাইল নম্বর দিয়ে খুঁজুন..." type="text"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('employeeSearchInput').value=''" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Filter Chips Scrollable -->
+<div class="flex items-center gap-2 overflow-x-auto py-1 no-scrollbar">
+<button class="filter-chip px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0 shadow-sm" type="button">
+        সকল কর্মী (৪)
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shrink-0 active:bg-surface-container-high" type="button">
+        সক্রিয় (৩)
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shrink-0 active:bg-surface-container-high" type="button">
+        ম্যানেজার
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shrink-0 active:bg-surface-container-high" type="button">
+        সেলসম্যান
+      </button>
+<button class="filter-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shrink-0 active:bg-surface-container-high" type="button">
+        নিষ্ক্রিয় (১)
+      </button>
+</div>
+</section>
+<!-- Employee List -->
+<section class="px-margin-mobile pt-space-sm flex flex-col gap-space-sm">
+<!-- CARD 1: মো: শামীম রেজা (Senior Branch Manager) -->
+<div class="employee-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-13 h-13 w-12 h-12 rounded-full object-cover shadow-sm" data-alt="A portrait of a confident Bangladeshi senior pharmacy retail manager in a crisp light teal polo shirt, with a warm friendly smile inside a bright veterinary pharmacy store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMOf3md6MQrj0ksBOY4C6ZGQV0J8HWRYiMCyXbc5Kb8mOMgJ1Ygf0CFglPWljJJk0CEgsELlc1tkIGagO1thkoPRWQiZmNLofGh-07NHiP0vsA7YXvM25hIVbZLzWXtM0biIQ60Vq7NxfVdo5plwTwJMX1j2I-QndhYz9eLLtieCCRH7UbApTzabclTJV8OOLMeMSvFSosRufVCV1WVwJhWHpGT9-EcTjJtPvhskwzxVCI7Un08gzx"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">মো: শামীম রেজা</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">সুপারভাইজার</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior Branch Manager • সেলস ম্যানেজার</span>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">call</span>০১৭১২-৮৮৯৯০০</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="ম্যানেজার অপশন" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Live Shift Badge -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+<span class="font-label-sm text-label-sm truncate">কাউন্টারে সক্রিয় (শিফট চলছে)</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">আজকের সেলস: ৳৩২,৪০০</span>
+</div>
+<!-- Permissions Snapshot Pills -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">অনুমোদিত পারমিশনসমূহ:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>বিক্রি ও ডিসকাউন্ট
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>ক্রয় চালান এন্ট্রি
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>স্টক সমন্বয়
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>রিপোর্ট
+          </span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span>পারমিশন দেখুন</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>কল / বার্তা পাঠান</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: রাজীব হোসেন (Junior Cashier) -->
+<div class="employee-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="A portrait of a young South Asian male pharmacy sales clerk with a badge, smiling gently in a clean veterinary store setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSzDrQa3fijNLTe1kCUqtHqE4tSaCXlhWdEjDiXiVK-idbzFGR6Flx9jgysJeaUYXSJxj2JoKIfL6MX9aSe9IBCrcrCjUVWbBl9KI83qv058D49Pa-mmFkoVf3p6f-MT4f2tC-T10F_eLlWRq3QLq9cgJ1zmCEN1kui04xuXGzqO0NuEpNLkaDn1IMWw80Oq3SuEPIsfQJZXOmmiiWlURSWVB_YQte4jspWFiou7Uz-gWF8_lAVyyA"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">রাজীব হোসেন</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">ক্যাশিয়ার রোল</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Junior Cashier • কাউন্টার সেলসম্যান</span>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">call</span>০১৮২৩-৪৫৬৭৮৯</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="ক্যাশিয়ার অপশন" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Shift and Sales Info -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-1 min-w-0">
+<span class="material-symbols-outlined text-[15px] text-tertiary">schedule</span>
+<span class="font-label-sm text-label-sm truncate">সকাল ৯:০০ - রাত ৮:০০</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">আজকের সেলস: ৳১৮,২০০</span>
+</div>
+<!-- Permissions & Restriction Pills -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">নির্ধারিত সীমা:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">point_of_sale</span>শুধু পিওএস বিলিং
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">payments</span>নগদ গ্রহণ
+          </span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-error">lock</span>ক্রয়/লাভ রিপোর্ট ব্লকড
+          </span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>পারমিশন দেখুন</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>অ্যাক্সেস এডিট</span>
+</button>
+</div>
+</div>
+<!-- CARD 3: ডা: রিয়াজ উদ্দিন (Guest Vet Consultant) -->
+<div class="employee-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="A distinguished Bangladeshi veterinarian with a stethoscope over his neck, smiling warmly in a clinical livestock consultancy office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAodWC_XBLJC6F0bSnVR6nifwDgVHB-S5tQ5OSnygL1bBOYk2eLMHM9fegLtM9Ca6W6TErucDi3fts4o8uv_DYtj8ddiChXf1M8G_vfGxs7Qk3jMGJorp3CrarRDEMF4Zw5Dm6MqUDjmxE8lL3CThxrp1B1eOOFn2Fuul1-ljicIuxU6kFxbJSH8Yi5pPcn7khxasPPYicZuM__9HEWfio_eOVS8-PzBugS2hSmU7Lu35u_EcoJiCl9"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">ডা: রিয়াজ উদ্দিন</h2>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">ভেট সার্জন</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Guest Vet Consultant • পশুপালন পরামর্শক</span>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">call</span>০১৯১১-২২৩৩৪৪</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="ভেট কনসালট্যান্ট অপশন" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Specific Duty Note -->
+<div class="p-2 rounded-lg bg-surface-container-low text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">medical_services</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">খামারি পরামর্শ ও ডিজিটাল প্রেসক্রিপশন মডিউল বরাদ্দ</span>
+</div>
+<!-- Permissions Snapshot Pills -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">অনুমোদিত মডিউল:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">assignment</span>প্রেসক্রিপশন তৈরি
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">pets</span>রোগী রেকর্ড
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">history</span>ফার্ম হিস্ট্রি
+          </span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>রেকর্ড দেখুন</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>প্রেসক্রিপশন লগ</span>
+</button>
+</div>
+</div>
+<!-- CARD 4: সুমন ভৌমিক (Former Delivery & Stock Staff - INACTIVE) -->
+<div class="employee-card opacity-85 bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">person_off</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-outline-variant ring-2 ring-surface-container-low"></span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface-variant truncate">সুমন ভৌমিক</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">নিষ্ক্রিয়</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Former Delivery &amp; Stock Assistant</span>
+<div class="flex items-center gap-1 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">event_busy</span>
+<span>স্থগিতের তারিখ: ১৫ অক্টোবর, ২০২৪</span>
+</div>
+</div>
+</div>
+<div class="relative shrink-0">
+<button aria-label="নিষ্ক্রিয় কর্মী অপশন" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Revocation Warning -->
+<div class="p-2 rounded-lg bg-surface-container text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-error">lock_person</span>
+<span class="font-body-sm text-body-sm">সফটওয়্যার অ্যাকাউন্ট অ্যাক্সেস সম্পূর্ণ বাতিল (Revoked)</span>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center justify-between gap-2 pt-1">
+<button class="h-9 flex-1 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>পুরনো অডিট লগ</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-primary-fixed-dim transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">person_check</span>
+<span>পুনরায় সক্রিয় করুন</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Security and Cloud Audit Trail Micro-Banner -->
+<section class="px-margin-mobile pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-3 text-on-surface">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="font-label-md text-label-md font-semibold text-on-surface">সুরক্ষিত ক্লাউড অডিট ও রোল কন্ট্রোল</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-0.5">
+          সকল কর্মচারীর বিক্রয় ভাউচার তৈরি, ডিসকাউন্ট পরিবর্তন এবং স্টক হিসাব রিয়েল-টাইমে ডিভাইসের আইপি সহ লিপিবদ্ধ থাকে।
+        </div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Quick Action Dock for Counter Operators -->
+<div class="fixed bottom-0 inset-x-0 bg-surface/95 backdrop-blur-md px-margin-mobile py-2.5 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] flex items-center justify-between gap-2 z-40 max-w-lg mx-auto">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-2 h-2 rounded-full bg-primary animate-ping"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">অপারেটিং ব্র্যাঞ্চ: ভাই ভাই ভেট ফার্মেসি</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">assignment_ind</span>
+<span>শিফট রিপোর্ট</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple interactive filter chip selection for high-touch mobile feedback
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        c.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      this.classList.remove('bg-surface-container', 'text-on-surface');
+      this.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    });
+  });
+</script></main></body></html>

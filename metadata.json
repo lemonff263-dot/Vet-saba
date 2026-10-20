@@ -1,0 +1,6 @@
+{
+  "name": "Vet সেবা",
+  "description": "প্রিমিয়াম ভেটেরিনারি ফার্মেসি ও ইনভেন্টরি ম্যানেজমেন্ট অ্যাপ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

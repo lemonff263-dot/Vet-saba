@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#005d42", "error": "#ba1a1a", "secondary": "#006c49", "background": "#f8f9ff", "on-tertiary-fixed": "#00174b", "surface-container-high": "#dce9ff", "on-surface": "#0b1c30", "secondary-fixed": "#6ffbbe", "tertiary-fixed": "#dbe1ff", "on-secondary-container": "#00714d", "on-tertiary-container": "#e6e9ff", "primary-fixed-dim": "#7bd8b1", "surface-variant": "#d3e4fe", "primary-fixed": "#97f5cc", "on-error-container": "#93000a", "surface-dim": "#cbdbf5", "on-secondary": "#ffffff", "on-primary-fixed": "#002115", "surface-container": "#e5eeff", "secondary-container": "#6cf8bb", "surface-container-lowest": "#ffffff", "tertiary": "#0047bf", "outline": "#6e7a73", "inverse-on-surface": "#eaf1ff", "primary-container": "#047857", "on-error": "#ffffff", "inverse-surface": "#213145", "on-primary-container": "#9ffdd3", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "surface-container-highest": "#d3e4fe", "inverse-primary": "#7bd8b1", "surface-tint": "#006c4e", "surface-container-low": "#eff4ff", "outline-variant": "#bdc9c1", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#005236", "on-secondary-fixed": "#002113", "on-tertiary-fixed-variant": "#003ea8", "tertiary-fixed-dim": "#b4c5ff", "on-background": "#0b1c30", "on-primary-fixed-variant": "#00513a", "tertiary-container": "#1e5fe7", "error-container": "#ffdad6", "surface": "#f8f9ff", "on-surface-variant": "#3e4943", "secondary-fixed-dim": "#4edea3" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "margin": "1.5rem", "space-xl": "2rem" }, fontFamily: { "body-sm": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Inter"], "currency-display": ["Inter"], "headline-md": ["Inter"], "label-lg": ["Inter"] }, fontSize: { "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-sm": ["17px", { lineHeight: "24px", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "headline-lg-mobile": ["22px", { lineHeight: "30px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", fontWeight: "700" }], "currency-display": ["24px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "label-lg": ["15px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">local_pharmacy</span></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Vet সেবা POS</span><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Purchase History</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface"><div class="flex flex-col w-full pb-6">
+<!-- Subtle Ambient Top Banner: Synced & Store Indicator -->
+<div class="px-margin-mobile pt-3 pb-2 flex items-center justify-between">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">লাইভ সিঙ্ক সক্রিয় • মেসার্স ভাই ভাই ভেটেরিনারি</span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-semibold">ভেরিফাইড খাতা</span>
+</div>
+</div>
+<!-- Metric Overview Bento Cards -->
+<div class="px-margin-mobile mt-1 space-y-space-xs">
+<div class="grid grid-cols-12 gap-space-xs">
+<!-- Total Expense Primary Card (Span 7) -->
+<div class="col-span-7 bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">payments</span>
+            মোট ক্রয় ব্যয়
+          </span>
+<span class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-primary font-bold">২৮টি</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight font-bold">৳৪,৮৫,৬০০</span>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">trending_up</span>
+            গত মাসের চেয়ে +৮%
+          </p>
+</div>
+</div>
+<!-- Unpaid Due Attention Card (Span 5) -->
+<div class="col-span-5 bg-error-container/40 p-3.5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-error-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-error">pending_actions</span>
+            বাকি দেনা
+          </span>
+</div>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-error font-bold leading-tight block">৳৫২,৬০০</span>
+<span class="font-label-sm text-label-sm text-on-error-container/80 mt-0.5 block">১০টি চালানে বাকি</span>
+</div>
+</div>
+</div>
+<!-- Quick Mini-Summary Bar -->
+<div class="bg-surface-container-low px-3 py-2 rounded-lg flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">inventory_2</span>
+<span class="font-body-sm text-body-sm">চলতি মাসে নতুন ওষুধ অন্তর্ভুক্ত: <strong>১৯৪ প্যাক</strong></span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5" onclick="alert('খতিয়ান ডাউনলোড প্রক্রিয়াধীন')">
+<span class="material-symbols-outlined text-[14px]">download</span>
+        রিপোর্ট
+      </button>
+</div>
+</div>
+<!-- Search & Filter Area -->
+<div class="px-margin-mobile mt-4 space-y-space-xs">
+<!-- Search Bar with Barcode Scanner Trigger -->
+<div class="relative flex items-center w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-11 pl-10 pr-20 bg-surface-container-lowest text-on-surface rounded-xl shadow-sm font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="invoiceSearch" placeholder="চালান নম্বর বা সাপ্লায়ার দিয়ে খুঁজুন..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-1.5 flex items-center gap-1">
+<button aria-label="Clear Search" class="hidden p-1.5 rounded-full hover:bg-surface-container text-outline" id="clearBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button aria-label="Scan Invoice Barcode" class="h-8 w-8 flex items-center justify-center rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">barcode_scanner</span>
+</button>
+</div>
+</div>
+<!-- Date Period Selector Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest px-3 py-2 rounded-xl shadow-sm">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">সময়কাল</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">চলতি মাস (অক্টোবর ২০২৪)</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1 active:scale-95 transition-transform">
+<span>পরিবর্তন</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<!-- Filter Chips Scrollable Pill Row -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 no-scrollbar -mx-margin-mobile px-margin-mobile" id="chipContainer">
+<button class="filter-chip active shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm flex items-center gap-1 transition-all" data-status="all">
+<span>সব চালান</span>
+<span class="bg-primary-container text-on-primary-container px-1.5 py-0.2 rounded-full text-[10px]">২৮</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1 transition-all hover:bg-surface-container" data-status="paid">
+<span>সম্পূর্ণ পরিশোধিত</span>
+<span class="bg-surface-container text-on-surface px-1.5 py-0.2 rounded-full text-[10px]">১৮</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1 transition-all hover:bg-surface-container" data-status="partial">
+<span>আংশিক বকেয়া</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-1.5 py-0.2 rounded-full text-[10px]">৭</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1 transition-all hover:bg-surface-container" data-status="due">
+<span>সম্পূর্ণ বাকি</span>
+<span class="bg-error-container text-on-error-container px-1.5 py-0.2 rounded-full text-[10px]">৩</span>
+</button>
+<button class="filter-chip shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-1 transition-all hover:bg-surface-container" data-status="return">
+<span>ফেরত / রিটার্ন</span>
+<span class="bg-surface-variant text-on-surface-variant px-1.5 py-0.2 rounded-full text-[10px]">২</span>
+</button>
+</div>
+</div>
+<!-- Invoices List Container -->
+<div class="px-margin-mobile mt-3 space-y-3" id="invoiceList">
+<!-- Invoice Card 1: Square Agrovet (Partial Due) -->
+<div class="invoice-item bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3 transition-transform active:scale-[0.99]" data-query="pur-2024-118 স্কয়ার এগ্রোভেট লিমিটেড square agrovet" data-type="partial">
+<!-- Top Row: Badge, ID, Time -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">vaccines</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#PUR-2024-118</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-outline">আজ, ১০:৩০ AM</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-primary leading-tight mt-0.5">স্কয়ার এগ্রোভেট লিমিটেড</p>
+</div>
+</div>
+<!-- Status Pill -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container/60 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          আংশিক বকেয়া
+        </span>
+</div>
+<!-- Item tags & Visual Context -->
+<div class="bg-surface-container-low/70 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-lg object-cover shadow-xs" data-alt="A modern packaging box of veterinary antibiotic injections and livestock vaccine vials neatly organized in a clean pharmacy store shelf with soft mint lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPssUnuE8oihPLBx0c6y3CBZx7DkFr56lIr8TCInYruufqABg9RzQNUmuhIwObdpJqz9FPwTzunDg38lcPmlgqaY6d2FP-zRH2I8RI93YWd9dQixONk5NMvKfvGKJJF2v2WAsWShaMPghwmx0ChywuTZXW-9RISDJCq3a7qO8c-vis7zbyaIuu5ZnMV7ZVb00K_faeMEzcNU34-Syyk12Q8UXlfLjbMlammFU1hSKZvGM2omHtBkr6"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">৫টি ওষুধ (ভ্যাকসিন ও অ্যান্টিবায়োটিক)</span>
+<span class="font-body-sm text-body-sm text-outline">চালান রসিদ: #SQ-88412 • গুদাম: প্রধান ১</span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-outline block">চালান মূল্য</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">৳২৮,৫০০</span>
+</div>
+</div>
+<!-- Financial Breakdown strip -->
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span>জমা: <strong class="text-secondary font-semibold">৳১০,০০০</strong></span>
+<span class="text-outline">•</span>
+<span>বাকি: <strong class="text-error font-bold">৳১৮,৫০০</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">পরিশোধের শেষ তারিখ: ৩০ অক্টো</span>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-10 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[17px]">visibility</span>
+          চালান বিস্তারিত
+        </button>
+<button class="h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 shadow-sm active:translate-y-[0.5px] transition-transform">
+<span class="material-symbols-outlined text-[17px]">credit_card</span>
+          পেমেন্ট দিন
+        </button>
+</div>
+</div>
+<!-- Invoice Card 2: Renata Animal Health (Fully Paid) -->
+<div class="invoice-item bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3 transition-transform active:scale-[0.99]" data-query="pur-2024-117 রেনাটা অ্যানিমেল হেলথ renata animal health" data-type="paid">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/60 flex items-center justify-center text-on-secondary-container font-bold">
+<span class="material-symbols-outlined text-[20px]">medication</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#PUR-2024-117</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-outline">২৪ অক্টোবর</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-primary leading-tight mt-0.5">রেনাটা অ্যানিমেল হেলথ</p>
+</div>
+</div>
+<!-- Status Pill -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          সম্পূর্ণ পরিশোধিত
+        </span>
+</div>
+<div class="bg-surface-container-low/70 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-lg object-cover shadow-xs" data-alt="Stack of veterinary calcium bolus packets and vitamin injection glass ampoules in pharmaceutical delivery carton in sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4JKlweJOh55-jMZuJdWfCWgxYj0TIs9BPgQk2-pW3IxoUG-a4HgtLWhKu0-HgWII40467J4CiaXE93wkmGLouwQJyFAqVu_zpKNpUPNA-ertnZmQT5-OEapLOWqNI4C-x3IPqhnUHakgILv99IB5HOCd--ziN7KJPvleEMhvrCSBl3G7tpdYnM2Wahtk0VtMA5nCGcRBfriSQMoCrzZdz3W2XX90XXSXrFIw_Yxr-00Whdq8oPc7X"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">৩টি ওষুধ (ইনজেকশন ও বোলাস)</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">check</span> ব্যাংক পেমেন্ট সম্পন্ন
+            </span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-outline block">পরিশোধিত মূল্য</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">৳৪৫,০০০</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-10 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[17px]">print</span>
+          প্রিন্ট রশিদ
+        </button>
+<button class="h-10 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[17px]">description</span>
+          চালান বিস্তারিত
+        </button>
+</div>
+</div>
+<!-- Invoice Card 3: Acme Laboratories (Total Due) -->
+<div class="invoice-item bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3 transition-transform active:scale-[0.99]" data-query="pur-2024-116 একমি ল্যাবরেটরিজ acme laboratories" data-type="due">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-error-container/40 flex items-center justify-center text-error font-bold">
+<span class="material-symbols-outlined text-[20px]">inventory</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#PUR-2024-116</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-outline">২২ অক্টোবর</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-primary leading-tight mt-0.5">একমি ল্যাবরেটরিজ লিমিটেড</p>
+</div>
+</div>
+<!-- Status Pill -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+          বকেয়া (Due)
+        </span>
+</div>
+<div class="bg-surface-container-low/70 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">৮টি ওষুধ (দুধ বৃদ্ধির সাপ্লিমেন্ট)</span>
+<span class="font-body-sm text-body-sm text-error font-semibold">কোনো অর্থ পরিশোধ হয়নি</span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-error block">মোট বকেয়া</span>
+<span class="font-headline-sm text-headline-sm font-bold text-error">৳১২,০০০</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-10 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[17px]">visibility</span>
+          বিস্তারিত
+        </button>
+<button class="h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 shadow-sm active:translate-y-[0.5px] transition-transform">
+<span class="material-symbols-outlined text-[17px]">payments</span>
+          পেমেন্ট দিন
+        </button>
+</div>
+</div>
+<!-- Invoice Card 4: Purchase Return (Adjusted Credit Note) -->
+<div class="invoice-item bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3 transition-transform active:scale-[0.99]" data-query="pur-ret-004 রেনাটা লিমিটেড ফেরত রিটার্ন renata return" data-type="return">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-tertiary">#PUR-RET-004</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-outline">২০ অক্টোবর</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-primary leading-tight mt-0.5">রেনাটা লিমিটেড (সাপ্লায়ার)</p>
+</div>
+</div>
+<!-- Return Status Pill -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">published_with_changes</span>
+          সমন্বয় সম্পন্ন
+        </span>
+</div>
+<div class="bg-surface-container-low/70 rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-10 h-10 rounded-lg object-cover shadow-xs" data-alt="Returned damaged medicine glass vial box with return inspection mark and stamp on rustic wooden counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLDkijx3Ir5_CadKsMzNJ5l5i3zltK5fWRkJoGFk-E5iTJ69y8A2CKi01yBFYHmE9QYjwFez6VgznFcSR9T8qArfC3d96xDE4RcUOGraiqtV0JG2ts381TvBdk3wY7ep1pvY2Vda6YOPSiIar91HT_JkzXdA9tmfzNU8e1Xwg5Uol3T6KHMItairbP-bCdZW2grhFBYQZcrOrVXXrY3LWLozisNfKyf-vx8WxEyrBaurnwTe8mdLPe"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">ভাঙা ও ত্রুটিপূর্ণ ইনজেকশন ফেরত</span>
+<span class="font-body-sm text-body-sm text-outline">ক্রেডিট নোট: #CN-2024-91</span>
+</div>
+</div>
+<div class="text-right shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-outline block">ক্রেডিট সমন্বয়</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">-৳৩,২০০</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">task_alt</span>
+          পরবর্তী চালানের দেনা থেকে সমন্বিত
+        </span>
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5 hover:underline">
+          নোট দেখুন
+          <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State (Shown when filter yields zero results) -->
+<div class="hidden px-margin-mobile py-10 flex-col items-center justify-center text-center" id="emptyState">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[32px]">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">কোনো চালান পাওয়া যায়নি</h3>
+<p class="font-body-md text-body-md text-outline mt-1 max-w-[260px]">আপনার ফিল্টার বা অনুসন্ধানের সাথে মিল রেখে কোনো ক্রয় চালান খুঁজে পাওয়া যায়নি।</p>
+<button class="mt-4 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold" onclick="resetFilters()">
+      ফিল্টার মুছুন
+    </button>
+</div>
+<!-- Bottom Spacing & Fixed Primary Floating Action Button Container -->
+<div class="sticky bottom-2 inset-x-0 px-margin-mobile mt-6 pointer-events-none z-30">
+<button class="pointer-events-auto w-full h-12 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] transition-transform" onclick="window.location.hash='#new-purchase'">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+<span>নতুন ক্রয় চালান যোগ করুন</span>
+</button>
+</div>
+</div>
+<script>
+  // Filter chips & search interaction
+  const searchInput = document.getElementById('invoiceSearch');
+  const clearBtn = document.getElementById('clearBtn');
+  const chips = document.querySelectorAll('.filter-chip');
+  const invoiceCards = document.querySelectorAll('.invoice-item');
+  const emptyState = document.getElementById('emptyState');
+
+  let activeFilter = 'all';
+
+  function applyFilters() {
+    const term = (searchInput.value || '').trim().toLowerCase();
+    let visibleCount = 0;
+
+    invoiceCards.forEach(card => {
+      const cardType = card.getAttribute('data-type');
+      const cardQuery = card.getAttribute('data-query') || '';
+
+      const matchesStatus = (activeFilter === 'all') || (cardType === activeFilter);
+      const matchesSearch = !term || cardQuery.toLowerCase().includes(term);
+
+      if (matchesStatus && matchesSearch) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (visibleCount === 0) {
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+    } else {
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+    }
+
+    if (term.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      chip.classList.add('bg-primary', 'text-on-primary');
+      chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+
+      activeFilter = chip.getAttribute('data-status');
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', applyFilters);
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    applyFilters();
+    searchInput.focus();
+  });
+
+  function resetFilters() {
+    searchInput.value = '';
+    activeFilter = 'all';
+    chips.forEach((c, idx) => {
+      if (idx === 0) {
+        c.classList.add('bg-primary', 'text-on-primary');
+        c.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      } else {
+        c.classList.remove('bg-primary', 'text-on-primary');
+        c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      }
+    });
+    applyFilters();
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_10px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="purchase-dashboard-&amp;-supplier-due" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">ড্যাশবোর্ড</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="new-purchase" href="#"><span class="material-symbols-outlined text-[22px]">add_shopping_cart</span><span class="font-label-sm text-label-sm">নতুন ক্রয়</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-11 transition-colors text-primary-container font-semibold" data-path="purchase-history" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">চালান খতিয়ান</span></a></div></nav></body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#b4c5ff", "on-secondary-container": "#00714d", "tertiary-fixed": "#dbe1ff", "secondary-fixed": "#6ffbbe", "on-primary-container": "#9ffdd3", "inverse-primary": "#7bd8b1", "inverse-surface": "#213145", "on-tertiary-fixed": "#00174b", "secondary-fixed-dim": "#4edea3", "on-primary-fixed": "#002115", "primary-container": "#047857", "secondary-container": "#6cf8bb", "outline": "#6e7a73", "on-tertiary-fixed-variant": "#003ea8", "on-error-container": "#93000a", "primary-fixed-dim": "#7bd8b1", "on-secondary": "#ffffff", "on-surface": "#0b1c30", "outline-variant": "#bdc9c1", "on-primary": "#ffffff", "surface": "#f8f9ff", "surface-bright": "#f8f9ff", "tertiary": "#0047bf", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "on-secondary-fixed-variant": "#005236", "error-container": "#ffdad6", "surface-container-highest": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#002113", "surface-container-low": "#eff4ff", "on-surface-variant": "#3e4943", "surface-dim": "#cbdbf5", "primary-fixed": "#97f5cc", "background": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "secondary": "#006c49", "surface-tint": "#006c4e", "primary": "#005d42", "error": "#ba1a1a", "on-tertiary": "#ffffff", "tertiary-container": "#1e5fe7", "on-error": "#ffffff", "on-primary-fixed-variant": "#00513a", "on-tertiary-container": "#e6e9ff", "on-background": "#0b1c30", "surface-container-high": "#dce9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-mobile": "1rem", "margin": "1.5rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2rem" }, "fontFamily": { "headline-lg-mobile": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "label-lg": ["Inter"], "currency-display": ["Inter"] }, "fontSize": { "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="পেছনে যান" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Cloud Backup And Sync</h1></div><div class="flex items-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-28 space-y-space-md">
+<!-- Interactive Toast Feedback -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-primary text-on-primary px-space-md py-space-sm rounded-full shadow-xl flex items-center space-x-space-xs transform -translate-y-16 opacity-0 transition-all duration-300 pointer-events-none" id="saveToast">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md">সকল সেটিংস সফলভাবে সংরক্ষিত হয়েছে!</span>
+</div>
+<!-- Hero Status Card -->
+<div class="relative overflow-hidden bg-primary-container text-on-primary-container rounded-xl p-space-md shadow-md">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="space-y-space-xs">
+<div class="inline-flex items-center space-x-space-xs bg-surface-container-lowest/20 backdrop-blur-md px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide text-on-primary">ক্লাউড সিঙ্ক: সুরক্ষিত</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-primary pt-1">সিস্টেম ও ডেটা নিরাপত্তা</h2>
+<p class="font-body-sm text-body-sm text-on-primary-container max-w-[240px]">দোকানের বিক্রয় রেজিস্টার ও খামারি গ্রাহকদের স্পর্শকাতর তথ্যাবলীর কেন্দ্রীয় নিয়ন্ত্রণ</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest/15 backdrop-blur-sm flex items-center justify-center text-on-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: নিরাপত্তা ও এক্সেস সিকিউরিটি -->
+<div class="space-y-space-xs">
+<div class="flex items-center space-x-space-xs px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">নিরাপত্তা ও এক্সেস সিকিউরিটি (Security)</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<!-- Change Password Row -->
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-label-lg text-label-lg text-on-surface">মাস্টার পাসওয়ার্ড পরিবর্তন</p>
+<p class="font-body-sm text-body-sm text-outline">শেষ পরিবর্তন: ১৫ দিন আগে (সুরক্ষিত)</p>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md active:scale-95 transition-all shadow-sm" type="button">
+          পরিবর্তন
+        </button>
+</div>
+<!-- Quick Counter PIN -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">dialpad</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">কাউন্টার কুইক পিন (Quick PIN)</p>
+<p class="font-body-sm text-body-sm text-secondary font-medium">সক্রিয় (****) • দ্রুত ক্যাশ ডেস্ক লগইন</p>
+</div>
+</div>
+<button class="font-label-md text-label-md text-primary hover:underline px-space-xs py-1" type="button">
+          রিসেট
+        </button>
+</div>
+<!-- 2FA Authentication Toggle -->
+<div class="flex items-center justify-between pt-1">
+<div class="space-y-0.5 max-w-[78%]">
+<div class="flex items-center space-x-1.5">
+<p class="font-label-lg text-label-lg text-on-surface">দ্বি-স্তরীয় যাচাইকরণ (2FA)</p>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm px-1.5 py-0.2 rounded font-bold">প্রস্তাবিত</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">নতুন ডিভাইসে প্রবেশের ক্ষেত্রে এসএমএস ওটিপি নিশ্চিতকরণ</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform translate-x-6 transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Biometric Unlock Toggle -->
+<div class="flex items-center justify-between pt-1">
+<div class="space-y-0.5 max-w-[78%]">
+<p class="font-label-lg text-label-lg text-on-surface">বায়োমেট্রিক ও ফিঙ্গারপ্রিন্ট আনলক</p>
+<p class="font-body-sm text-body-sm text-outline">কাউন্টার দ্রুত খোলার জন্য বায়োমেট্রিক অথেন্টিকেশন</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform translate-x-6 transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Restricted Wi-Fi -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="space-y-0.5 max-w-[75%]">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">wifi_lock</span>
+<p class="font-label-md text-label-md text-on-surface">দোকান ওয়াই-ফাই সুরক্ষা</p>
+</div>
+<p class="font-body-sm text-body-sm text-outline truncate">শুধুমাত্র সংযুক্ত: <span class="font-medium text-on-surface">AgroVet_5G</span></p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform translate-x-6 transition-transform duration-200"></div>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 2: ভাষা ও মুদ্রা সেটিংস -->
+<div class="space-y-space-xs">
+<div class="flex items-center space-x-space-xs px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">translate</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">ভাষা ও মুদ্রা সেটিংস (Localization)</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<!-- App Language Selection -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface">অ্যাপের ভাষা (Interface Language)</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="lang-opt px-space-sm py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-between shadow-sm" type="button">
+<span>বাংলা (Bangla)</span>
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="lang-opt px-space-sm py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-between" type="button">
+<span>English</span>
+<span class="material-symbols-outlined text-[18px] opacity-0">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Digit Format -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface">সংখ্যা প্রদর্শন পদ্ধতি (Numeric Format)</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="digit-opt px-space-sm py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-between shadow-sm" type="button">
+<span>বাংলা (১২৩৪)</span>
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="digit-opt px-space-sm py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-between" type="button">
+<span>English (1234)</span>
+<span class="material-symbols-outlined text-[18px] opacity-0">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Currency Display (Fixed/Configured) -->
+<div class="flex items-center justify-between pt-1">
+<div class="space-y-0.5">
+<p class="font-label-md text-label-md text-on-surface">মুদ্রার প্রতীক (Currency)</p>
+<p class="font-body-sm text-body-sm text-outline">বাংলাদেশি স্ট্যান্ডার্ড ইনভয়েসিং ফরম্যাট</p>
+</div>
+<div class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center space-x-1">
+<span class="font-bold text-primary">৳</span>
+<span>টাকা (BDT)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: নোটিফিকেশন ও অ্যালার্ট প্রেফারেন্স -->
+<div class="space-y-space-xs">
+<div class="flex items-center space-x-space-xs px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">নোটিফিকেশন ও স্টক অ্যালার্ট</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<!-- Expiry Alerts -->
+<div class="flex items-center justify-between">
+<div class="space-y-0.5 max-w-[78%]">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-error text-[18px]">event_busy</span>
+<p class="font-label-lg text-label-lg text-on-surface">মেয়াদোত্তীর্ণের আগাম সতর্কতা</p>
+</div>
+<p class="font-body-sm text-body-sm text-outline">মেয়াদ শেষের ৩০ দিন ও ৬০ দিন পূর্বে কাউন্টারে লাল অ্যালার্ট</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform translate-x-6 transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Low Stock Alert -->
+<div class="flex items-center justify-between">
+<div class="space-y-0.5 max-w-[78%]">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">production_quantity_limits</span>
+<p class="font-label-lg text-label-lg text-on-surface">লো-স্টক সতর্কতা নোটিফিকেশন</p>
+</div>
+<p class="font-body-sm text-body-sm text-outline">স্টক ৫ পিসের নিচে নামলে রি-অর্ডার পপআপ</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform translate-x-6 transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Due Payment Reminder -->
+<div class="flex items-center justify-between">
+<div class="space-y-0.5 max-w-[78%]">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">sms</span>
+<p class="font-label-lg text-label-lg text-on-surface">খামারির বাকি তাগাদার এসএমএস</p>
+</div>
+<p class="font-body-sm text-body-sm text-outline">নির্দিষ্ট তারিখে খামারিদের কাছে অটোমেটিক তাগাদা এসএমএস প্রেরণ</p>
+</div>
+<button aria-checked="true" class="toggle-btn w-12 h-6 bg-primary rounded-full relative p-0.5 transition-colors duration-200" role="switch" type="button">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-md transform translate-x-6 transition-transform duration-200"></div>
+</button>
+</div>
+</div>
+</div>
+<!-- Visual Card Mosaic / Infographic -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container rounded-xl p-space-sm space-y-space-xs flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[22px]">cloud_sync</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">100% সুরক্ষিত</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">স্বয়ংক্রিয় ক্লাউড ব্যাকআপ</p>
+<p class="font-body-sm text-body-sm text-outline">প্রতি ৩০ মিনিটে ব্যাকআপ কার্যকর</p>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-sm space-y-space-xs flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary text-[22px]">lock_clock</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">AES-256</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">এন্ড-টু-এন্ড এনক্রিপশন</p>
+<p class="font-body-sm text-body-sm text-outline">খাতার লেনদেন কেবল আপনার নিয়ন্ত্রণে</p>
+</div>
+</div>
+</div>
+<!-- SECTION 4: ডেটা পলিসি ও হিস্ট্রি রিটেনশন -->
+<div class="space-y-space-xs">
+<div class="flex items-center space-x-space-xs px-1">
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">ডেটা পলিসি ও হিস্ট্রি রিটেনশন</h3>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md space-y-space-md">
+<!-- Retention Policy Info -->
+<div class="flex items-start space-x-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">all_inclusive</span>
+</div>
+<div class="space-y-0.5">
+<p class="font-label-lg text-label-lg text-on-surface">সর্বকালের হিসাব ও ক্লাউড স্টোরেজ</p>
+<p class="font-body-sm text-body-sm text-outline">দোকান প্রতিষ্ঠার প্রথম দিন থেকে সকল বিক্রয় ও ক্যাশ খাতা ডাটাবেস ক্লাউডে আনলিমিটেড সংরক্ষণ থাকে।</p>
+</div>
+</div>
+<!-- Cache Clear Option -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-label-md text-label-md text-on-surface">লোকাল অফলাইন ক্যাশ মেমরি</p>
+<p class="font-body-sm text-body-sm text-outline" id="cacheLabel">মেমরি দখল: ২৪.৬ MB</p>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-error font-label-md text-label-md active:scale-95 transition-all flex items-center space-x-1" id="clearCacheBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">cached</span>
+<span>ক্লিয়ার করুন</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 5: বিপদজনক জোন (Danger Zone) -->
+<div class="space-y-space-xs pt-1">
+<div class="flex items-center space-x-space-xs px-1">
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+<h3 class="font-label-lg text-label-lg text-error">বিপদজনক জোন (Danger Zone)</h3>
+</div>
+<div class="bg-error-container/30 rounded-xl p-space-md space-y-space-sm">
+<div class="space-y-1">
+<p class="font-label-lg text-label-lg text-on-surface">দোকান ডাটাবেস রিসেট অথবা অ্যাকাউন্ট ডিঅ্যাক্টিভেশন</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">সকল ইনভেন্টরি, বাকি খাতা ও কাস্টমার তালিকা স্থায়ীভাবে মুছে যাবে। এটি কার্যকর করতে ওটিপি ভেরিফিকেশন প্রয়োজন।</p>
+</div>
+<div class="pt-2 flex flex-col space-y-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-surface-container-lowest text-error font-label-md text-label-md active:scale-98 transition-all flex items-center justify-center space-x-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>দোকান টেস্ট ডেটা রিসেট করুন</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-lg bg-error text-on-error font-label-md text-label-md active:scale-98 transition-all flex items-center justify-center space-x-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>অ্যাকাউন্ট সম্পূর্ণ বন্ধ বা বাতিল করুন</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Floating Sticky Bottom Save Dock -->
+<div class="fixed bottom-0 left-0 right-0 p-space-md bg-surface/90 backdrop-blur-md z-40 max-w-lg mx-auto">
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center space-x-space-xs shadow-md active:translate-y-[0.5px] hover:opacity-95 transition-all" id="mainSaveBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>পরিবর্তন সংরক্ষণ করুন (Save Settings)</span>
+</button>
+</div>
+</div>
+<script>
+  // Micro-interactions for interactive toggle states
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isChecked = btn.getAttribute('aria-checked') === 'true';
+      btn.setAttribute('aria-checked', !isChecked);
+      const dot = btn.querySelector('div');
+      if (isChecked) {
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-outline-variant');
+        dot.classList.remove('translate-x-6');
+        dot.classList.add('translate-x-0');
+      } else {
+        btn.classList.add('bg-primary');
+        btn.classList.remove('bg-outline-variant');
+        dot.classList.add('translate-x-6');
+        dot.classList.remove('translate-x-0');
+      }
+    });
+  });
+
+  // Language & digit selection pills micro-interactions
+  function setupSelectionGroup(selector) {
+    const buttons = document.querySelectorAll(selector);
+    buttons.forEach(b => {
+      b.addEventListener('click', () => {
+        buttons.forEach(other => {
+          other.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+          other.classList.add('bg-surface-container', 'text-on-surface');
+          const checkIcon = other.querySelector('.material-symbols-outlined');
+          if (checkIcon) checkIcon.classList.add('opacity-0');
+        });
+        b.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+        b.classList.remove('bg-surface-container', 'text-on-surface');
+        const activeCheck = b.querySelector('.material-symbols-outlined');
+        if (activeCheck) activeCheck.classList.remove('opacity-0');
+      });
+    });
+  }
+
+  setupSelectionGroup('.lang-opt');
+  setupSelectionGroup('.digit-opt');
+
+  // Cache clear feedback
+  const cacheBtn = document.getElementById('clearCacheBtn');
+  const cacheLabel = document.getElementById('cacheLabel');
+  cacheBtn?.addEventListener('click', () => {
+    cacheBtn.disabled = true;
+    cacheBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>ক্লিনিং...</span>';
+    setTimeout(() => {
+      cacheLabel.textContent = 'মেমরি দখল: ০.০ MB (সম্পূর্ণ মুক্ত)';
+      cacheBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>সম্পন্ন</span>';
+      cacheBtn.classList.remove('text-error');
+      cacheBtn.classList.add('text-secondary');
+    }, 600);
+  });
+
+  // Save Settings Toast trigger
+  const saveBtn = document.getElementById('mainSaveBtn');
+  const toast = document.getElementById('saveToast');
+  saveBtn?.addEventListener('click', () => {
+    toast.classList.remove('opacity-0', '-translate-y-16');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', '-translate-y-16');
+    }, 2400);
+  });
+</script></main></body></html>

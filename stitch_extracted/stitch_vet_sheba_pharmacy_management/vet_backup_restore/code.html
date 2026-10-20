@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#6e7a73", "on-primary-fixed-variant": "#00513a", "on-primary-fixed": "#002115", "on-error": "#ffffff", "primary-container": "#047857", "surface-container-low": "#eff4ff", "primary": "#005d42", "on-error-container": "#93000a", "tertiary": "#0047bf", "on-tertiary": "#ffffff", "primary-fixed": "#97f5cc", "on-primary-container": "#9ffdd3", "secondary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-dim": "#cbdbf5", "on-background": "#0b1c30", "surface-container-lowest": "#ffffff", "inverse-surface": "#213145", "on-tertiary-container": "#e6e9ff", "tertiary-fixed-dim": "#b4c5ff", "secondary": "#006c49", "tertiary-container": "#1e5fe7", "surface-variant": "#d3e4fe", "surface-container-highest": "#d3e4fe", "primary-fixed-dim": "#7bd8b1", "surface": "#f8f9ff", "inverse-primary": "#7bd8b1", "on-secondary-container": "#00714d", "outline-variant": "#bdc9c1", "surface-bright": "#f8f9ff", "secondary-fixed": "#6ffbbe", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed-variant": "#005236", "on-secondary-fixed": "#002113", "surface-container-high": "#dce9ff", "on-tertiary-fixed-variant": "#003ea8", "on-primary": "#ffffff", "on-tertiary-fixed": "#00174b", "surface-container": "#e5eeff", "secondary-container": "#6cf8bb", "on-secondary": "#ffffff", "tertiary-fixed": "#dbe1ff", "on-surface-variant": "#3e4943", "error": "#ba1a1a", "on-surface": "#0b1c30", "error-container": "#ffdad6", "surface-tint": "#006c4e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "margin": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "gutter": "1rem" }, "fontFamily": { "headline-lg": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "currency-display": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center min-w-0 gap-space-xs flex-1"><button aria-label="ফিরে যান" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0 pr-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse shrink-0"></span><h1 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Backup & Restore Manager</h1></div><span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide truncate">Vet সেবা • AgroVet Pharmacy Suite</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="সিঙ্ক রিফ্রেশ করুন" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:rotate-180 transition-all duration-300" type="button"><span class="material-symbols-outlined text-[22px]">sync</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 space-y-4">
+<!-- Safety Banner / Reassurance Header Card -->
+<div class="px-margin-mobile pt-3">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">সবুজ সুরক্ষিত শিল্ড</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">ক্লাউড প্রোটেকশন সক্রিয়</h2>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          AES-256
+        </span>
+</div>
+<!-- Key Health Indicators -->
+<div class="grid grid-cols-2 gap-2 mt-4 pt-3 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">সর্বশেষ ব্যাকআপ</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">আজ দুপুর ১২:০০ মিঃ</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">cloud_done</span> Drive & Vet Cloud
+          </span>
+</div>
+<div class="flex flex-col pl-2 border-l border-surface-variant/40">
+<span class="font-label-sm text-label-sm text-on-surface-variant">সাইজ ও স্বাস্থ্য</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">৩৮.৪ MB (৩,৮৫০ রেকর্ড)</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> ১০০% ভেরিফাইড
+          </span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">phonelink_ring</span>
+          ফোন হারিয়ে গেলে বা নষ্ট হলেও ডাটা নিরাপদ
+        </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold cursor-pointer">হেল্প ডেস্কে কল</span>
+</div>
+</div>
+</div>
+<!-- Primary Interactive CTA: Create Backup Card -->
+<div class="px-margin-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">নতুন ব্যাকআপ তৈরি করুন</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Create Instant Pharmacy Backup</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+          তাত্ক্ষণিক
+        </span>
+</div>
+<!-- Backup Scope Selection (Custom Styled Radios) -->
+<div class="space-y-2 mt-3" id="backup-options-group">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] has-[:checked]:bg-primary-container/10 has-[:checked]:text-on-surface">
+<input checked="" class="mt-1 w-4 h-4 text-primary accent-primary" name="backup_type" onchange="updateBackupScope()" type="radio" value="full"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">সম্পূর্ণ ডাটাবেস (Full Backup)</span>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-1.5 py-0.5 rounded">প্রস্তাবিত</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              ওষুধের স্টক, মেয়াদ, খামারি বাকি খাতা, ভ্যাট মেমো ও সেটিংস
+            </p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] has-[:checked]:bg-primary-container/10">
+<input class="mt-1 w-4 h-4 text-primary accent-primary" name="backup_type" onchange="updateBackupScope()" type="radio" value="ledger"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">শুধুমাত্র আর্থিক ও খামারি খতিয়ান</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">৪.২ MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Quick Ledger Backup: খামারি ও কাস্টমারের পাওনা-দেনার খাতা
+            </p>
+</div>
+</label>
+</div>
+<!-- Live Dynamic Progress Tracker (Hidden by default, shown during backup) -->
+<div class="hidden mt-4 p-3 bg-surface-container rounded-lg" id="backup-progress-card">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-primary font-bold flex items-center gap-1.5" id="progress-status-label">
+<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span>
+            এনক্রিপশন ও ড্রাইভে আপলোড হচ্ছে...
+          </span>
+<span class="text-on-surface font-bold" id="progress-percentage">০%</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-300 w-0" id="backup-progress-bar"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2 block" id="progress-sub-detail">
+          মেডিসিন ইনভেন্টরি প্যাকিং: ৩৮৪টি আইটেম...
+        </span>
+</div>
+<!-- Action Button -->
+<button class="mt-4 w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm hover:opacity-95 active:scale-[0.98] transition-all" id="backup-now-btn" onclick="startInstantBackup()" type="button">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>১ ক্লিকে ইনস্ট্যান্ট ক্লাউড ব্যাকআপ নিন</span>
+</button>
+<div class="mt-2.5 flex items-center justify-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">security</span>
+<span>Google Cloud & VetSeba হাইপার-সিকিউর এনভায়রনমেন্ট</span>
+</div>
+</div>
+</div>
+<!-- Scheduled Auto Backups Card -->
+<div class="px-margin-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">স্বয়ংক্রিয় ব্যাকআপ শিডিউল</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated Daily Cloud Protection</p>
+</div>
+</div>
+</div>
+<!-- Toggle 1: Daily Schedule -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3 pr-2">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">nights_stay</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">দৈনিক রাত ১১:৩০ মিনিটে অটো ব্যাকআপ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">দোকান বন্ধের সময় স্বয়ংক্রিয়ভাবে ক্লাউডে পাঠাবে</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" onchange="togglePulse(this)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Cloud Destination Info Card -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">add_to_drive</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface block truncate">গুগল ড্রাইভ (Google Drive)</span>
+<span class="font-body-sm text-body-sm text-primary font-medium truncate block">vet.seba.mymensingh@gmail.com</span>
+</div>
+</div>
+<button class="px-2.5 py-1 text-label-sm font-label-sm text-primary font-semibold bg-surface-container-lowest rounded-md shadow-xs hover:bg-surface-container transition-colors" type="button">
+          পরিবর্তন
+        </button>
+</div>
+<!-- Toggle 2: Safety Wi-Fi & Charging -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3 pr-2">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">battery_charging_full</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">চার্জিং ও ওয়াই-ফাই শর্ত</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">চার্জে থাকা ও ডাটা সংযোগ পেলে ব্যাকআপ নিবে</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Retention Policy Reminder -->
+<div class="flex items-center gap-2 px-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">history</span>
+<span>সংরক্ষণ নীতি: গত ৩০ দিনের দৈনিক স্ন্যাপশট ক্লাউডে সংরক্ষিত থাকবে</span>
+</div>
+</div>
+</div>
+<!-- Available Backup History & Restore Options -->
+<div class="px-margin-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">settings_backup_restore</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">রিস্টোর ও ব্যাকআপ ফাইল</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Available Restore Points</p>
+</div>
+</div>
+<span class="text-label-sm font-label-sm font-semibold text-primary cursor-pointer hover:underline">সবগুলো দেখুন</span>
+</div>
+<!-- Pre-Restore Auto-Save Safety Warning -->
+<div class="mb-3 p-2.5 rounded-lg bg-surface-container-low flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">info</span>
+<span class="font-body-sm text-body-sm">
+          রিস্টোর চাপলে বর্তমান ফোনের ডাটা আগে স্বয়ংক্রিয় সেভ হয়ে রিস্টোর হবে। কোনো তথ্য হারাবে না।
+        </span>
+</div>
+<!-- Backup Item 1: Latest Cloud -->
+<div class="p-3.5 rounded-xl bg-surface-container-low mb-3 space-y-2.5">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary">আজকের সর্বশেষ ক্লাউড ব্যাকআপ</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface block mt-0.5">২৮ অক্টোবর ২০২৪, দুপুর ১২:০০ মিঃ</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">
+            ক্লাউড কপি
+          </span>
+</div>
+<div class="flex flex-wrap gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="bg-surface-container px-2 py-0.5 rounded">৩৮.৪ MB</span>
+<span class="bg-surface-container px-2 py-0.5 rounded">v2.4.1</span>
+<span class="bg-surface-container px-2 py-0.5 rounded">৩৪৮ ওষুধ</span>
+<span class="bg-surface-container px-2 py-0.5 rounded">৮৫২ খামারি</span>
+<span class="bg-surface-container px-2 py-0.5 rounded">৫১২ সেলস মেমো</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 shadow-xs hover:opacity-95 active:scale-95 transition-all" onclick="confirmRestoreModal('২৮ অক্টোবর দুপুর ১২:০০ (৩৮.৪ MB)')" type="button">
+<span class="material-symbols-outlined text-[17px]">restore</span>
+            রিস্টোর করুন (Restore)
+          </button>
+<button class="px-3 h-9 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-1 hover:bg-surface-container-high active:scale-95 transition-all" onclick="downloadVdbToast()" type="button">
+<span class="material-symbols-outlined text-[17px]">download</span>
+            .vdb ফাইল
+          </button>
+</div>
+</div>
+<!-- Backup Item 2: Yesterday Closing -->
+<div class="p-3.5 rounded-xl bg-surface-container-low mb-3 space-y-2">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">দৈনিক ক্লোজিং ব্যাকআপ</span>
+<span class="font-label-md text-label-md font-bold text-on-surface block">২৭ অক্টোবর ২০২৪, রাত ১১:৪৫ মিঃ</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            ৩৭.৮ MB
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          ৩,৮১০টি রেকর্ড • Google Drive আর্কাইভে সংরক্ষিত
+        </p>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-4 h-8 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-primary-container/10 active:scale-95 transition-all" onclick="confirmRestoreModal('২৭ অক্টোবর রাত ১১:৪৫ (৩৭.৮ MB)')" type="button">
+<span class="material-symbols-outlined text-[16px]">restore</span>
+            রিস্টোর করুন
+          </button>
+</div>
+</div>
+<!-- Backup Item 3: Local Storage / SD Card -->
+<div class="p-3.5 rounded-xl bg-surface-container-low space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">sd_card</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">এসডি কার্ড / লোকাল মেমরি কপি</span>
+<span class="font-label-md text-label-md font-bold text-on-surface block">২৫ অক্টোবর ২০২৪, বিকাল ০৫:২০ মিঃ</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            ৩৭.২ MB
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          ফাইল পাথ: /VetSeba/Backups/VetBackup_20241025.vdb
+        </p>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-4 h-8 rounded-lg bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 hover:bg-primary-container/10 active:scale-95 transition-all" onclick="confirmRestoreModal('২৫ অক্টোবর বিকাল ০৫:২০ (৩৭.২ MB - SD কার্ড)')" type="button">
+<span class="material-symbols-outlined text-[16px]">restore</span>
+            রিস্টোর করুন
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Manual File Restore & Offline Management -->
+<div class="px-margin-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">ফাইল থেকে সরাসরি রিস্টোর</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Restore From External .vdb File</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[26px]">folder_open</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">
+          মোবাইল মেমরি বা পেনড্রাইভ ফাইল
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+          অন্য ফোন থেকে আনা .vdb ব্যাকআপ ফাইলটি সিলেক্ট করে ফার্মেসির ডাটা এই ফোনে প্রতিস্থাপন করুন
+        </p>
+<label class="mt-3 inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container-highest text-primary font-label-md text-label-md font-semibold rounded-lg cursor-pointer hover:bg-primary-container/15 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">attach_file</span>
+<span>ফাইল সিলেক্ট করুন (Browse .vdb)</span>
+<input accept=".vdb,.bin" class="hidden" onchange="handleFileSelect(this)" type="file"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Security & Trust Footer Badge -->
+<div class="px-margin-mobile pt-1">
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface block">
+          DGDA ও ব্যাংক-গ্রেড ডাটা সুরক্ষা মানদণ্ড
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+          আপনার ফার্মেসির ওষুধ স্টক রেজিস্টার, মাদক ও অ্যান্টিবায়োটিক বিক্রয় মেমো এবং খামারি লেজার এন্ড-টু-এন্ড এনক্রিপশনে সুরক্ষিত। আপনার অনুমতি ছাড়া কেউ এই তথ্য দেখতে পারে না।
+        </p>
+</div>
+</div>
+</div>
+<!-- Confirmation Modal for Restore (Hidden by Default) -->
+<div class="fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/40 backdrop-blur-xs transition-opacity opacity-0 pointer-events-none duration-200" id="restore-modal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-t-2xl p-space-md shadow-xl flex flex-col space-y-3 transform translate-y-full transition-transform duration-200" id="restore-sheet">
+<div class="w-10 h-1 bg-surface-variant rounded-full mx-auto mb-1"></div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container/30 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">ডাটা রিস্টোর নিশ্চিতকরণ</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">রিস্টোর করার আগে তথ্য মিলিয়ে নিন</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-normal">
+        আপনি নির্বাচন করেছেন: <span class="font-bold text-primary" id="restore-target-label"></span>। 
+        <br/>
+        বর্তমান অ্যাপ ডাটা আপডেট হবে। সুরক্ষার স্বার্থে এখনই স্বয়ংক্রিয় একটি রিকভারি স্ন্যাপশট নেওয়া হবে।
+      </p>
+<div class="pt-2 flex flex-col gap-2">
+<button class="w-full h-11 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="executeRestoreProcess()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+          হ্যাঁ, নিশ্চিত রিস্টোর করুন
+        </button>
+<button class="w-full h-10 bg-surface-container text-on-surface rounded-xl font-label-md text-label-md font-medium active:scale-95 transition-all" onclick="closeRestoreModal()" type="button">
+          বাতিল করুন (Cancel)
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Toast Floating Alert -->
+<div class="fixed bottom-6 left-4 right-4 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-lg flex items-center justify-between opacity-0 translate-y-3 pointer-events-none transition-all duration-300" id="toast-msg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md font-medium" id="toast-text">সফলভাবে ক্লাউড ব্যাকআপ সম্পন্ন হয়েছে!</span>
+</div>
+<button class="text-inverse-on-surface/70 hover:text-inverse-on-surface" onclick="hideToast()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  function showToast(message, iconName) {
+    const toast = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    if (toast && toastText) {
+      toastText.innerText = message;
+      if (iconName && toastIcon) toastIcon.innerText = iconName;
+      toast.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        hideToast();
+      }, 4000);
+    }
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast-msg');
+    if (toast) {
+      toast.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }
+  }
+
+  function downloadVdbToast() {
+    showToast('VetBackup_20241028_Full.vdb ডাউনলোড শুরু হয়েছে...', 'download_done');
+  }
+
+  function handleFileSelect(input) {
+    if (input.files && input.files[0]) {
+      const fileName = input.files[0].name;
+      confirmRestoreModal(fileName + ' (লোকাল ফাইল)');
+    }
+  }
+
+  function updateBackupScope() {
+    const selected = document.querySelector('input[name="backup_type"]:checked').value;
+    const btn = document.getElementById('backup-now-btn');
+    if (btn) {
+      if (selected === 'ledger') {
+        btn.querySelector('span:last-child').innerText = '১ ক্লিকে খামারি বাকি খাতার ব্যাকআপ নিন';
+      } else {
+        btn.querySelector('span:last-child').innerText = '১ ক্লিকে সম্পূর্ণ ক্লাউড ব্যাকআপ নিন';
+      }
+    }
+  }
+
+  function startInstantBackup() {
+    const progressCard = document.getElementById('backup-progress-card');
+    const progressBar = document.getElementById('backup-progress-bar');
+    const progressLabel = document.getElementById('progress-percentage');
+    const subDetail = document.getElementById('progress-sub-detail');
+    const backupBtn = document.getElementById('backup-now-btn');
+
+    if (!progressCard || !progressBar) return;
+
+    progressCard.classList.remove('hidden');
+    backupBtn.disabled = true;
+    backupBtn.classList.add('opacity-50', 'pointer-events-none');
+
+    let current = 0;
+    const stages = [
+      { pct: 20, text: 'মেডিসিন ইনভেন্টরি প্যাকিং: ৩৪৮টি আইটেম...' },
+      { pct: 45, text: 'খামারি বাকি লেজার হিসাব মেলানো হচ্ছে (৮৫২ একাউন্ট)...' },
+      { pct: 75, text: 'AES-256 বিট এনক্রিপশন প্রস্তুত ও ক্লাউড সিঙ্ক হচ্ছে...' },
+      { pct: 95, text: 'Google Drive ও VetSeba ক্লাউডে ফাইনাল রাইট হচ্ছে...' },
+      { pct: 100, text: '১০০% ব্যাকআপ সফল ও ভেরিফাইড!' }
+    ];
+
+    let stageIdx = 0;
+    const interval = setInterval(() => {
+      if (stageIdx < stages.length) {
+        current = stages[stageIdx].pct;
+        progressBar.style.width = current + '%';
+        progressLabel.innerText = current + '%';
+        subDetail.innerText = stages[stageIdx].text;
+        stageIdx++;
+      } else {
+        clearInterval(interval);
+        setTimeout(() => {
+          progressCard.classList.add('hidden');
+          progressBar.style.width = '0%';
+          backupBtn.disabled = false;
+          backupBtn.classList.remove('opacity-50', 'pointer-events-none');
+          showToast('ক্লাউড ব্যাকআপ সফলভাবে সংরক্ষিত হয়েছে!', 'cloud_done');
+        }, 800);
+      }
+    }, 450);
+  }
+
+  function confirmRestoreModal(backupName) {
+    const modal = document.getElementById('restore-modal');
+    const sheet = document.getElementById('restore-sheet');
+    const label = document.getElementById('restore-target-label');
+    if (label) label.innerText = backupName;
+
+    if (modal && sheet) {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      sheet.classList.remove('translate-y-full');
+      sheet.classList.add('translate-y-0');
+    }
+  }
+
+  function closeRestoreModal() {
+    const modal = document.getElementById('restore-modal');
+    const sheet = document.getElementById('restore-sheet');
+    if (modal && sheet) {
+      sheet.classList.add('translate-y-full');
+      sheet.classList.remove('translate-y-0');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+    }
+  }
+
+  function executeRestoreProcess() {
+    closeRestoreModal();
+    showToast('সফলভাবে ডাটাবেস রিস্টোর সম্পন্ন হয়েছে!', 'history');
+  }
+
+  function togglePulse(checkbox) {
+    if (checkbox.checked) {
+      showToast('দৈনিক রাত ১১:৩০ মিঃ অটো ব্যাকআপ চালু আছে', 'schedule');
+    } else {
+      showToast('অটো ব্যাকআপ সাময়িকভাবে স্থগিত করা হয়েছে', 'warning');
+    }
+  }
+</script></main></body></html>

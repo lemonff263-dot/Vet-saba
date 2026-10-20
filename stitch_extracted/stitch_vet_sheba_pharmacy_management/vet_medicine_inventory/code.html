@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;font-family:'Hind Siliguri','Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;display:inline-block;vertical-align:middle;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary': '#ffffff', 'on-primary': '#ffffff', 'outline': '#6e7a73', 'tertiary-fixed-dim': '#b4c5ff', 'tertiary': '#0047bf', 'on-secondary-fixed': '#002113', 'on-secondary-fixed-variant': '#005236', 'tertiary-fixed': '#dbe1ff', 'surface-container-high': '#dce9ff', 'surface-container': '#e5eeff', 'primary-fixed-dim': '#7bd8b1', 'on-primary-fixed': '#002115', 'on-tertiary-container': '#e6e9ff', 'secondary-fixed': '#6ffbbe', 'on-tertiary-fixed-variant': '#003ea8', 'secondary-container': '#6cf8bb', 'surface-bright': '#f8f9ff', 'on-primary-fixed-variant': '#00513a', 'error': '#ba1a1a', 'surface-container-lowest': '#ffffff', 'tertiary-container': '#1e5fe7', 'surface': '#f8f9ff', 'primary-container': '#047857', 'on-surface-variant': '#3e4943', 'on-tertiary-fixed': '#00174b', 'on-background': '#0b1c30', 'inverse-on-surface': '#eaf1ff', 'inverse-surface': '#213145', 'surface-container-highest': '#d3e4fe', 'surface-dim': '#cbdbf5', 'surface-variant': '#d3e4fe', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#4edea3', 'error-container': '#ffdad6', 'on-surface': '#0b1c30', 'secondary': '#006c49', 'on-error-container': '#93000a', 'surface-tint': '#006c4e', 'on-secondary-container': '#00714d', 'primary': '#005d42', 'inverse-primary': '#7bd8b1', 'on-error': '#ffffff', 'outline-variant': '#bdc9c1', 'primary-fixed': '#97f5cc', 'background': '#f8f9ff', 'on-primary-container': '#9ffdd3', 'surface-container-low': '#eff4ff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter-mobile': '0.75rem', 'space-xl': '2rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'space-md': '1rem', 'margin-mobile': '1rem', 'space-sm': '0.5rem', 'margin': '1.5rem', 'gutter': '1rem' }, fontFamily: { 'headline-lg': ['Inter'], 'body-lg': ['Inter'], 'headline-sm': ['Inter'], 'headline-md': ['Inter'], 'currency-display': ['Inter'], 'label-md': ['Inter'], 'body-md': ['Inter'], 'label-sm': ['Inter'], 'body-sm': ['Inter'], 'headline-lg-mobile': ['Inter'], 'label-lg': ['Inter'] }, fontSize: { 'headline-lg': ['28px', { lineHeight: '36px', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'headline-sm': ['17px', { lineHeight: '24px', fontWeight: '600' }], 'headline-md': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'currency-display': ['24px', { lineHeight: '28px', letterSpacing: '-0.02em', fontWeight: '700' }], 'label-md': ['13px', { lineHeight: '18px', fontWeight: '500' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.03em', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-lg-mobile': ['22px', { lineHeight: '30px', fontWeight: '700' }], 'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Vet সেবা Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XKmZ8vQZBFImHwL-xqESAWrMGOK5bV4plDfhhq0zV32ipMDB_Z1KzDoV0rCnsb-Y7jZdKN6DdTjXZsgnypJrOzHlrdfPygtGvfshLn5sUCh3UQHYpobpDuPv3S_R5S-BMyIEImTnk1CFy9MCSZU5ig-TB-4o_Y9-9W5i0OgE9kuCRQb0n5bzK0-gwUJIpDzdYyuBnAx3WGs4L_qwXq5yA-iUF-CjLInS5LXv7D7sxgfQc5S30Xt8DntgQ"/><div class="flex flex-col min-w-0 justify-center"><h1 class="font-label-md text-label-md font-bold text-on-surface truncate leading-tight">বিসমিল্লাহ্ ভেট ফার্মেসি</h1><span class="font-label-sm text-label-sm text-outline truncate leading-tight">শাখা: ময়মনসিংহ সদর</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed text-label-sm font-label-sm shrink-0"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>লাইভ সিঙ্ক</span></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-2xl">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="pl-0.5 shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9tGnik7HjlbkMKGagRiT3pa1EzLf2FrRlFJ6HMBlKnW7hvhMZmBsfMB43kVe9Otd4rXPlsMTePuiceNamK8vr3Tr78kAxe7biFs5ghDQZN2_VOIuxDHLo938Ers5X_4iVWily8vwRWRmlsrEO_qJDXW78dzkG-2MbOk5--RS0e9Cl1TA8_Dc0P-z7NEH4PcUGCajrTMumxiilBKPXXd_xikb-CdK3s3LH1K9wSHqzaUrJ2S92gfD0"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Search & Barcode Quick Access Dock -->
+<section class="px-margin-mobile pt-3 pb-2">
+<div class="relative flex items-center gap-space-xs">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-9 pr-8 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" id="inventory-search" placeholder="ওষুধের নাম, জেনেরিক বা বারকোড খুঁজুন..." type="text"/>
+<button aria-label="মুছে ফেলুন" class="absolute right-2.5 w-6 h-6 rounded-full flex items-center justify-center text-outline hover:text-on-surface" onclick="document.getElementById('inventory-search').value=''; document.getElementById('inventory-search').focus();" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</div>
+<!-- Live Barcode Scan Trigger -->
+<button aria-label="বারকোড স্ক্যানার" class="h-11 px-3.5 rounded-xl bg-primary-container text-on-primary flex items-center gap-1.5 shadow-md active:scale-95 transition-transform" onclick="triggerScanHaptic()" type="button">
+<span class="material-symbols-outlined text-[20px]">barcode_scanner</span>
+<span class="font-label-sm text-label-sm hidden xs:inline">স্ক্যান</span>
+</button>
+</div>
+<!-- Category Filter Chips (Horizontal Touch Strip) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-3 pb-1 -mx-margin-mobile px-margin-mobile">
+<button class="shrink-0 h-8 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm flex items-center gap-1 active:scale-95 transition-transform">
+<span>সব</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">২৪৮</span>
+</button>
+<button class="shrink-0 h-8 px-3 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform">
+<span>অ্যান্টিবায়োটিক</span>
+<span class="text-outline font-label-sm text-label-sm">৪২</span>
+</button>
+<button class="shrink-0 h-8 px-3 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform">
+<span>ভিটামিন ও মিনারেল</span>
+<span class="text-outline font-label-sm text-label-sm">৬৪</span>
+</button>
+<button class="shrink-0 h-8 px-3 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform">
+<span>কৃমিনাশক</span>
+<span class="text-outline font-label-sm text-label-sm">৩৮</span>
+</button>
+<button class="shrink-0 h-8 px-3 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform">
+<span>ভ্যাক্সিন</span>
+<span class="text-outline font-label-sm text-label-sm">১২</span>
+</button>
+<button class="shrink-0 h-8 px-3 rounded-full bg-amber-50 text-amber-900 font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+<span>লো-স্টক</span>
+<span class="font-bold font-label-sm text-label-sm text-amber-700">৩</span>
+</button>
+<button class="shrink-0 h-8 px-3 rounded-full bg-error-container/60 text-error font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[15px]">notification_important</span>
+<span>মেয়াদোত্তীর্ণ</span>
+<span class="font-bold font-label-sm text-label-sm">৪</span>
+</button>
+</div>
+</section>
+<!-- Inventory Performance Overview Banner -->
+<section class="px-margin-mobile py-2">
+<div class="p-3.5 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">স্টক সামারি ড্যাশবোর্ড</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> আপডেট: আজ ১২:৪০ PM
+        </span>
+</div>
+<!-- Quick Summary Metric Pills -->
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest flex flex-col shadow-sm">
+<span class="font-label-sm text-label-sm text-outline truncate">মোট আইটেম</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">২৪৮</span>
+<span class="font-label-sm text-label-sm text-outline">প্রকার</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest flex flex-col shadow-sm">
+<span class="font-label-sm text-label-sm text-outline truncate">মোট স্টক মূল্য</span>
+<div class="flex items-baseline mt-0.5">
+<span class="font-label-lg text-label-lg text-primary font-bold tracking-tight truncate">৳৩,৮২,৫০০</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest flex flex-col shadow-sm">
+<span class="font-label-sm text-label-sm text-outline truncate">লো-স্টক অ্যালার্ট</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-sm text-headline-sm text-amber-600 font-bold">০৭</span>
+<span class="font-label-sm text-label-sm text-amber-700">আইটেম</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Medicine Inventory Cards Grid -->
+<section class="px-margin-mobile pt-2 flex flex-col gap-3">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-1.5">
+<span>মজুদ ওষুধের তালিকা</span>
+<span class="text-outline font-label-md text-label-md">(৪টি প্রদর্শিত)</span>
+</h2>
+<button class="font-label-md text-label-md text-primary font-semibold flex items-center gap-0.5 hover:underline">
+<span>সাজান</span>
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+</div>
+<!-- Medicine Card 1: Renamycin (Safe Stock) -->
+<article class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-shadow hover:shadow-md">
+<div class="flex items-start gap-3">
+<!-- Medicine Visual Preview with Badge Overlay -->
+<div class="relative w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean pharmaceutical bottle of veterinary antibiotic medicine Renamycin 100ml with light teal packaging, laboratory aesthetic, studio lighting on soft off-white background with subtle green reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDniutIDPu86Z7xJh7V13J-YtsrqvmV8B-PcSNeTYgihsHgjq_GjwyS51WJ_zr4pJVmwJq31laAHLKGCbu_MFdoClCOXcInc_AWCuOfL9lO74erXFE1RI4ZNeW_uyorGw4cxktAqcACcIzf5fz0-dOKZzJJyae-67Yu1h0e1v59Y2qWPOR1dOLMQI5ZvGeXDLD_DmJ2fld-_UUWcHmeU7ad_ryX5lwDyGl13y842VbdNMe6UeqDltL6"/>
+<span class="absolute bottom-0 inset-x-0 bg-primary/90 text-on-primary font-label-sm text-[9px] text-center py-0.5 font-bold uppercase tracking-wider">
+            ইনজেকশন
+          </span>
+</div>
+<!-- Product Identity Header -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold truncate">
+              Renata Animal Health
+            </span>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>স্টকে আছে
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mt-0.5 truncate">
+            Renamycin 100ml
+          </h3>
+<p class="font-body-sm text-body-sm text-outline truncate">
+            রেমামাইসিন ১০০মি.লি. • <span class="italic text-on-surface-variant font-medium">Oxytetracycline 100mg</span>
+</p>
+</div>
+</div>
+<!-- Batch & Expiry Micro-Tags -->
+<div class="grid grid-cols-2 gap-2 p-2 rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">tag</span>
+<span class="truncate">ব্যাচ: <strong class="text-on-surface font-semibold">RNT-8841</strong></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0 justify-end">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">event_available</span>
+<span class="truncate">মেয়াদ: <strong class="text-on-surface font-semibold">১২/২০২৬</strong></span>
+</div>
+</div>
+<!-- Stock & Price Matrix -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">৮৫</span>
+<span class="font-label-md text-label-md text-on-surface-variant">বোতল</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> নিরাপদ স্টক লেভেল
+          </span>
+</div>
+<div class="text-right">
+<div class="font-currency-display text-label-lg font-bold text-on-surface">
+            ৳১৩০.০০ <span class="font-label-sm text-label-sm text-outline font-normal">খুচরা</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">
+            ক্রয়মূল্য: ৳১১০.০০
+          </span>
+</div>
+</div>
+<!-- Quick Action Buttons Strip -->
+<div class="flex items-center gap-2 pt-2 border-none">
+<button class="flex-1 h-9 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="openRestockModal('Renamycin 100ml', 'RNT-8841')" type="button">
+<span class="material-symbols-outlined text-[17px] text-primary">add_box</span>
+<span>স্টক অ্যাড</span>
+</button>
+<button class="flex-1 h-9 rounded-xl bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[17px]">edit_note</span>
+<span>এডিট</span>
+</button>
+<button aria-label="বিস্তারিত দেখুন" class="w-9 h-9 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[19px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Medicine Card 2: Ciprocin Vet (Low Stock Warning) -->
+<article class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-shadow hover:shadow-md">
+<div class="flex items-start gap-3">
+<!-- Medicine Visual Preview with Badge Overlay -->
+<div class="relative w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Square Pharmaceuticals Ciprocin Vet liquid bottle packaging with amber medical grade glass bottle and green veterinary cap, studio setup, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2fVkpnO_XrMkjW0nqXdRG4JnPbXjGvzwEiC26bzCJG_etwxGFTga-83jSepT4uINuUNSxP4-TZAhpfu8OeRlmUg_8G9mwnakVC086It_y6mKQ9hUxZkrQEZ83J-nFzwowr74fFxmZjAF_5fo4pb10TJwWUFdbob4jRNrz4PdrDVUWSzHLLQFZYqvo2NujoUeTiILAGoeqqPgOqhR4B4g2LSyP3VXIRThYfrpy5rgXCjHL5gmsX1V2"/>
+<span class="absolute bottom-0 inset-x-0 bg-amber-600 text-white font-label-sm text-[9px] text-center py-0.5 font-bold uppercase tracking-wider">
+            সলিউশন
+          </span>
+</div>
+<!-- Product Identity Header -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold truncate">
+              Square Agrovet
+            </span>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-bold flex items-center gap-1 animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>স্টক শেষপ্রায়
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mt-0.5 truncate">
+            Ciprocin Vet 100ml
+          </h3>
+<p class="font-body-sm text-body-sm text-outline truncate">
+            সিপ্রোসিন ভেট • <span class="italic text-on-surface-variant font-medium">Ciprofloxacin</span>
+</p>
+</div>
+</div>
+<!-- Batch & Expiry Micro-Tags -->
+<div class="grid grid-cols-2 gap-2 p-2 rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">tag</span>
+<span class="truncate">ব্যাচ: <strong class="text-on-surface font-semibold">SQ-2049</strong></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0 justify-end">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">event</span>
+<span class="truncate">মেয়াদ: <strong class="text-on-surface font-semibold">০৫/২০২৫</strong></span>
+</div>
+</div>
+<!-- Stock & Price Matrix with Alert Fill -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-amber-50/70">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-amber-700 font-bold">০৩</span>
+<span class="font-label-md text-label-md text-amber-900">বোতল অবশিষ্ট</span>
+</div>
+<span class="font-label-sm text-label-sm text-amber-800 font-medium">
+            সর্বনিম্ন লিমিট: ১০ বোতল
+          </span>
+</div>
+<div class="text-right">
+<div class="font-currency-display text-label-lg font-bold text-on-surface">
+            ৳১২০.০০ <span class="font-label-sm text-label-sm text-outline font-normal">বিক্রয়</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">
+            ক্রয়মূল্য: ৳৯৫.০০
+          </span>
+</div>
+</div>
+<!-- Quick Action Buttons Strip with Urgency Emphasis -->
+<div class="flex items-center gap-2 pt-1 border-none">
+<button class="flex-1 h-9 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-transform" onclick="openRestockModal('Ciprocin Vet 100ml', 'SQ-2049')" type="button">
+<span class="material-symbols-outlined text-[17px]">inventory_2</span>
+<span>দ্রুত রি-অর্ডার</span>
+</button>
+<button class="flex-1 h-9 rounded-xl bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[17px]">edit_note</span>
+<span>এডিট</span>
+</button>
+<button aria-label="বিস্তারিত দেখুন" class="w-9 h-9 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[19px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Medicine Card 3: Astavet Bolus (Near Expiry Alert) -->
+<article class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-shadow hover:shadow-md">
+<div class="flex items-start gap-3">
+<!-- Medicine Visual Preview with Badge Overlay -->
+<div class="relative w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="ACME Laboratories Astavet Bolus veterinary multi-vitamin foil strip packet for livestock, professional pharmaceutical product photography on light grey podium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlW22nGvhLn1iCrRSZoTdSLkSkyqtwZoirDIAewsbtWX7lD7aeFLSlo6N7-hdLjYPcmsTEgqkLHSMm39lfktyOFUISAlLXbADzM9bo0sFf6baOedurITi-Oprz4MgNnRpJ14inU_A7i1GvnCsHuRzVs_Qy6rt6UUrWvEnsPJz4Xr8BORN3Rj9i1ee4jq3F8mmq87180_SWJagjx94dKULelcfa8K-Mkw8RlDGlhyxDHoeSUAAYW9nL"/>
+<span class="absolute bottom-0 inset-x-0 bg-primary/90 text-on-primary font-label-sm text-[9px] text-center py-0.5 font-bold uppercase tracking-wider">
+            বোলাস
+          </span>
+</div>
+<!-- Product Identity Header -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold truncate">
+              ACME Laboratories
+            </span>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>শীঘ্রই মেয়াদ শেষ
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mt-0.5 truncate">
+            Astavet Bolus
+          </h3>
+<p class="font-body-sm text-body-sm text-outline truncate">
+            অ্যাস্টাভেট বোলাস • <span class="italic text-on-surface-variant font-medium">Multivitamin &amp; Minerals</span>
+</p>
+</div>
+</div>
+<!-- Batch & Critical Expiry Notification -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-error-container/40 font-body-sm text-body-sm text-on-error-container">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-error text-[16px] shrink-0">notification_important</span>
+<span class="truncate">ব্যাচ: <strong>ACM-1022</strong></span>
+</div>
+<div class="flex items-center gap-1 font-semibold text-error text-right">
+<span>১৫ দিন বাকি</span>
+<span class="font-label-sm text-label-sm opacity-80">(২৫ এপ্রিল)</span>
+</div>
+</div>
+<!-- Stock & Price Matrix -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">২৪</span>
+<span class="font-label-md text-label-md text-on-surface-variant">প্যাকেট মজুত</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">
+            দ্রুত ছাড়ে বিক্রয়ের পরামর্শ
+          </span>
+</div>
+<div class="text-right">
+<div class="font-currency-display text-label-lg font-bold text-on-surface">
+            ৳৬০.০০ <span class="font-label-sm text-label-sm text-outline font-normal">বিক্রয়</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">
+            ক্রয়মূল্য: ৳৪৫.০০
+          </span>
+</div>
+</div>
+<!-- Quick Action Buttons Strip -->
+<div class="flex items-center gap-2 pt-2 border-none">
+<button class="flex-1 h-9 rounded-xl bg-error/10 text-error font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[17px]">percent</span>
+<span>ডিসকাউন্ট দিন</span>
+</button>
+<button class="flex-1 h-9 rounded-xl bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[17px]">edit_note</span>
+<span>এডিট</span>
+</button>
+<button aria-label="বিস্তারিত দেখুন" class="w-9 h-9 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[19px]">chevron_right</span>
+</button>
+</div>
+</article>
+<!-- Medicine Card 4: Fasinex (Healthy Stock) -->
+<article class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-shadow hover:shadow-md">
+<div class="flex items-start gap-3">
+<!-- Medicine Visual Preview with Badge Overlay -->
+<div class="relative w-16 h-16 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Novartis Elanco Fasinex 100ml anthelmintic suspension for cattle and sheep, bright clean packaging with veterinary emblem, studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeMB9wMmGusIjjLISGjMh7VEmltROaKUcVqHsihWjOluIjKsrrEto-_GQSxSyb77Wz23GqYyPvhKE0sINisF11OpjXsNyUXU_KyiYk8dlzLyknLG4ap_lbFGWsrERABjntm9ygYSIb4zqNI5sXbsXS-WwCDNFKfAOUN08_ULYVgjoCQ16VNOu6iUVUEkrSV9JWZtX5G4QVNNk_vHYtMUV8aEGoSjPLts9SDWCKc9p95R2EU_2k-tJJ"/>
+<span class="absolute bottom-0 inset-x-0 bg-primary/90 text-on-primary font-label-sm text-[9px] text-center py-0.5 font-bold uppercase tracking-wider">
+            সাসপেনশন
+          </span>
+</div>
+<!-- Product Identity Header -->
+<div class="flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold truncate">
+              Novartis / Elanco
+            </span>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>স্টকে আছে
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mt-0.5 truncate">
+            Fasinex 100ml
+          </h3>
+<p class="font-body-sm text-body-sm text-outline truncate">
+            ফ্যাসিনেক্স (কৃমিনাশক) • <span class="italic text-on-surface-variant font-medium">Triclabendazole</span>
+</p>
+</div>
+</div>
+<!-- Batch & Expiry Micro-Tags -->
+<div class="grid grid-cols-2 gap-2 p-2 rounded-xl bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">tag</span>
+<span class="truncate">ব্যাচ: <strong class="text-on-surface font-semibold">FAS-5501</strong></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant min-w-0 justify-end">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0">verified_user</span>
+<span class="truncate">মেয়াদ: <strong class="text-on-surface font-semibold">১০/২০২৭</strong></span>
+</div>
+</div>
+<!-- Stock & Price Matrix -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">৪২</span>
+<span class="font-label-md text-label-md text-on-surface-variant">বোতল মজুত</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">
+            নিয়মিত চাহিদা পণ্য
+          </span>
+</div>
+<div class="text-right">
+<div class="font-currency-display text-label-lg font-bold text-on-surface">
+            ৳২৫৫.০০ <span class="font-label-sm text-label-sm text-outline font-normal">বিক্রয়</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">
+            ক্রয়মূল্য: ৳২২০.০০
+          </span>
+</div>
+</div>
+<!-- Quick Action Buttons Strip -->
+<div class="flex items-center gap-2 pt-2 border-none">
+<button class="flex-1 h-9 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" onclick="openRestockModal('Fasinex 100ml', 'FAS-5501')" type="button">
+<span class="material-symbols-outlined text-[17px] text-primary">add_box</span>
+<span>স্টক অ্যাড</span>
+</button>
+<button class="flex-1 h-9 rounded-xl bg-surface-container-low text-on-surface-variant font-label-md text-label-md font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[17px]">edit_note</span>
+<span>এডিট</span>
+</button>
+<button aria-label="বিস্তারিত দেখুন" class="w-9 h-9 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[19px]">chevron_right</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Interactive Restock Modal Bottom Sheet (Client Logic Included) -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden flex-col justify-end transition-opacity" id="restock-sheet">
+<div class="w-full max-w-lg mx-auto bg-surface-container-lowest rounded-t-3xl p-margin-mobile flex flex-col gap-4 shadow-2xl animate-in slide-in-from-bottom duration-200">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant mx-auto"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">দ্রুত মজুদ বৃদ্ধি (Restock)</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-med-name">ওষুধের নাম</h4>
+<span class="font-body-sm text-body-sm text-outline" id="modal-med-batch">ব্যাচ: </span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeRestockModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex justify-between">
+<span>যুক্ত করার সংখ্যা (পিস/বোতল)</span>
+<span class="text-primary font-bold" id="quantity-preview">+১০ বোতল</span>
+</label>
+<div class="flex items-center gap-3">
+<button class="w-12 h-12 rounded-2xl bg-surface-container-low text-on-surface flex items-center justify-center font-bold text-xl active:scale-90 transition-transform" onclick="adjustQty(-5)" type="button">-৫</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container text-on-surface flex items-center justify-center font-bold text-lg active:scale-90 transition-transform" onclick="adjustQty(-1)" type="button">-১</button>
+<input class="flex-1 h-12 rounded-2xl bg-surface-container text-center font-headline-md text-headline-md text-primary font-bold focus:ring-2 focus:ring-primary focus:outline-none" id="restock-qty" type="number" value="10"/>
+<button class="w-10 h-10 rounded-xl bg-surface-container text-on-surface flex items-center justify-center font-bold text-lg active:scale-90 transition-transform" onclick="adjustQty(1)" type="button">+১</button>
+<button class="w-12 h-12 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-xl active:scale-90 transition-transform" onclick="adjustQty(5)" type="button">+৫</button>
+</div>
+</div>
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg active:scale-98 transition-all" onclick="confirmRestock()" type="button">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span>স্টক হালনাগাদ নিশ্চিত করুন</span>
+</button>
+</div>
+</div>
+<!-- Primary Floating Action Button (FAB) for Adding New Medicine -->
+<div class="fixed right-4 bottom-20 z-40">
+<button class="h-12 px-4 rounded-full bg-primary text-on-primary shadow-xl flex items-center gap-2 hover:bg-primary-container active:scale-95 transition-all" onclick="triggerHapticNotice('নতুন ওষুধ যুক্ত করার ফরম খোলা হচ্ছে...')" type="button">
+<span class="material-symbols-outlined text-[22px]">add</span>
+<span class="font-label-lg text-label-lg font-bold">নতুন ওষুধ যোগ করুন</span>
+</button>
+</div>
+</div>
+<script>
+  let currentQty = 10;
+  
+  function openRestockModal(medName, batchNo) {
+    document.getElementById('modal-med-name').innerText = medName;
+    document.getElementById('modal-med-batch').innerText = 'ব্যাচ নং: ' + batchNo;
+    currentQty = 10;
+    document.getElementById('restock-qty').value = currentQty;
+    document.getElementById('quantity-preview').innerText = '+' + currentQty + ' বোতল';
+    const sheet = document.getElementById('restock-sheet');
+    sheet.classList.remove('hidden');
+    sheet.classList.add('flex');
+    if (navigator.vibrate) navigator.vibrate(30);
+  }
+
+  function closeRestockModal() {
+    const sheet = document.getElementById('restock-sheet');
+    sheet.classList.add('hidden');
+    sheet.classList.remove('flex');
+  }
+
+  function adjustQty(amount) {
+    currentQty = Math.max(1, currentQty + amount);
+    document.getElementById('restock-qty').value = currentQty;
+    document.getElementById('quantity-preview').innerText = '+' + currentQty + ' বোতল';
+    if (navigator.vibrate) navigator.vibrate(15);
+  }
+
+  function confirmRestock() {
+    closeRestockModal();
+    triggerHapticNotice('স্টক সফলভাবে বৃদ্ধি করা হয়েছে!');
+  }
+
+  function triggerScanHaptic() {
+    if (navigator.vibrate) navigator.vibrate([40, 60, 40]);
+    alert('বারকোড স্ক্যানার ক্যামেরা চালু করা হচ্ছে...');
+  }
+
+  function triggerHapticNotice(msg) {
+    if (navigator.vibrate) navigator.vibrate(50);
+    // Visual feedback indicator
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-on-background text-on-primary text-label-md font-label-md shadow-lg transition-opacity duration-300 pointer-events-none flex items-center gap-1.5';
+    toast.innerHTML = '<span class="material-symbols-outlined text-primary-fixed text-[18px]">check</span> ' + msg;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 300);
+    }, 2200);
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-between h-16 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center flex-1 h-14 min-w-[56px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm mt-0.5 leading-none text-center">ড্যাশবোর্ড</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-14 min-w-[56px] transition-colors text-primary font-bold" data-path="stock-inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm mt-0.5 leading-none text-center">ইনভেন্টরি</span></a><div class="flex flex-col items-center justify-center px-1 -mt-4"><a aria-label="বিক্রয় POS" class="flex flex-col items-center justify-center w-12 h-12 rounded-full bg-primary text-on-primary shadow-md hover:bg-primary-container active:scale-95 transition-all" data-path="sales-pos" href="#"><span class="material-symbols-outlined text-2xl">point_of_sale</span></a><span class="font-label-sm text-label-sm mt-1 leading-none text-on-surface font-semibold">বিক্রয়</span></div><a class="flex flex-col items-center justify-center flex-1 h-14 min-w-[56px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="reports-dues" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm mt-0.5 leading-none text-center">রিপোর্ট/বাকি</span></a><a class="flex flex-col items-center justify-center flex-1 h-14 min-w-[56px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="more-menu" href="#"><span class="material-symbols-outlined text-[22px]">more_horiz</span><span class="font-label-sm text-label-sm mt-0.5 leading-none text-center">আরও</span></a></div></nav></body></html>

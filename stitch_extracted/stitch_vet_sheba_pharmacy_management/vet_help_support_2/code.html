@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#4edea3", "outline-variant": "#bdc9c1", "surface-container-lowest": "#ffffff", "on-surface-variant": "#3e4943", "on-secondary-container": "#00714d", "surface-dim": "#cbdbf5", "primary-fixed": "#97f5cc", "surface": "#f8f9ff", "secondary-container": "#6cf8bb", "tertiary": "#0047bf", "on-tertiary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#00174b", "surface-container-highest": "#d3e4fe", "on-primary": "#ffffff", "on-surface": "#0b1c30", "surface-container": "#e5eeff", "primary-container": "#047857", "surface-bright": "#f8f9ff", "primary": "#005d42", "on-error": "#ffffff", "outline": "#6e7a73", "error-container": "#ffdad6", "surface-variant": "#d3e4fe", "background": "#f8f9ff", "surface-tint": "#006c4e", "surface-container-high": "#dce9ff", "secondary-fixed": "#6ffbbe", "on-primary-fixed": "#002115", "tertiary-container": "#1e5fe7", "on-background": "#0b1c30", "secondary": "#006c49", "inverse-primary": "#7bd8b1", "inverse-on-surface": "#eaf1ff", "error": "#ba1a1a", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#005236", "on-primary-container": "#9ffdd3", "inverse-surface": "#213145", "on-primary-fixed-variant": "#00513a", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#b4c5ff", "on-tertiary-container": "#e6e9ff", "on-secondary-fixed": "#002113", "primary-fixed-dim": "#7bd8b1", "surface-container-low": "#eff4ff", "tertiary-fixed": "#dbe1ff", "on-error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "margin": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-xl": "2rem" }, "fontFamily": { "headline-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "label-md": ["Inter"], "currency-display": ["Inter"], "headline-lg": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"] }, "fontSize": { "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">হেল্প ও সাপোর্ট</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Interactive Support Status Banner -->
+<section class="px-gutter pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+<span class="absolute top-0 right-0 w-3 h-3 bg-primary-container rounded-full ring-2 ring-surface"></span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-label-lg text-label-lg text-on-surface truncate">কাস্টমার সাপোর্ট টিম অনলাইন</h2>
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">গড় উত্তর সময়: ৩-৫ মিনিট • সকাল ৯টা - রাত ১০টা</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-full shrink-0">সক্রিয়</span>
+</div>
+</section>
+<!-- Search Bar with Live Bengali Filters -->
+<section class="px-gutter pt-space-md">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-10 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="faqSearchInput" oninput="handleSearch(this.value)" placeholder="আপনার সমস্যা বা প্রশ্ন লিখে খুঁজুন..." type="search"/>
+<button aria-label="ক্লিয়ার করুন" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-outline hover:text-on-surface transition-colors" id="clearSearchBtn" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</section>
+<!-- Quick Action Support Channels Grid -->
+<section class="px-gutter pt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">জরুরি যোগাযোগ মাধ্যম</h3>
+<span class="font-label-sm text-label-sm text-primary font-semibold">৪টি সক্রিয় চ্যানেল</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Toll Free Call Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded">টোল-ফ্রি</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">হেল্পলাইন কল</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">১৬২০৫ / ০৯৬১২</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">সকাল ৯টা - রাত ১০টা</p>
+</div>
+<a class="mt-space-sm w-full py-2 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-[0.98] transition-transform" href="tel:16205">
+<span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+          কল করুন
+        </a>
+</div>
+<!-- WhatsApp Direct Chat Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-1.5 py-0.5 rounded">লাইভ</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">হোয়াটসঅ্যাপ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">০১৭১১-২২৩৩৪৪</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">স্ক্রিনশট ও চ্যাট সেবা</p>
+</div>
+<a class="mt-space-sm w-full py-2 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-[0.98] transition-transform" href="https://wa.me/8801700112233" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+          চ্যাট শুরু
+        </a>
+</div>
+<!-- Video Pharmacy Training Tutorials -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded">ভিডিও</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">ইউটিউব গাইড</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ফার্মেসি ট্রেনিং</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">১২টি ধাপে ধাপে ভিডিও</p>
+</div>
+<button class="mt-space-sm w-full py-2 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" onclick="openTutorialSheet()" type="button">
+<span class="material-symbols-outlined text-[16px]">smart_display</span>
+          ভিডিও দেখুন
+        </button>
+</div>
+<!-- Ticket Creation Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+</div>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-1.5 py-0.5 rounded">২৪/৭</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface">টিকেট ওপেন</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">জটিল সমস্যা</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">ট্র্যাকিং আইডি প্রদান</p>
+</div>
+<button class="mt-space-sm w-full py-2 bg-tertiary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 active:scale-[0.98] transition-transform" onclick="openTicketModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+          টিকেট তৈরি
+        </button>
+</div>
+</div>
+</section>
+<!-- Help Topic Categories Chips -->
+<section class="pt-space-lg">
+<div class="px-gutter flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">বিষয়ভিত্তিক সমাধান</h3>
+<span class="font-label-sm text-label-sm text-outline">ক্যাটাগরি</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto px-gutter no-scrollbar py-1">
+<button class="category-chip px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm transition-all flex items-center gap-1" onclick="filterTopics('all', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+        সব বিষয়
+      </button>
+<button class="category-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="filterTopics('billing', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+        বিক্রি ও প্রিন্ট
+      </button>
+<button class="category-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="filterTopics('sync', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">cloud_sync</span>
+        অফলাইন সিঙ্ক
+      </button>
+<button class="category-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="filterTopics('stock', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+        মেয়াদ ও স্টক
+      </button>
+<button class="category-chip px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="filterTopics('employee', this)" type="button">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+        কর্মচারী রোল
+      </button>
+</div>
+</section>
+<!-- Interactive Visual Diagnostic Helper (Tactile Component) -->
+<section class="px-gutter pt-space-md">
+<div class="bg-gradient-to-r from-surface-container to-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">print_connect</span>
+<span class="font-label-lg text-label-lg text-primary">স্বয়ংক্রিয় হার্ডওয়্যার চেকার</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mt-1">ব্লুটুথ প্রিন্টার কানেকশন স্টেটাস</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">আপনার কাউন্টারের ৫৪মিমি প্রিন্টারের সংযোগ পরীক্ষা করুন</p>
+</div>
+<button class="shrink-0 px-3 py-2 bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md shadow-sm hover:shadow flex items-center gap-1 active:scale-95 transition-all" onclick="testThermalPrinter(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+          টেস্ট প্রিন্ট
+        </button>
+</div>
+<div class="hidden mt-space-sm p-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm flex items-center gap-2" id="printerTestResult">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>প্রিন্টার রেডি: <strong>POS-58 Bluetooth</strong> সক্রিয় আছে এবং মেমো পেপার পর্যাপ্ত রয়েছে।</span>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion Section -->
+<section class="px-gutter pt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">সাধারণ জিজ্ঞাসা (FAQ)</h3>
+<span class="font-label-sm text-label-sm text-outline">ক্লিক করে উত্তর দেখুন</span>
+</div>
+<div class="space-y-space-sm" id="faqAccordionGroup">
+<!-- FAQ 1 (Default Expanded) -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden" data-category="sync billing" data-question="ইন্টারনেট বা বিদ্যুৎ না থাকলে কি ক্যাশ মেমো কাটা যাবে">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-sm focus:outline-none" onclick="toggleFaq(this)" type="button">
+<div class="flex items-start gap- space-sm min-w-0">
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm shrink-0 mr-2">১</span>
+<span class="font-label-lg text-label-lg text-on-surface text-left">ইন্টারনেট বা বিদ্যুৎ না থাকলে কি ক্যাশ মেমো কাটা যাবে?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 rotate-180 faq-icon shrink-0">expand_more</span>
+</button>
+<div class="faq-content px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md block">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-md leading-relaxed">
+<p class="font-medium text-primary mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">offline_bolt</span>
+              হ্যাঁ, শতভাগ অফলাইনেও সম্পূর্ণ বিলিং করা যাবে!
+            </p>
+<p class="text-on-surface-variant">মোবাইলের ব্লুটুথ ব্যবহার করে যেকোনো রিচার্জেবল ৫৪মিমি বা ৮০মিমি থার্মাল প্রিন্টারে ইন্টারনেট ছাড়াই বাংলা বা ইংরেজি মেমো প্রিন্ট করতে পারবেন। ইন্টারনেট সংযোগ পুনরায় পাওয়ার সাথে সাথেই আপনার সংরক্ষিত সকল বিক্রয় ও বাকি তথ্য স্বয়ংক্রিয়ভাবে ক্লাউড ডাটাবেজে ব্যাকআপ হয়ে যাবে।</p>
+<div class="mt-2 pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">সহায়ক হয়েছে?</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1" onclick="voteHelpful(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">thumb_up</span> হ্যাঁ (১২৪)
+                </button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1" onclick="voteHelpful(this)" type="button">
+<span class="material-symbols-outlined text-[14px]">thumb_down</span> না
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden" data-category="billing" data-question="ভুল বিক্রি বা রিটার্ন মেমো কীভাবে সংশোধন করব">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-sm focus:outline-none" onclick="toggleFaq(this)" type="button">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm shrink-0 mr-2">২</span>
+<span class="font-label-lg text-label-lg text-on-surface text-left">ভুল বিক্রি বা ওষুধের রিটার্ন মেমো কীভাবে সংশোধন করব?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon shrink-0">expand_more</span>
+</button>
+<div class="faq-content px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md hidden">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-md leading-relaxed">
+<p class="text-on-surface-variant">
+              ১. মূল মেন্যু থেকে <strong>'বিক্রয় ইতিহাস (Sales Ledger)'</strong>-এ যান।<br/>
+              ২. ইনভয়েস নম্বর অথবা খামারীর নাম দিয়ে মেমোটি খুঁজে বের করুন।<br/>
+              ৩. মেমোর ডানপাশের ৩-ডট অপশন থেকে <strong>'বিক্রয় ফেরত / রিটার্ন'</strong> সিলেক্ট করুন। রিটার্ন কৃত ওষুধের পরিমাণ সিলেক্ট করলে স্টকে স্বয়ংক্রিয়ভাবে ওষুধ যোগ হবে এবং বকেয়া বা ক্যাশ এডজাস্ট হয়ে যাবে।
+            </p>
+</div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden" data-category="billing" data-question="থার্মাল প্রিন্টারে বাংলা লেখা অস্পষ্ট আসলে করণীয় কী">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-sm focus:outline-none" onclick="toggleFaq(this)" type="button">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm shrink-0 mr-2">৩</span>
+<span class="font-label-lg text-label-lg text-on-surface text-left">থার্মাল প্রিন্টারে বাংলা ফন্ট অস্পষ্ট আসলে করণীয় কী?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon shrink-0">expand_more</span>
+</button>
+<div class="faq-content px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md hidden">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-md leading-relaxed">
+<p class="text-on-surface-variant">
+              প্রিন্টিং সেটিংসে গিয়ে <strong>'গ্রাফিক মোড (Raster Image Print)'</strong> অপশনটি অন করুন। কম দামি চাইনিজ প্রিন্টারগুলোতে ইউনিকোড বাংলা সরাসরি সাপোর্ট না করায় ইমেজ মোডে প্রিন্ট করলে একদম ঝকঝকে বাংলা রশিদ ও কিউআর কোড বের হবে।
+            </p>
+</div>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden" data-category="employee" data-question="নতুন কর্মচারীকে কীভাবে শুধুমাত্র বিল কাটার পারমিশন দেব">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-sm focus:outline-none" onclick="toggleFaq(this)" type="button">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm shrink-0 mr-2">৪</span>
+<span class="font-label-lg text-label-lg text-on-surface text-left">নতুন কর্মচারীকে শুধুমাত্র বিলিং করার অ্যাক্সেস কীভাবে দেব?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon shrink-0">expand_more</span>
+</button>
+<div class="faq-content px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md hidden">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-md leading-relaxed">
+<p class="text-on-surface-variant">
+              ফার্মেসি প্রোফাইল থেকে <strong>'স্টাফ ম্যানেজমেন্ট'</strong>-এ যান। <strong>'নতুন ইউজার'</strong> বাটনে চাপ দিয়ে কর্মচারীর মোবাইল নম্বর লিখুন এবং রোল হিসেবে <strong>'সেলসম্যান / ক্যাশিয়ার'</strong> সিলেক্ট করুন। এর ফলে তিনি ওষুধ কেনা বা লাভ-ক্ষতির হিসেব দেখতে পারবেন না, শুধুমাত্র বিল ও মেমো জেনারেট করতে পারবেন।
+            </p>
+</div>
+</div>
+</div>
+<!-- FAQ 5 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden" data-category="stock" data-question="মেয়াদোত্তীর্ণ ওষুধের অ্যালার্ট বা নোটিফিকেশন কত দিন আগে পাব">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-sm focus:outline-none" onclick="toggleFaq(this)" type="button">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm shrink-0 mr-2">৫</span>
+<span class="font-label-lg text-label-lg text-on-surface text-left">মেয়াদোত্তীর্ণ ওষুধের অ্যালার্ট কত দিন আগে পাওয়া যায়?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon shrink-0">expand_more</span>
+</button>
+<div class="faq-content px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md hidden">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface font-body-md leading-relaxed">
+<p class="text-on-surface-variant">
+              ডিফল্টভাবে ওষুধ মেয়াদের <strong>৩০, ৬০ এবং ৯০ দিন পূর্বে</strong> নোটিফিকেশন সেন্টারে লাল এবং হলুদ সতর্কবার্তা দেখানো হয়, যাতে কোম্পানি রিপ্রেজেন্টেটিভকে সময়মতো মেয়াদোত্তীর্ণ ওষুধ ফেরত দেওয়া যায়। আপনি 'সেটিংস' থেকে এই দিনসীমা পরিবর্তন করতে পারেন।
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State for Search Filter -->
+<div class="hidden text-center py-8 bg-surface-container-lowest rounded-xl shadow-sm p-space-md mt-space-sm" id="noFaqResults">
+<div class="w-12 h-12 mx-auto rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-2">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+</div>
+<h5 class="font-label-lg text-label-lg text-on-surface">কোনো সরাসরি উত্তর খুঁজে পাওয়া যায়নি</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">আমাদের কাস্টমার কেয়ারে সরাসরি মেসেজ অথবা কল করুন, আমরা সাথে সাথে সমাধান করব।</p>
+<button class="mt-3 px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md inline-flex items-center gap-1" onclick="openTicketModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+        প্রশ্ন পাঠান
+      </button>
+</div>
+</section>
+<!-- Training & Community Banner -->
+<section class="px-gutter pt-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-md shadow-sm">
+<div class="relative z-10">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm mb-2">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+          ভেটেরিনারি রিটেইলার ফোরাম
+        </div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">বাংলাদেশ ভেট কেমিস্ট অ্যান্ড ড্রাগিস্ট সমাজ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-[260px]">
+          সারাদেশের ৪,৫০০+ এগ্রো ও ভেট ফার্মাসিস্টদের সাথে যুক্ত হোন। প্রেসক্রিপশন সমাধান ও সরকারি পলিসির আপডেট জানুন।
+        </p>
+<button class="mt-space-sm px-3.5 py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-transform" type="button">
+<span>ফেসবুক গ্রুপে যোগ দিন</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 rounded-full bg-primary-fixed-dim/30 pointer-events-none"></div>
+</div>
+</section>
+<!-- About Vet Sheba, Compliance & Legal Card -->
+<section class="px-gutter pt-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface">Vet সেবা POS প্ল্যাটফর্ম</h4>
+<span class="font-label-sm text-label-sm text-outline">সংস্করণ: v2.4.2 (বিল্ড #২০২৪.০৯)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">DGDA ভেরিফায়েড</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+        প্রাণিসম্পদ অধিদপ্তর (DLS) ও ঔষধ প্রশাসন অধিদপ্তর (DGDA)-এর খুচরা ও পাইকারি ভেটেরিনারি ওষুধ বিক্রয় নীতিমালা এবং ডিজিটাল ভ্যাট সংরক্ষণ মানদণ্ড অনুযায়ী প্রস্তুতকৃত।
+      </p>
+<div class="grid grid-cols-2 gap-2 mt-space-md pt-space-sm">
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-between text-left transition-colors" onclick="showLegalNotice('privacy')" type="button">
+<span class="font-label-md text-label-md text-on-surface truncate">প্রাইভেসি পলিসি</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-between text-left transition-colors" onclick="showLegalNotice('terms')" type="button">
+<span class="font-label-md text-label-md text-on-surface truncate">ব্যবহারের শর্তাবলী</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-between text-left transition-colors" onclick="showLegalNotice('license')" type="button">
+<span class="font-label-md text-label-md text-on-surface truncate">লাইসেন্স তথ্য</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-between text-left transition-colors" onclick="showLegalNotice('security')" type="button">
+<span class="font-label-md text-label-md text-on-surface truncate">ডাটা সিকিউরিটি</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-center gap-4 text-center">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+          ২৫৬-বিট ব্যাংক গ্রেড এনক্রিপশন
+        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">cloud_done</span>
+          প্রতি রাতে অটো ব্যাকআপ
+        </div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Quick Contact Bar -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md px-gutter py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex items-center gap-3">
+<button class="flex-1 h-12 bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow hover:bg-primary transition-colors active:scale-[0.99]" onclick="openMessageDrawer()" type="button">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+      এখনই মেসেজ পাঠান
+    </button>
+<a aria-label="সরাসরি কল করুন" class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm shrink-0 active:scale-95 transition-transform" href="tel:16205">
+<span class="material-symbols-outlined text-[22px]">phone</span>
+</a>
+</div>
+<!-- Interactive Slide-in Bottom Sheet Modal: Send Direct Support Ticket -->
+<div class="hidden fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/45 transition-opacity duration-300" id="ticketModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-md shadow-2xl flex flex-col max-h-[751px] overflow-y-auto animate-slide-up">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">support</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">নতুন সাপোর্ট টিকেট তৈরি</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeTicketModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">আপনার দোকানের নাম ও সমস্যার বিবরণ লিখে পাঠান। আমাদের টেকনিক্যাল টিম দ্রুত রিমোটলি যুক্ত হবে।</p>
+<form class="space-y-3" id="supportTicketForm" onsubmit="handleTicketSubmit(event)">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface mb-1 block">সমস্যার ধরন</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container">
+<option>ওষুধ বিক্রি ও রশিদ প্রিন্ট সংক্রান্ত</option>
+<option>বাকি খাতা ও কাস্টমার লেজার সমস্যা</option>
+<option>ডাটা সিঙ্ক ও ব্যাকআপ রিস্টোর</option>
+<option>স্টক ও এক্সপায়ারি অ্যাডজাস্টমেন্ট</option>
+<option>অন্যান্য সাধারণ কারিগরি জিজ্ঞাসা</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface mb-1 block">আপনার মোবাইল নম্বর</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container" required="" type="tel" value="01712-345678"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface mb-1 block">বিস্তারিত বিবরণ</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container placeholder:text-outline resize-none" placeholder="কী সমস্যা হচ্ছে বিস্তারিত লিখুন (যেমন: প্রিন্টারে লেখা কেটে যাচ্ছে)..." required="" rows="3"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full h-12 bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow hover:bg-primary transition-colors" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+            টিকেট সাবমিট করুন
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Interactive Slide-in Bottom Sheet Modal: Video Guides -->
+<div class="hidden fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/45 transition-opacity duration-300" id="tutorialModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-md shadow-2xl flex flex-col max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[24px]">smart_display</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">ভিডিও টিউটোরিয়ালসমূহ</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeTutorialSheet()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm mt-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-16 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0 relative overflow-hidden">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<div class="min-w-0 flex-1">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">১ মিনিটে দ্রুত ক্যাশ মেমো তৈরির পদ্ধতি</h5>
+<span class="font-label-sm text-label-sm text-outline">সময়কাল: ২:৪৫ মিনিট • বাংলা নির্দেশিকা</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-16 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0 relative overflow-hidden">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<div class="min-w-0 flex-1">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">ব্লুটুথ থার্মাল প্রিন্টারের পেয়ারিং ও সেটিংস</h5>
+<span class="font-label-sm text-label-sm text-outline">সময়কাল: ৩:২০ মিনিট • বাংলা নির্দেশিকা</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm cursor-pointer hover:bg-surface-container transition-colors">
+<div class="w-16 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0 relative overflow-hidden">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</div>
+<div class="min-w-0 flex-1">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate">বাকির খাতা পরিচালনা ও খামারীদের এসএমএস রিমাইন্ডার</h5>
+<span class="font-label-sm text-label-sm text-outline">সময়কাল: ৪:১৫ মিনিট • বাংলা নির্দেশিকা</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed top-16 inset-x-4 z-50 hidden bg-surface-container-lowest text-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 transition-transform" id="toastNotification">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0" id="toastIconContainer">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md truncate" id="toastMessage">বার্তা সফলভাবে পাঠানো হয়েছে</p>
+</div>
+</div>
+</div>
+<script>
+  function toggleFaq(buttonElement) {
+    const parentItem = buttonElement.closest('.faq-item');
+    const content = parentItem.querySelector('.faq-content');
+    const icon = buttonElement.querySelector('.faq-icon');
+    const isHidden = content.classList.contains('hidden');
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      content.classList.add('block');
+      icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      content.classList.remove('block');
+      icon.classList.remove('rotate-180');
+    }
+  }
+
+  function handleSearch(query) {
+    const cleanQuery = query.toLowerCase().trim();
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const noResults = document.getElementById('noFaqResults');
+    let visibleCount = 0;
+
+    if (cleanQuery.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+
+    faqItems.forEach(item => {
+      const question = item.getAttribute('data-question').toLowerCase();
+      const textContent = item.textContent.toLowerCase();
+      
+      if (question.includes(cleanQuery) || textContent.includes(cleanQuery)) {
+        item.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('faqSearchInput');
+    input.value = '';
+    handleSearch('');
+    input.focus();
+  }
+
+  function filterTopics(category, btnElement) {
+    const chips = document.querySelectorAll('.category-chip');
+    chips.forEach(chip => {
+      chip.classList.remove('bg-primary-container', 'text-on-primary');
+      chip.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+
+    btnElement.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    btnElement.classList.add('bg-primary-container', 'text-on-primary');
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    const noResults = document.getElementById('noFaqResults');
+    let visibleCount = 0;
+
+    faqItems.forEach(item => {
+      const itemCats = item.getAttribute('data-category');
+      if (category === 'all' || itemCats.includes(category)) {
+        item.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+
+  function testThermalPrinter(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> চেকিং...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      const res = document.getElementById('printerTestResult');
+      res.classList.remove('hidden');
+      showToast('থার্মাল প্রিন্টার সক্রিয় পাওয়া গেছে!');
+    }, 1200);
+  }
+
+  function voteHelpful(btn) {
+    btn.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+    btn.disabled = true;
+    showToast('আপনার মতামতের জন্য ধন্যবাদ!');
+  }
+
+  function openTicketModal() {
+    document.getElementById('ticketModal').classList.remove('hidden');
+  }
+
+  function closeTicketModal() {
+    document.getElementById('ticketModal').classList.add('hidden');
+  }
+
+  function openTutorialSheet() {
+    document.getElementById('tutorialModal').classList.remove('hidden');
+  }
+
+  function closeTutorialSheet() {
+    document.getElementById('tutorialModal').classList.add('hidden');
+  }
+
+  function openMessageDrawer() {
+    openTicketModal();
+  }
+
+  function handleTicketSubmit(e) {
+    e.preventDefault();
+    closeTicketModal();
+    showToast('টিকেট তৈরি হয়েছে! টিকেট আইডি: #VET-88349');
+  }
+
+  function showLegalNotice(type) {
+    const titles = {
+      privacy: 'প্রাইভেসি পলিসি: আপনার দোকানের তথ্য ১০০% সুরক্ষিত',
+      terms: 'ব্যবহারের শর্তাবলী: নিয়মিত ব্যাকআপ ও লাইসেন্স মেয়াদের নিয়মাবলী',
+      license: 'DGDA অনুমোদিত সফটওয়্যার লাইসেন্স সক্রিয় আছে',
+      security: 'ক্লাউড এনক্রিপশন ও সাইবার সিকিউরিটি প্রোটোকল'
+    };
+    showToast(titles[type] || 'তথ্য প্রদর্শিত হচ্ছে');
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msgEl = document.getElementById('toastMessage');
+    msgEl.textContent = message;
+    toast.classList.remove('hidden');
+    
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 3500);
+  }
+</script></main></body></html>

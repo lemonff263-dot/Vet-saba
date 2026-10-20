@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;font-family:'Hind Siliguri','Inter',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;display:inline-block;vertical-align:middle;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-secondary': '#ffffff', 'on-primary': '#ffffff', 'outline': '#6e7a73', 'tertiary-fixed-dim': '#b4c5ff', 'tertiary': '#0047bf', 'on-secondary-fixed': '#002113', 'on-secondary-fixed-variant': '#005236', 'tertiary-fixed': '#dbe1ff', 'surface-container-high': '#dce9ff', 'surface-container': '#e5eeff', 'primary-fixed-dim': '#7bd8b1', 'on-primary-fixed': '#002115', 'on-tertiary-container': '#e6e9ff', 'secondary-fixed': '#6ffbbe', 'on-tertiary-fixed-variant': '#003ea8', 'secondary-container': '#6cf8bb', 'surface-bright': '#f8f9ff', 'on-primary-fixed-variant': '#00513a', 'error': '#ba1a1a', 'surface-container-lowest': '#ffffff', 'tertiary-container': '#1e5fe7', 'surface': '#f8f9ff', 'primary-container': '#047857', 'on-surface-variant': '#3e4943', 'on-tertiary-fixed': '#00174b', 'on-background': '#0b1c30', 'inverse-on-surface': '#eaf1ff', 'inverse-surface': '#213145', 'surface-container-highest': '#d3e4fe', 'surface-dim': '#cbdbf5', 'surface-variant': '#d3e4fe', 'on-tertiary': '#ffffff', 'secondary-fixed-dim': '#4edea3', 'error-container': '#ffdad6', 'on-surface': '#0b1c30', 'secondary': '#006c49', 'on-error-container': '#93000a', 'surface-tint': '#006c4e', 'on-secondary-container': '#00714d', 'primary': '#005d42', 'inverse-primary': '#7bd8b1', 'on-error': '#ffffff', 'outline-variant': '#bdc9c1', 'primary-fixed': '#97f5cc', 'background': '#f8f9ff', 'on-primary-container': '#9ffdd3', 'surface-container-low': '#eff4ff' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'gutter-mobile': '0.75rem', 'space-xl': '2rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'space-md': '1rem', 'margin-mobile': '1rem', 'space-sm': '0.5rem', 'margin': '1.5rem', 'gutter': '1rem' }, fontFamily: { 'headline-lg': ['Inter'], 'body-lg': ['Inter'], 'headline-sm': ['Inter'], 'headline-md': ['Inter'], 'currency-display': ['Inter'], 'label-md': ['Inter'], 'body-md': ['Inter'], 'label-sm': ['Inter'], 'body-sm': ['Inter'], 'headline-lg-mobile': ['Inter'], 'label-lg': ['Inter'] }, fontSize: { 'headline-lg': ['28px', { lineHeight: '36px', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'headline-sm': ['17px', { lineHeight: '24px', fontWeight: '600' }], 'headline-md': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'currency-display': ['24px', { lineHeight: '28px', letterSpacing: '-0.02em', fontWeight: '700' }], 'label-md': ['13px', { lineHeight: '18px', fontWeight: '500' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.03em', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-lg-mobile': ['22px', { lineHeight: '30px', fontWeight: '700' }], 'label-lg': ['15px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-space-xs flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="ফিরে যান" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-2xl">arrow_back</span></button><img alt="Vet সেবা Logo" class="h-7 w-auto object-contain shrink-0 hidden sm:block" src="https://lh3.googleusercontent.com/aida/AEtjO1XKmZ8vQZBFImHwL-xqESAWrMGOK5bV4plDfhhq0zV32ipMDB_Z1KzDoV0rCnsb-Y7jZdKN6DdTjXZsgnypJrOzHlrdfPygtGvfshLn5sUCh3UQHYpobpDuPv3S_R5S-BMyIEImTnk1CFy9MCSZU5ig-TB-4o_Y9-9W5i0OgE9kuCRQb0n5bzK0-gwUJIpDzdYyuBnAx3WGs4L_qwXq5yA-iUF-CjLInS5LXv7D7sxgfQc5S30Xt8DntgQ"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Medicine Details</h1></div><div class="flex items-center gap-space-xs pr-space-xs shrink-0"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed text-label-sm font-label-sm shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span>সিঙ্ক</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9tGnik7HjlbkMKGagRiT3pa1EzLf2FrRlFJ6HMBlKnW7hvhMZmBsfMB43kVe9Otd4rXPlsMTePuiceNamK8vr3Tr78kAxe7biFs5ghDQZN2_VOIuxDHLo938Ers5X_4iVWily8vwRWRmlsrEO_qJDXW78dzkG-2MbOk5--RS0e9Cl1TA8_Dc0P-z7NEH4PcUGCajrTMumxiilBKPXXd_xikb-CdK3s3LH1K9wSHqzaUrJ2S92gfD0"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-28 pt-2">
+<!-- Top Action Bar inside content -->
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-2.5 h-6 rounded-full bg-primary shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">নতুন ওষুধ এন্ট্রি</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ইনভেন্টরি তথ্য ও মূল্য তালিকা</span>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-all duration-150 active:scale-95 shrink-0 shadow-sm" id="draftBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span class="font-label-md text-label-md font-semibold">খসড়া রাখুন</span>
+</button>
+</div>
+<!-- Form Body -->
+<form class="flex flex-col gap-space-md" id="medicineForm" novalidate="">
+<!-- SECTION 1: Basic Info -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">medication</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">সেকশন ১: মৌলিক তথ্য</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">ওষুধের বাণিজ্যিক ও জেনেরিক পরিচয়</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">ধাপ ১/৪</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Medicine Commercial Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span>ওষুধের বাণিজ্যিক নাম (Medicine Name)</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="medName" placeholder="e.g. Renamycin 100ml / রেনামাইসিন" required="" type="text"/>
+</div>
+</div>
+<!-- Generic Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">
+            জেনেরিক নাম (Generic Name)
+          </label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="genericName" placeholder="e.g. Oxytetracycline Injection" type="text"/>
+</div>
+</div>
+<!-- Manufacturer Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span>প্রস্তুতকারক কোম্পানি (Manufacturer)</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="manufacturer">
+<option disabled="" selected="" value="">কোম্পানি বাছাই করুন</option>
+<option value="renata">Renata Animal Health (রেনটা)</option>
+<option value="square">Square Agrovet (স্কয়ার)</option>
+<option value="acme">ACME Laboratories Ltd. (একমি)</option>
+<option value="aci">ACI Animal Health (এসিআই)</option>
+<option value="opsonin">Opsonin Pharma (অপসোনিন)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-xl">expand_more</span>
+</div>
+</div>
+<!-- Category Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">
+            ক্যাটাগরি (Category)
+          </label>
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="category">
+<option selected="" value="antibiotic">অ্যান্টিবায়োটিক (Antibiotic)</option>
+<option value="vitamin">ভিটামিন ও সাপ্লিমেন্ট (Vitamin &amp; Supplement)</option>
+<option value="dewormer">কৃমিনাশক (Anthelmintic)</option>
+<option value="hormone">হরমোন ইনজেকশন (Hormone)</option>
+<option value="topical">টপিক্যাল স্প্রে ও মলম (Topical Spray/Ointment)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-xl">category</span>
+</div>
+</div>
+<!-- Target Animal Checkboxes -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-md text-label-md text-on-surface">পশুর ধরন (Target Animal)</span>
+<div class="grid grid-cols-2 gap-2" id="animalGroup">
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer select-none transition-colors has-[:checked]:bg-secondary-fixed/40 has-[:checked]:text-on-secondary-fixed">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">agriculture</span>
+<span class="font-label-md text-label-md">গরু / মহিষ</span>
+</label>
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer select-none transition-colors has-[:checked]:bg-secondary-fixed/40 has-[:checked]:text-on-secondary-fixed">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">cruelty_free</span>
+<span class="font-label-md text-label-md">ছাগল / ভেড়া</span>
+</label>
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer select-none transition-colors has-[:checked]:bg-secondary-fixed/40 has-[:checked]:text-on-secondary-fixed">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">egg</span>
+<span class="font-label-md text-label-md">পোল্ট্রি মুরগি</span>
+</label>
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer select-none transition-colors has-[:checked]:bg-secondary-fixed/40 has-[:checked]:text-on-secondary-fixed">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="material-symbols-outlined text-lg">pets</span>
+<span class="font-label-md text-label-md">পোষা প্রাণী</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Stock & Batch Details -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">সেকশন ২: স্টক ও ব্যাচ</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">মেয়াদ ও বারকোড ট্র্যাকিং</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">ধাপ ২/৪</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Batch Number -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span>ব্যাচ নম্বর (Batch No)</span>
+<span class="text-error font-bold">*</span>
+</label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md uppercase tracking-wider focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="batchNo" placeholder="e.g. RNT-2025-A" required="" type="text" value="RNT-2025-A"/>
+</div>
+<!-- Mfg & Exp Dates in 2 Column Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">উৎপাদন (Mfg Date)</label>
+<input class="w-full h-11 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary" id="mfgDate" type="date" value="2024-11-01"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface flex items-center gap-0.5">
+<span>মেয়াদ (Expiry)</span>
+<span class="text-error font-bold">*</span>
+</label>
+<input class="w-full h-11 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary" id="expDate" required="" type="date" value="2026-10-31"/>
+</div>
+</div>
+<!-- Expiry Alert Switch -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">মেয়াদোত্তীর্ণ অ্যালার্ট</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">মেয়াদ শেষ হওয়ার ৩০ দিন আগে সতর্কবার্তা</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="alertToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Barcode / QR with Scan Button -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">বারকোড / কিউআর কোড (Barcode)</label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-11 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="barcodeInput" placeholder="৮৯৩৫০১০২..." type="text" value="893501024501"/>
+<span class="material-symbols-outlined absolute left-2.5 top-3 text-outline text-lg">barcode</span>
+</div>
+<button class="h-11 px-3.5 rounded-lg bg-secondary-fixed/40 text-on-secondary-fixed hover:bg-secondary-fixed/60 active:scale-95 transition-all flex items-center gap-1.5 shrink-0" id="scanBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span class="font-label-md text-label-md font-semibold">স্ক্যান</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Pricing & Packaging -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">সেকশন ৩: মূল্য ও স্টক</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">ক্রয়-বিক্রয় দর এবং মার্জিন হিসাব</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">ধাপ ৩/৪</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Unit Selection -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">পরিমাপের একক (Unit)</label>
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="medUnit">
+<option selected="" value="bottle">বোতল (Bottle / 100ml)</option>
+<option value="vial">ভায়াল (Vial / Injection)</option>
+<option value="strip">পাতা / স্ট্রিপ (Strip / Tablets)</option>
+<option value="packet">প্যাকেট (Packet / Powder)</option>
+<option value="bolus">বোলাস (Bolus / Single)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-xl">inventory_2</span>
+</div>
+</div>
+<!-- Quantity & Min Alert in Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface flex items-center gap-0.5">
+<span>স্টক পরিমাণ</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none focus:ring-2 focus:ring-primary" id="stockQty" min="0" placeholder="৫০" required="" type="number" value="50"/>
+<span class="absolute right-3 top-3 font-label-sm text-label-sm text-outline">পিস</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">সর্বনিম্ন অ্যালার্ট</label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none focus:ring-2 focus:ring-primary" id="minAlertQty" min="1" placeholder="১০" type="number" value="10"/>
+<span class="absolute right-3 top-3 font-label-sm text-label-sm text-outline">পিস</span>
+</div>
+</div>
+</div>
+<!-- Purchase & MRP Inputs -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface flex items-center gap-0.5">
+<span>পাইকারি/ক্রয় দর</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-headline-sm text-headline-sm text-outline">৳</span>
+<input class="w-full h-11 pl-8 pr-2.5 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm focus:outline-none focus:ring-2 focus:ring-primary" id="buyPrice" placeholder="১১০.০০" required="" step="0.5" type="number" value="110"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface flex items-center gap-0.5">
+<span>খুচরা বিক্রয় (MRP)</span>
+<span class="text-error font-bold">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-headline-sm text-headline-sm text-primary">৳</span>
+<input class="w-full h-11 pl-8 pr-2.5 rounded-lg bg-surface-container-low text-on-surface font-headline-sm text-headline-sm text-primary focus:outline-none focus:ring-2 focus:ring-primary" id="sellPrice" placeholder="১৩০.০০" required="" step="0.5" type="number" value="130"/>
+</div>
+</div>
+</div>
+<!-- Live Profit Margin Card Badge -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-secondary-fixed/30 text-on-secondary-fixed transition-all duration-300" id="profitBadgeContainer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+<span class="font-label-md text-label-md font-semibold">প্রত্যাশিত মুনাফা মার্জিন:</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-primary" id="marginPercent">১৮.১৮%</span>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2 py-0.5 rounded-md text-on-surface-variant font-medium" id="marginUnit">(৳ ২০.০০/ইউনিট)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Supplier Information -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">সেকশন ৪: সরবরাহকারী</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">ডিস্ট্রিবিউটর ও চালান উৎস</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">ধাপ ৪/৪</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">ডিস্ট্রিবিউটর / সরবরাহকারী</label>
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary" id="supplierSelect">
+<option selected="" value="jamuna">মেসার্স যমুনা ভেট এজেন্সি (ময়মনসিংহ)</option>
+<option value="square_depo">স্কয়ার ডিপো ময়মনসিংহ (অফিসিয়াল)</option>
+<option value="renata_depo">রেনটা সেন্ট্রাল ডিস্ট্রিবিউশন হাব</option>
+<option value="bhai_bhai">ভাই ভাই মেডিসিন হাউস, গফরগাঁও</option>
+<option value="new">+ নতুন সরবরাহকারী যুক্ত করুন</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline pointer-events-none text-xl">store</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">verified_user</span>
+<span class="font-label-sm text-label-sm leading-tight">সরবরাহকারীর ভাউচার এবং স্টক লেজারে এই ওষুধ স্বয়ংক্রিয়ভাবে যুক্ত হবে।</span>
+</div>
+</div>
+</div>
+</form>
+<!-- Sticky Bottom Action Dock -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/95 backdrop-blur-md p-space-md pb-safe shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+<div class="max-w-md mx-auto flex items-center gap-space-sm">
+<button class="w-1/3 h-12 rounded-xl bg-surface-container text-on-surface-variant hover:bg-surface-container-high active:scale-95 font-label-lg text-label-lg transition-all flex items-center justify-center gap-1 shadow-sm" id="cancelBtn" type="button">
+<span>বাতিল</span>
+</button>
+<button class="w-2/3 h-12 rounded-xl bg-primary text-on-primary hover:bg-primary-container active:translate-y-[0.5px] font-label-lg text-label-lg transition-all flex items-center justify-center gap-2 shadow-md" id="saveMedicineBtn" type="button">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+<span>ওষুধ সংরক্ষণ করুন</span>
+</button>
+</div>
+</div>
+<!-- Interactive Feedback Toast (Initially Hidden) -->
+<div class="fixed top-20 inset-x-4 max-w-sm mx-auto z-50 transform -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 p-3.5 rounded-xl bg-primary text-on-primary shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-2xl" id="toastIcon">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold" id="toastTitle">সাফল্য!</span>
+<span class="font-body-sm text-body-sm text-on-primary-container" id="toastMessage">ওষুধটি ইনভেন্টরিতে সংরক্ষিত হয়েছে।</span>
+</div>
+</div>
+</div>
+<script>
+  (function initAddMedicineForm() {
+    const buyPriceInput = document.getElementById('buyPrice');
+    const sellPriceInput = document.getElementById('sellPrice');
+    const marginPercentSpan = document.getElementById('marginPercent');
+    const marginUnitSpan = document.getElementById('marginUnit');
+    const profitBadgeContainer = document.getElementById('profitBadgeContainer');
+    const saveBtn = document.getElementById('saveMedicineBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const draftBtn = document.getElementById('draftBtn');
+    const scanBtn = document.getElementById('scanBtn');
+    const barcodeInput = document.getElementById('barcodeInput');
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastMessage = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+
+    function calculateProfit() {
+      const buy = parseFloat(buyPriceInput.value) || 0;
+      const sell = parseFloat(sellPriceInput.value) || 0;
+      const profitPerUnit = sell - buy;
+
+      if (buy > 0) {
+        const marginPct = ((profitPerUnit / sell) * 100).toFixed(2);
+        marginPercentSpan.textContent = marginPct + '%';
+        marginUnitSpan.textContent = `(৳ ${profitPerUnit.toFixed(2)}/ইউনিট)`;
+
+        if (profitPerUnit >= 0) {
+          profitBadgeContainer.className = 'flex items-center justify-between p-3 rounded-lg bg-secondary-fixed/30 text-on-secondary-fixed transition-all duration-300';
+          marginPercentSpan.className = 'font-headline-sm text-headline-sm font-bold text-primary';
+        } else {
+          // Negative profit alert
+          profitBadgeContainer.className = 'flex items-center justify-between p-3 rounded-lg bg-error-container text-on-error-container transition-all duration-300';
+          marginPercentSpan.className = 'font-headline-sm text-headline-sm font-bold text-error';
+        }
+      } else {
+        marginPercentSpan.textContent = '০.০০%';
+        marginUnitSpan.textContent = '(৳ ০.০০/ইউনিট)';
+      }
+    }
+
+    buyPriceInput.addEventListener('input', calculateProfit);
+    sellPriceInput.addEventListener('input', calculateProfit);
+
+    function showToast(title, msg, isSuccess = true) {
+      toastTitle.textContent = title;
+      toastMessage.textContent = msg;
+      toastIcon.textContent = isSuccess ? 'check_circle' : 'info';
+      
+      if (isSuccess) {
+        toast.className = 'fixed top-20 inset-x-4 max-w-sm mx-auto z-50 transform translate-y-0 opacity-100 transition-all duration-300 flex items-center gap-3 p-3.5 rounded-xl bg-primary text-on-primary shadow-xl';
+      } else {
+        toast.className = 'fixed top-20 inset-x-4 max-w-sm mx-auto z-50 transform translate-y-0 opacity-100 transition-all duration-300 flex items-center gap-3 p-3.5 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl';
+      }
+
+      setTimeout(() => {
+        toast.classList.add('-translate-y-12', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+
+    saveBtn.addEventListener('click', () => {
+      const name = document.getElementById('medName').value.trim();
+      if (!name) {
+        showToast('প্রয়োজনীয় তথ্য পূরণ করুন', 'ওষুধের বাণিজ্যিক নাম লিখুন।', false);
+        document.getElementById('medName').focus();
+        return;
+      }
+      showToast('সংরক্ষিত সম্পন্ন!', 'নতুন ওষুধ সফলভাবে স্টকে তালিকাভুক্ত হয়েছে।', true);
+    });
+
+    draftBtn.addEventListener('click', () => {
+      showToast('খসড়া রাখা হয়েছে', 'পরবর্তীতে খসড়া তালিকা থেকে সম্পূর্ণ করতে পারবেন।', false);
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      if (confirm('আপনি কি ফর্মটি বাতিল করে পূর্বের পৃষ্ঠায় ফিরে যেতে চান?')) {
+        window.history.back();
+      }
+    });
+
+    scanBtn.addEventListener('click', () => {
+      const dummyBarcodes = ['893501024502', '893501098213', '893501041120'];
+      const randomCode = dummyBarcodes[Math.floor(Math.random() * dummyBarcodes.length)];
+      barcodeInput.value = randomCode;
+      showToast('স্ক্যান সম্পন্ন', `বারকোড যুক্ত হয়েছে: ${randomCode}`, true);
+    });
+
+    calculateProfit();
+  })();
+</script></main></body></html>

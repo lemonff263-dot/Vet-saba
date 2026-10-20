@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#213145", "on-error-container": "#93000a", "on-primary-fixed-variant": "#00513a", "on-secondary": "#ffffff", "surface-container-highest": "#d3e4fe", "surface-dim": "#cbdbf5", "outline-variant": "#bdc9c1", "on-primary-container": "#9ffdd3", "on-primary": "#ffffff", "surface-container-high": "#dce9ff", "secondary-fixed": "#6ffbbe", "error": "#ba1a1a", "on-secondary-fixed-variant": "#005236", "surface-container": "#e5eeff", "tertiary-fixed-dim": "#b4c5ff", "secondary-fixed-dim": "#4edea3", "tertiary": "#0047bf", "primary": "#005d42", "background": "#f8f9ff", "primary-fixed-dim": "#7bd8b1", "error-container": "#ffdad6", "on-tertiary-fixed": "#00174b", "on-tertiary-fixed-variant": "#003ea8", "outline": "#6e7a73", "surface-variant": "#d3e4fe", "on-secondary-fixed": "#002113", "inverse-primary": "#7bd8b1", "on-tertiary": "#ffffff", "primary-container": "#047857", "tertiary-container": "#1e5fe7", "surface-container-low": "#eff4ff", "primary-fixed": "#97f5cc", "on-background": "#0b1c30", "surface": "#f8f9ff", "surface-bright": "#f8f9ff", "on-secondary-container": "#00714d", "on-surface": "#0b1c30", "on-primary-fixed": "#002115", "tertiary-fixed": "#dbe1ff", "secondary": "#006c49", "secondary-container": "#6cf8bb", "surface-tint": "#006c4e", "on-surface-variant": "#3e4943", "on-error": "#ffffff", "inverse-on-surface": "#eaf1ff", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#e6e9ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xl": "2rem", "gutter-mobile": "0.75rem", "margin": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin-mobile": "1rem" }, fontFamily: { "currency-display": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"] }, fontSize: { "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;font-family:'Hind Siliguri','Inter',sans-serif;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button class="w-11 h-11 -ml-1 flex items-center justify-center rounded-full text-on-surface hover:text-primary active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate leading-tight">Help &amp; Support</h1></div><div class="flex items-center shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-primary-fixed"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-gutter-mobile pt-14 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 space-y-space-md">
+<!-- Friendly Support Banner with Search -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-space-md text-on-primary shadow-sm">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-secondary-fixed/10 pointer-events-none blur-xl"></div>
+<div class="relative z-10 flex flex-col space-y-space-sm">
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center justify-center p-1.5 rounded-lg bg-surface/15 backdrop-blur-md">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">support_agent</span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed font-semibold">ভেট সেবা হেল্পডেস্ক</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-primary leading-tight">
+        কীভাবে আমরা আপনাকে সাহায্য করতে পারি?
+      </p>
+<p class="font-body-sm text-body-sm text-on-primary/80">
+        আপনার খামার বা ভেটেরিনারি দোকানের নির্ভুল হিসাব ও দ্রুত সেবা নিশ্চিত করতে আমরা প্রস্তুত।
+      </p>
+<!-- Search Box Inside Banner -->
+<div class="pt-1">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-inner placeholder:text-outline focus:outline-none" id="faq-search" placeholder="সমস্যা বা প্রশ্ন লিখে সার্চ করুন..." type="text"/>
+<button class="hidden absolute right-3 w-6 h-6 items-center justify-center rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-variant transition-colors" id="clear-search">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Agent Status Pill -->
+<div class="flex items-center justify-between px-space-md py-2.5 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center space-x-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-secondary">সাপোর্ট টিম অনলাইন আছে</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">গড় রেসপন্স: ৩ মিনিট</span>
+</div>
+<!-- Direct Contact Cards -->
+<div class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">জরুরি যোগাযোগ ও সহায়তা</h2>
+<span class="font-label-sm text-label-sm text-primary font-semibold">৭ দিন খোলা</span>
+</div>
+<!-- Phone Support Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">সরাসরি ফোন কল সাপোর্ট</h3>
+<span class="font-currency-display text-headline-sm text-primary font-bold tracking-tight">১৬৮২৪ <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">অথবা</span> ০১৯১১-২২৩৩৪৪</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">সকাল ৮টা - রাত ১০টা, রবি থেকে বৃহস্পতিবার</p>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-2">
+<a class="w-full h-12 flex items-center justify-center space-x-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold active:translate-y-[0.5px] transition-all shadow-sm" href="tel:16824">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+<span>এখনই কল করুন</span>
+</a>
+</div>
+</div>
+<!-- WhatsApp Support Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-2">
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">হোয়াটসঅ্যাপ লাইভ চ্যাট</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">অটোমেটেড</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">আমাদের সাপোর্ট টিম সাধারণত ৫ মিনিটের মধ্যে উত্তর দেয়।</p>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">মেমো বা ডিভাইসের ছবি পাঠিয়ে দ্রুত সমাধান নিন</p>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-2">
+<a class="w-full h-12 flex items-center justify-center space-x-2 rounded-lg bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-semibold active:translate-y-[0.5px] transition-all" href="https://wa.me/8801911223344" target="_blank">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+<span>হোয়াটসঅ্যাপে চ্যাট করুন</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Frequently Asked Questions (Accordion) -->
+<div class="flex flex-col space-y-space-sm pt-2">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[22px]">quiz</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">ঘন ঘন জিজ্ঞাসিত প্রশ্ন (FAQ)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">৪টি সমাধান</span>
+</div>
+<div class="flex flex-col space-y-2" id="faq-list">
+<!-- FAQ 1 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button class="faq-toggle w-full flex items-center justify-between p-space-md text-left active:bg-surface-container-low transition-colors" type="button">
+<div class="flex items-center space-x-3 pr-2">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface leading-snug">ইন্টারনেট বা ওয়াইফাই না থাকলে কি বিক্রি বা রশিদ করা যাবে?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 shrink-0">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            হ্যাঁ, সম্পূর্ণ অফলাইনে পিওএস মেমো ও খাতার হিসাব চলবে। ইন্টারনেট সংযোগ পুনরায় সক্রিয় হওয়ার সাথে সাথেই যাবতীয় সেলস ডাটা ও রিপোর্ট অটোমেটিকভাবে ক্লাউডে সিঙ্ক হয়ে নিরাপদ থাকবে।
+          </div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button class="faq-toggle w-full flex items-center justify-between p-space-md text-left active:bg-surface-container-low transition-colors" type="button">
+<div class="flex items-center space-x-3 pr-2">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface leading-snug">ওষুধের মেয়াদ শেষ হওয়ার কতদিন আগে অ্যালার্ট পাবো?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 shrink-0">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            ডিফল্টভাবে মেয়াদ শেষ হওয়ার ৩০ দিন পূর্বে লাল সতর্কবার্তা দেখাবে। আপনি চাইলে 'স্টক সেটিংস' থেকে এটি ১৫ দিন, ৬০ দিন বা ৯০ দিন হিসেবে নিজের সুবিধামত কাস্টমাইজ করতে পারবেন।
+          </div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button class="faq-toggle w-full flex items-center justify-between p-space-md text-left active:bg-surface-container-low transition-colors" type="button">
+<div class="flex items-center space-x-3 pr-2">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface leading-snug">নতুন কর্মী যোগ করলে সে কি আমার পাইকারি ক্রয়মূল্য দেখতে পাবে?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 shrink-0">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            না, কর্মচারী রোল পারমিশন অপশনে গিয়ে ক্রয়মূল্য (Buy Rate) এবং মোট লাভের হিসাব হাইড বা লক করে রাখা যায়। কাউন্টার অপারেটর কেবল বিক্রয়মূল্য দেখতে ও মেমো কাটতে পারবেন।
+          </div>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden transition-all">
+<button class="faq-toggle w-full flex items-center justify-between p-space-md text-left active:bg-surface-container-low transition-colors" type="button">
+<div class="flex items-center space-x-3 pr-2">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface leading-snug">থার্মাল প্রিন্টারে ব্লুটুথ দিয়ে ক্যাশ মেমো কীভাবে প্রিন্ট করবো?</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 shrink-0">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0">
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md leading-relaxed">
+            আপনার মোবাইলের ব্লুটুথ অন করে প্রিন্টারের সাথে পেয়ার (Pair) করুন। এরপর 'ভেট সেবা' অ্যাপের সেটিংস থেকে 'প্রিন্টার সেটআপ'-এ গিয়ে ৫৪ মিমি বা ৮০ মিমি সিলেক্ট করলেই এক ক্লিকে মেমো প্রিন্ট হবে।
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Tutorials & Guides -->
+<div class="flex flex-col space-y-space-sm pt-2">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[22px]">smart_display</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">ভিডিও টিউটোরিয়াল ও গাইড</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">সব ভিডিও</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Video Card 1 -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm">
+<div class="relative w-full h-36 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Bangladeshi veterinary pharmacist using an easy mobile POS app inside a modern agro medicine dispensary counter with bottles of cattle vitamins in warm afternoon shop light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaV_5XcxdwpVVT7aeJGjRoK9RDf2HfsNZoEK6ExOuU2PVn1tD170jh25Hz7FqL71XPVivJ0NM-Gyh9uV143NkVj9RrtJ4gVRosQz6aEYHNFAjnflB4X8gX4375nmnK5L0WzUtkBEhqBCkVMiss-rcRfmnUi4BO9Uub-bM7WSMKONtNROLluW2TuF6wInb9MtWAu_7WT-YNgPwq8wfHLdBSkdzVzbtODUiJ3vs9cQ4OgfVbiqdxbGnl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-primary">
+<span class="flex items-center space-x-1 font-label-sm text-label-sm bg-inverse-surface/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>০৩:১৫ মিনিট</span>
+</span>
+<span class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col justify-between space-y-2">
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">৩ মিনিটে পিওএস মেমো তৈরি করার সহজ নিয়ম</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">কাস্টমার সিলেকশন, ডিসকাউন্ট ও দ্রুত প্রিন্ট মেমো তৈরির পদ্ধতি শিখুন।</p>
+</div>
+<button class="flex items-center space-x-1 text-primary font-label-md text-label-md font-semibold self-start hover:underline">
+<span>ভিডিও দেখুন</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm">
+<div class="relative w-full h-36 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up view of tablet and laptop screen showing excel spreadsheet importing livestock pharmacy medicines into inventory management app with clear green metrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdW7uqd8Bgb3xfTBu4EQnXYguJKyGF0d13U1btUfSEYah1vJA6zjYzRaUmBeQUjrrYmqtH1QqM43JApbnGMgtpnNLV5PiZavtJvicA9tvIXRJUFyBp4amQPdJNh99piKmsVN6PhjF-6xkmw_GF4lo1gutdM6j0zombyi5zTRDwCr6rxgKfd5fKxZbOexl2TcHxYNO_IYzcN4RuowEUWEA4cr3SNx8tauupWFJaTpQUWiZS4rOVHJl9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-primary">
+<span class="flex items-center space-x-1 font-label-sm text-label-sm bg-inverse-surface/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>০৪:৪৫ মিনিট</span>
+</span>
+<span class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col justify-between space-y-2">
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">এক্সেল থেকে ৫০০+ ভেট ওষুধ এক ক্লিকে ইমপোর্ট</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">রেনাটা, স্কয়ার ও একমি কোম্পানির বাল্ক ঔষধের তালিকা দ্রুত আপলোড করুন।</p>
+</div>
+<button class="flex items-center space-x-1 text-primary font-label-md text-label-md font-semibold self-start hover:underline">
+<span>ভিডিও দেখুন</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Feedback & Issue Report Section -->
+<div class="flex flex-col space-y-space-sm pt-2">
+<div class="flex items-center space-x-2 px-1">
+<span class="material-symbols-outlined text-primary text-[22px]">rate_review</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">ফিডব্যাক বা সমস্যা রিপোর্ট করুন</h2>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-md">
+<div class="space-y-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="issue-category">সমস্যার ধরন</label>
+<div class="relative">
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none" id="issue-category">
+<option value="pos">পিওএস সেলস বা প্রিন্টারে সমস্যা</option>
+<option value="stock">স্টক ও ইনভেন্টরি হিসাব গড়মিল</option>
+<option value="sync">অফলাইন ডাটা সিঙ্ক হচ্ছে না</option>
+<option value="suggestion">নতুন ফিচার সাজেশন বা ফিডব্যাক</option>
+<option value="other">অন্যান্য সমস্যা</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="issue-details">বিস্তারিত বিবরণ লিখুন</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" id="issue-details" placeholder="আপনার সমস্যাটি বিস্তারিত লিখুন যাতে আমাদের ইঞ্জিনিয়াররা দ্রুত সমাধান করতে পারে..." rows="3"></textarea>
+</div>
+<!-- Attachment Button & Feedback Preview -->
+<div class="flex flex-col space-y-2">
+<div class="flex items-center space-x-3">
+<label class="cursor-pointer flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px] text-primary">add_a_photo</span>
+<span class="font-label-md text-label-md font-semibold">স্ক্রিনশট যুক্ত করুন</span>
+<input accept="image/*" class="hidden" id="screenshot-input" type="file"/>
+</label>
+<span class="font-body-sm text-body-sm text-outline truncate max-w-[150px]" id="file-name">কোনো ফাইল নেই</span>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 flex items-center justify-center space-x-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold active:translate-y-[0.5px] transition-all shadow-sm" id="submit-report" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>রিপোর্ট পাঠান</span>
+</button>
+<!-- Success Notification Toast (Simulated) -->
+<div class="hidden flex items-center space-x-2 p-3 rounded-lg bg-secondary-container text-on-secondary-container font-body-sm text-body-sm" id="toast-success">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>আপনার রিপোর্টটি সফলভাবে পাঠানো হয়েছে! টিকিট আইডি: #VT-8924</span>
+</div>
+</div>
+</div>
+<!-- Human Assurance Trust Badge -->
+<div class="flex flex-col items-center justify-center pt-2 pb-4 text-center space-y-1">
+<div class="flex items-center space-x-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md font-semibold">১০০% সুরক্ষিত ও দেশীয় প্রযুক্তিতে তৈরি</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+      দেশজুড়ে ৪,৫০০+ খামারি ও ভেট ফার্মেসির নির্ভরযোগ্য সহযোগী
+    </p>
+</div>
+</div>
+<script>
+  // FAQ Interactive Accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const toggleBtn = item.querySelector('.faq-toggle');
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.material-symbols-outlined:last-child');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = !content.classList.contains('hidden');
+      
+      // Close other accordions for compact mobile experience
+      faqItems.forEach(other => {
+        other.querySelector('.faq-content').classList.add('hidden');
+        other.querySelector('.material-symbols-outlined:last-child').classList.remove('rotate-180');
+      });
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Client-side Instant Filter for FAQ
+  const searchInput = document.getElementById('faq-search');
+  const clearBtn = document.getElementById('clear-search');
+
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    if (term.length > 0) {
+      clearBtn.classList.remove('hidden');
+      clearBtn.classList.add('flex');
+    } else {
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+    }
+
+    faqItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(term)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    clearBtn.classList.remove('flex');
+    faqItems.forEach(item => item.style.display = 'block');
+  });
+
+  // Screenshot File Selector Micro-interaction
+  const fileInput = document.getElementById('screenshot-input');
+  const fileNameDisplay = document.getElementById('file-name');
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files && e.target.files[0]) {
+      fileNameDisplay.textContent = e.target.files[0].name;
+      fileNameDisplay.classList.remove('text-outline');
+      fileNameDisplay.classList.add('text-primary');
+    }
+  });
+
+  // Submit Report Animation
+  const submitBtn = document.getElementById('submit-report');
+  const successToast = document.getElementById('toast-success');
+  const detailsField = document.getElementById('issue-details');
+
+  submitBtn.addEventListener('click', () => {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>পাঠানো হচ্ছে...</span>';
+
+    setTimeout(() => {
+      submitBtn.classList.add('hidden');
+      successToast.classList.remove('hidden');
+      detailsField.value = '';
+      fileNameDisplay.textContent = 'কোনো ফাইল নেই';
+    }, 900);
+  });
+</script></main></body></html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-on-surface": "#eaf1ff", "on-primary": "#ffffff", "on-secondary": "#ffffff", "on-surface-variant": "#3e4943", "outline": "#6e7a73", "inverse-primary": "#7bd8b1", "on-primary-container": "#9ffdd3", "on-error-container": "#93000a", "secondary-container": "#6cf8bb", "primary-fixed": "#97f5cc", "error-container": "#ffdad6", "primary": "#005d42", "tertiary-fixed-dim": "#b4c5ff", "surface-variant": "#d3e4fe", "secondary": "#006c49", "outline-variant": "#bdc9c1", "on-background": "#0b1c30", "primary-fixed-dim": "#7bd8b1", "surface-dim": "#cbdbf5", "surface-container-highest": "#d3e4fe", "on-error": "#ffffff", "on-tertiary": "#ffffff", "surface-tint": "#006c4e", "surface": "#f8f9ff", "on-secondary-fixed-variant": "#005236", "on-secondary-fixed": "#002113", "surface-container-low": "#eff4ff", "on-secondary-container": "#00714d", "secondary-fixed": "#6ffbbe", "tertiary-fixed": "#dbe1ff", "surface-container-high": "#dce9ff", "on-primary-fixed-variant": "#00513a", "tertiary": "#0047bf", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#003ea8", "secondary-fixed-dim": "#4edea3", "surface-container-lowest": "#ffffff", "surface-bright": "#f8f9ff", "primary-container": "#047857", "surface-container": "#e5eeff", "on-primary-fixed": "#002115", "on-surface": "#0b1c30", "background": "#f8f9ff", "tertiary-container": "#1e5fe7", "inverse-surface": "#213145", "on-tertiary-container": "#e6e9ff", "on-tertiary-fixed": "#00174b" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter-mobile": "0.75rem", "margin": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-lg": "1.5rem" }, fontFamily: { "body-md": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"], "body-sm": ["Inter"], "currency-display": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Inter"] }, fontSize: { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center shrink-0 text-on-primary shadow-sm"><span class="material-symbols-outlined text-[22px]">local_pharmacy</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Vet সেবা</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span></div><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Reports</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Sub-header Meta Banner -->
+<div class="px-gutter-mobile pt-3 pb-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-wide">লাইভ অডিট ডাটা • অক্টোবর ২০২৪</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+<span>স্বয়ংক্রিয় সিঙ্ক</span>
+</div>
+</div>
+<!-- Time Range Filter Horizontal Scroll -->
+<div class="px-gutter-mobile py-2 overflow-x-auto no-scrollbar flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors whitespace-nowrap shadow-sm">
+      আজ
+    </button>
+<button class="px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors whitespace-nowrap shadow-sm">
+      এই সপ্তাহ
+    </button>
+<button class="px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary flex items-center gap-1.5 shadow-md whitespace-nowrap">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>চলতি মাস</span>
+</button>
+<button class="px-3 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors flex items-center gap-1 whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_month</span>
+<span>নির্দিষ্ট তারিখ</span>
+</button>
+</div>
+<!-- High-level KPI Summary Cards -->
+<div class="px-gutter-mobile pt-2 pb-4 space-y-3">
+<!-- KPI Card 1: Sales & Profit -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline-variant block">আর্থিক কার্যকারিতা</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">বিক্রি ও মুনাফা সারসংক্ষেপ</h2>
+</div>
+</div>
+<span class="bg-primary-fixed-dim text-on-primary-fixed-variant px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> ১২%
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1 pt-2 bg-surface-container-low rounded-lg p-2.5">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">মোট বিক্রি (অক্টোবর)</span>
+<span class="font-currency-display text-currency-display text-primary font-bold">৳৪,৮৫,৬০০</span>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">গত মাস: ৳৪,৩৩,৫০০</span>
+</div>
+<div class="pl-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">গ্রস প্রফিট</span>
+<span class="font-currency-display text-currency-display text-secondary font-bold">৳৭৮,৪০০</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mt-0.5">১৬.১% মার্জিন</span>
+</div>
+</div>
+<!-- Sparkline Visual -->
+<div class="mt-2.5 pt-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">দৈনিক গতির চার্ট:</span>
+<svg class="w-36 h-6 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0 16 Q 15 12, 30 15 T 60 7 T 80 9 T 100 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<!-- 2 Column KPI Grid: Stock & Dues -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Card 2: Stock Valuation -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant block">স্টক সম্পদ মূল্যায়ন</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block mt-0.5">৳১২,৪৫,০০০</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">ক্রয় মূল্যে সংরক্ষিত</span>
+</div>
+<div class="mt-2.5 pt-2 bg-surface-container-low rounded-lg p-1.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">মোট পদ:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">৩৪৮ প্রকার ওষুধ</span>
+</div>
+</div>
+<!-- Card 3: Due & Payable Balance -->
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-2">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant block">বকেয়া ও দেনা অনুপাত</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-label-lg text-label-lg text-error font-bold">৳৫৬.৪k</span>
+<span class="text-outline text-label-sm">/</span>
+<span class="font-label-lg text-label-lg text-tertiary font-bold">৳৫২.৬k</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">খামারি বনাম কোম্পানি</span>
+</div>
+<div class="mt-2.5 pt-2 bg-secondary-fixed-dim/30 rounded-lg p-1.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed">অবস্থা:</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> স্থিতিশীল
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Categorized Reports Directory Header -->
+<div class="px-gutter-mobile pt-3 pb-1 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_special</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">রিপোর্ট ডিরেক্টরি ও অডিট বুক</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">৪টি বিভাগ</span>
+</div>
+<!-- Directory Section 1: Sales & Revenue -->
+<div class="px-gutter-mobile pt-2 pb-3">
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-md bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">বিক্রি ও মুনাফা রিপোর্ট (Sales &amp; Revenue)</h4>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">৪টি রিপোর্ট</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Item 1.1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">দৈনিক ও মাসিক বিক্রয় রিপোর্ট</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">মোট বিক্রি, রিফান্ড, ডিসকাউন্ট ও নিট কালেকশন</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Item 1.2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">লাভ-ক্ষতি ও মার্জিন বিশ্লেষণ</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] px-1.5 py-0.2 rounded font-bold">১৬.১% গড়</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">ওষুধভিত্তিক ক্রয়মূল্য ও নিট লাভ মার্জিন</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Item 1.3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">সেরা বিক্রিত ওষুধ (Top Movers)</span>
+<span class="font-body-sm text-body-sm text-outline-variant block truncate">রেনামাইসিন ১০০মি.লি., ক্যালসিয়াম জেল, সিপ্রোসিন</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Item 1.4 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">কর্মীভিত্তিক সেলস কার্যকারিতা</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">শামীম রেজা (৳২.১ লাখ), রাজীব হাসান (৳১.৮ লাখ)</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Feature Card: Fast Counter Trend -->
+<div class="px-gutter-mobile py-1">
+<div class="rounded-xl overflow-hidden bg-primary p-3 text-on-primary shadow-sm flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[26px]">insights</span>
+</div>
+<div class="min-w-0 flex-1">
+<h4 class="font-label-lg text-label-lg font-bold truncate">অক্টোবর সেরা পারফর্মিং ক্যাটাগরি</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container truncate">অ্যান্টিবায়োটিক ও কৃমিনাশক ইনজেকশন (৪২% সামগ্রিক বিক্রি)</p>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-[20px] shrink-0">arrow_forward</span>
+</div>
+</div>
+<!-- Directory Section 2: Stock & Inventory -->
+<div class="px-gutter-mobile pt-3 pb-3">
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-md bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">warehouse</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">ইনভেন্টরি ও স্টক রিপোর্ট (Stock &amp; Expiry)</h4>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">৩টি রিপোর্ট</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Stock 2.1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">স্টক মূল্যায়ন ও ভৌত গণনা বিবরণী</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">বর্তমান তাক ও প্রধান গুদামের মোট বাজার ভ্যালু</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Stock 2.2 Alert Warning -->
+<div class="p-2.5 rounded-lg bg-error-container/40 flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-error font-semibold block truncate">মেয়াদোত্তীর্ণের পূর্বাভাস ও ঝুঁকি অ্যালার্ট</span>
+<span class="bg-error text-on-error text-[10px] px-1.5 py-0.2 rounded font-bold">৮টি ওষুধ</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface block truncate">আগামী ৬০ দিনে মেয়াদোত্তীর্ণ হবে • আর্থিক ঝুঁকি ৳১৪,২০০</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-error shrink-0 shadow-sm hover:bg-error hover:text-on-error transition-colors" title="ঝুঁকি তালিকা ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</button>
+</div>
+<!-- Stock 2.3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">স্টক মুভমেন্ট, ভাঙচুর ও ড্যামেজ সমন্বয়</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">ভাঙা ভায়াল, ফেরত চালানের ক্ষতিপূরণ খতিয়ান</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Directory Section 3: Financial & Due Ledger -->
+<div class="px-gutter-mobile pt-1 pb-3">
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-md bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">বকেয়া ও আর্থিক খতিয়ান (Financial Ledger)</h4>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full">৩টি রিপোর্ট</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Due 3.1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">খামারি বাকি খাতা রিপোর্ট (Customer Aging)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">৩০ দিনের বেশি পুরোনো বকেয়া খামারিদের ক্রম তালিকা</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Due 3.2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">সাপ্লায়ার দেনা ও কোম্পানির কিস্তি সিডিউল</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">স্কয়ার, রেনাটা, একমি ভেট বকেয়া বিল পরিশোধের তারিখ</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- Due 3.3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">ফার্মেসি খরচ বিবরণী (Expense Breakdown)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">ভ্যাকসিন রেফ্রিজারেশন বিদ্যুৎ বিল, দোকান ভাড়া ও ডেলিভারি</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 hover:bg-primary hover:text-on-primary transition-colors" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Directory Section 4: Compliance & Tax -->
+<div class="px-gutter-mobile pt-1 pb-4">
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-md bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">ট্যাক্স ও ড্রাগ লাইসেন্স কমপ্লায়েন্স</h4>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">অডিট রেডি</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">ভ্যাট চালনা ও রেজিস্টার্ড ড্রাগ লগবুক</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">সরকারি পরিদর্শনের জন্য শেডিউল-এইচ ওষুধ বিক্রয় খতিয়ান</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm" title="ডাউনলোড">
+<span class="material-symbols-outlined text-[18px]">file_present</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Audit & Verification Note Banner -->
+<div class="px-gutter-mobile pb-5">
+<div class="bg-surface-container-low p-3 rounded-xl flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        উক্ত সকল রিপোর্ট জাতীয় পশুসম্পদ অধিদপ্তরের খসড়া অডিট নির্দেশিকা এবং ভেটেরিনারি কেমিস্ট সনদ অনুযায়ী স্বয়ংক্রিয়ভাবে জেনারেট করা হয়।
+      </p>
+</div>
+</div>
+<!-- Sticky / Bottom Floating Quick Export & Action Dock -->
+<div class="sticky bottom-1 px-gutter-mobile z-20">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md p-2.5 rounded-xl shadow-xl flex items-center gap-2">
+<button class="flex-1 h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-md">
+<span class="material-symbols-outlined text-[20px]">sim_card_download</span>
+<span>সকল রিপোর্ট ডাউনলোড (PDF/Excel)</span>
+</button>
+<button class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 shadow-sm hover:bg-surface-container transition-colors" title="প্রিন্ট কমান্ড">
+<span class="material-symbols-outlined text-[22px]">print</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic filter state toggling & download toast simulation
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.overflow-x-auto button');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors whitespace-nowrap shadow-sm';
+        });
+        btn.className = 'px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary flex items-center gap-1.5 shadow-md whitespace-nowrap';
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,93,66,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm">ড্যাশবোর্ড</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="sales" href="#"><span class="material-symbols-outlined text-[22px]">point_of_sale</span><span class="font-label-sm text-label-sm">বিক্রয়</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="purchases" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-sm text-label-sm">ক্রয়</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary font-bold" data-path="reports" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-label-sm">রিপোর্ট</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-sm text-label-sm">হিসাব</span></a></div></nav></body></html>

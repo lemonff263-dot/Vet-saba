@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#e5eeff", "on-surface-variant": "#3e4943", "on-tertiary-fixed-variant": "#003ea8", "secondary-fixed": "#6ffbbe", "inverse-surface": "#213145", "surface-tint": "#006c4e", "on-error-container": "#93000a", "tertiary": "#0047bf", "secondary-fixed-dim": "#4edea3", "on-background": "#0b1c30", "on-primary": "#ffffff", "surface-dim": "#cbdbf5", "on-secondary-container": "#00714d", "on-tertiary-container": "#e6e9ff", "primary-container": "#047857", "error-container": "#ffdad6", "on-primary-fixed-variant": "#00513a", "primary": "#005d42", "outline": "#6e7a73", "outline-variant": "#bdc9c1", "surface-variant": "#d3e4fe", "surface": "#f8f9ff", "on-surface": "#0b1c30", "on-tertiary-fixed": "#00174b", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#b4c5ff", "surface-container-low": "#eff4ff", "on-error": "#ffffff", "surface-container-highest": "#d3e4fe", "primary-fixed-dim": "#7bd8b1", "inverse-on-surface": "#eaf1ff", "on-secondary-fixed": "#002113", "error": "#ba1a1a", "tertiary-fixed": "#dbe1ff", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#005236", "on-primary-fixed": "#002115", "tertiary-container": "#1e5fe7", "surface-bright": "#f8f9ff", "on-primary-container": "#9ffdd3", "background": "#f8f9ff", "secondary-container": "#6cf8bb", "on-secondary": "#ffffff", "inverse-primary": "#7bd8b1", "primary-fixed": "#97f5cc", "surface-container-high": "#dce9ff", "secondary": "#006c49" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1rem", "margin": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "body-md": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "currency-display": ["Inter"], "headline-sm": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="ফিরে যান" class="w-11 h-11 -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider truncate">Vet সেবা</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Stock Adjustment</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="ফিল্টার বা হিস্ট্রি" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></button><button aria-label="ইতিহাস ও লগ" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[22px]">history</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin-mobile pt-14 pb-safe bg-surface"><div class="flex flex-col w-full pb-8">
+<div class="mt-2 mb-4 bg-surface-container-high rounded-xl p-space-md shadow-sm flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-semibold">নির্দেশিকা ও অডিট নিয়ম</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        স্টক অডিট বা শারীরিক গণনার পর সফটওয়্যারের সাথে আসল মজুদের অমিল হলে স্টক অ্যাডজাস্ট করুন।
+      </p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-4">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">১. ওষুধ ও ব্যাচ শনাক্তকরণ</span>
+<span class="bg-secondary-fixed/50 text-on-secondary-fixed-variant px-2 py-0.5 rounded-full font-label-sm text-label-sm">নিবন্ধিত ভেট পণ্য</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex gap-space-md items-center mb-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Clear studio shot of a 100ml amber glass injection bottle labeled veterinary medicine on a clean clinical white surface, soft professional emerald lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAwfafXuYSkAGgCgUXqgerXZhAnm1vE-heHJ21VSToIOQsyG2IBUNR2G0jlOv9IX09gz59NxTMWQNy7juCA8APRKSE7sfG9zZWpiHajFV30wVQbjXgdayNtZNHd8sdkFDmvhPhbTW7_JXAJLYYHPbPyjPckSnVRV4higfxCguRSJ2PXMbUA4B9NiZmPkufUjfwMh5XW8vK7PfqZO2hsJcohVQkLkgBTHGwgLV_1Iph8u0YskJER1dz"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Renata Animal Health</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Renamycin 100ml Injection</h2>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-sm text-label-sm text-primary font-medium">অক্সিটেট্রাসাইক্লিন বিপি</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">মূল্য: ৳১,১০০/বোতল</span>
+</div>
+</div>
+<button aria-label="ওষুধ পরিবর্তন" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+</button>
+</div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface mb-1.5 flex items-center justify-between">
+<span>সংশ্লিষ্ট ব্যাচ নির্বাচন করুন</span>
+<span class="font-label-sm text-label-sm text-primary">মেয়াদ: ১২/২০২৬</span>
+</label>
+<div class="relative bg-surface-container-low rounded-lg flex items-center px-3 py-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">qr_code_2</span>
+<select class="w-full bg-transparent font-body-md text-body-md text-on-surface outline-none appearance-none pr-8">
+<option selected="">RNT-8841 (বর্তমান সিস্টেম স্টক: ৪৫ বোতল)</option>
+<option>RNT-8210 (বর্তমান সিস্টেম স্টক: ১২ বোতল)</option>
+<option>RNT-7904 (বর্তমান সিস্টেম স্টক: ৩ বোতল)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] pointer-events-none absolute right-3">expand_more</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-4">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">২. সমন্বয়ের ধরন (Adjustment Type)</span>
+</div>
+<div class="grid grid-cols-2 gap-2 bg-surface-container p-1 rounded-xl" id="typeToggleContainer">
+<button class="flex items-center justify-center gap-1.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant transition-all duration-200" id="btnStockIn" onclick="setAdjustmentType('in')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>স্টক বৃদ্ধি (+)</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-error font-semibold shadow-sm transition-all duration-200" id="btnStockOut" onclick="setAdjustmentType('out')" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">remove_circle</span>
+<span>স্টক হ্রাস (-)</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-4">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">৩. কারণ নির্বাচন (Reason)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">১টি নির্বাচন আবশ্যক</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors hover:bg-surface-container">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 accent-primary" name="adj_reason" type="radio" value="broken"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">ওষুধ ক্ষতিগ্রস্ত / ভেঙে গেছে</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Damaged / Broken in shelf</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-error text-[20px]">broken_image</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="adj_reason" type="radio" value="leak"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">বোতল লিক / নষ্ট হয়েছে</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spillage / Quality Defect</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">water_drop</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="adj_reason" type="radio" value="expired"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">মেয়াদোত্তীর্ণ বাতিল</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Expired Stock Disposal</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">event_busy</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="adj_reason" type="radio" value="audit"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">অডিটে ঘাটতি পাওয়া গেছে</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inventory Audit Shortage</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">inventory</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="adj_reason" type="radio" value="sample"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">উপহার / স্যাম্পল প্রদান</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Free Doctor Promo / Sample</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">featured_seasonal_and_gifts</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors hover:bg-surface-container-low">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="adj_reason" type="radio" value="other"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">অন্যান্য কারণ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Custom specific reason</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">more_horiz</span>
+</label>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-4">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">৪. পরিমাণের হিসাব ও স্টক পুনর্মূল্যায়ন</span>
+<span class="bg-surface-container px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant">হিসাব ঘর</span>
+</div>
+<div class="grid grid-cols-2 gap-3 mb-4">
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">বর্তমান সিস্টেম স্টক</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">৪৫</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">বোতল</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl flex flex-col justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium" id="lblQtyEffect">বাদ দেওয়া হবে</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-error" id="valQtyEffect">-২</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">বোতল</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-3 rounded-xl flex items-center justify-between mb-4">
+<span class="font-label-md text-label-md text-on-surface">সমন্বয় পরিমাণ নির্ধারণ</span>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm active:scale-95 transition-transform" onclick="modifyQty(-1)" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="px-4 py-2 bg-surface-container-lowest rounded-lg font-headline-sm text-headline-sm text-on-surface min-w-[70px] text-center shadow-sm" id="displayQty">
+          ২ বোতল
+        </div>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm active:scale-95 transition-transform" onclick="modifyQty(1)" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<div class="bg-primary/5 rounded-xl p-3.5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">নতুন সংশোধিত স্টক হবে:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="newStockDisplay">৪৩ বোতল</span>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low/60 p-2 rounded-lg">
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="lossLabel">মোট ক্ষতির আর্থিক পরিমাণ:</span>
+<span class="font-label-lg text-label-lg text-error font-bold" id="lossAmountDisplay">৳২,২০০.০০</span>
+</div>
+<div class="text-[11px] text-on-surface-variant text-right">
+        * ডিলার ক্রয়মূল্য প্রতি বোতল ৳১,১০০ ধরে হিসাবকৃত
+      </div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-4">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">৫. প্রমাণক ও অনুমোদন বিবরণ</span>
+</div>
+<div class="flex flex-col mb-3">
+<label class="font-label-md text-label-md text-on-surface mb-1.5">মন্তব্য ও কারণের বিস্তারিত</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-3 font-body-md text-body-md text-on-surface outline-none resize-none placeholder:text-on-surface-variant/60" rows="2">কাউন্টার শেলফ থেকে পড়ে ১টি বোতল ভেঙে গেছে এবং ১টি বোতল ক্যাপ লিক ছিল।</textarea>
+</div>
+<div class="flex flex-col mb-4">
+<span class="font-label-md text-label-md text-on-surface mb-1.5">ছবি আপলোড করুন (ঐচ্ছিক প্রামাণিক)</span>
+<div class="grid grid-cols-3 gap-2">
+<div class="relative rounded-lg h-20 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a cracked glass veterinary injection medicine vial on a tiled pharmacy counter with safe clean inspection conditions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNsC5UuVVHeUzK5cBNkXyKnDhG0YxEBMO0oxHPBHbJulsll2N9I42JvgnheAM0QzJ-M4U8UU5HHi46EdIfI8RbkRKFfPxK99I4ZLtLvuH4v3rn95ycfhH9Mabc4IgN7Co26e9AijjpAhaG4-HVNl4kA-R8QA7iBfabKMO1Say_iHSFzNSNPCSQCbreXtVlMwD6oMYR3Rx6QHMNtlCAyqi4pu8M7_XE1MmEwTG9TdwRN0LvRwTr6S9a"/>
+<div class="absolute top-1 right-1 w-5 h-5 rounded-full bg-inverse-surface/80 text-inverse-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</div>
+</div>
+<button class="h-20 rounded-lg bg-surface-container-low flex flex-col items-center justify-center text-primary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">add_a_photo</span>
+<span class="font-label-sm text-label-sm mt-1">যুক্ত করুন</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">অনুমোদনকারী ব্যক্তি</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">ডাঃ রফিকুল ইসলাম (মালিক)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm">অনুমোদিত</span>
+</div>
+</div>
+<div class="flex gap-space-sm pt-2 mb-2">
+<button class="w-1/3 py-3 rounded-xl bg-surface-container text-on-surface-variant font-label-lg text-label-lg active:scale-98 transition-all flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span>বাতিল</span>
+</button>
+<button class="w-2/3 py-3 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md active:translate-y-[0.5px] transition-all flex items-center justify-center gap-1.5" onclick="confirmAdjustmentModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>স্টক সমন্বয় নিশ্চিত করুন</span>
+</button>
+</div>
+<div class="fixed bottom-6 inset-x-margin-mobile bg-inverse-surface text-inverse-on-surface p-space-md rounded-xl shadow-xl flex items-center justify-between transition-transform duration-300 translate-y-32 pointer-events-none z-50" id="successToast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-inverse-on-surface font-semibold">স্টক সফলভাবে সমন্বয় করা হয়েছে!</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80">নতুন মজুদ: ৪৩ বোতল সংরক্ষিত হলো</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-inverse-on-surface/60 text-[18px]">done_all</span>
+</div>
+</div>
+<script>
+  let currentAdjustmentType = 'out';
+  let currentQty = 2;
+  const initialStock = 45;
+  const unitCost = 1100;
+
+  function toBengaliNumber(num) {
+    const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    return num.toString().replace(/\d/g, d => bengaliDigits[d]);
+  }
+
+  function setAdjustmentType(type) {
+    currentAdjustmentType = type;
+    const btnIn = document.getElementById('btnStockIn');
+    const btnOut = document.getElementById('btnStockOut');
+    const lblQtyEffect = document.getElementById('lblQtyEffect');
+    const lossLabel = document.getElementById('lossLabel');
+
+    if (type === 'in') {
+      btnIn.className = 'flex items-center justify-center gap-1.5 py-2.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all duration-200';
+      btnOut.className = 'flex items-center justify-center gap-1.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant transition-all duration-200';
+      lblQtyEffect.textContent = 'যোগ করা হবে';
+      lblQtyEffect.className = 'font-body-sm text-body-sm text-primary font-medium';
+      lossLabel.textContent = 'যুক্তকৃত মজুদের মোট মূল্য:';
+    } else {
+      btnOut.className = 'flex items-center justify-center gap-1.5 py-2.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-error font-semibold shadow-sm transition-all duration-200';
+      btnIn.className = 'flex items-center justify-center gap-1.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant transition-all duration-200';
+      lblQtyEffect.textContent = 'বাদ দেওয়া হবে';
+      lblQtyEffect.className = 'font-body-sm text-body-sm text-error font-medium';
+      lossLabel.textContent = 'মোট ক্ষতির আর্থিক পরিমাণ:';
+    }
+    updateStockCalculations();
+  }
+
+  function modifyQty(delta) {
+    const nextQty = currentQty + delta;
+    if (nextQty < 1) return;
+    if (currentAdjustmentType === 'out' && nextQty > initialStock) return;
+    currentQty = nextQty;
+    updateStockCalculations();
+  }
+
+  function updateStockCalculations() {
+    const displayQty = document.getElementById('displayQty');
+    const valQtyEffect = document.getElementById('valQtyEffect');
+    const newStockDisplay = document.getElementById('newStockDisplay');
+    const lossAmountDisplay = document.getElementById('lossAmountDisplay');
+
+    displayQty.textContent = toBengaliNumber(currentQty) + ' বোতল';
+
+    const calculatedStock = currentAdjustmentType === 'in' 
+      ? initialStock + currentQty 
+      : initialStock - currentQty;
+
+    valQtyEffect.textContent = (currentAdjustmentType === 'in' ? '+' : '-') + toBengaliNumber(currentQty);
+    valQtyEffect.className = currentAdjustmentType === 'in' ? 'font-headline-lg-mobile text-headline-lg-mobile text-primary' : 'font-headline-lg-mobile text-headline-lg-mobile text-error';
+
+    newStockDisplay.textContent = toBengaliNumber(calculatedStock) + ' বোতল';
+
+    const totalValue = currentQty * unitCost;
+    lossAmountDisplay.textContent = '৳' + toBengaliNumber(totalValue.toLocaleString('en-IN')) + '.০০';
+    lossAmountDisplay.className = currentAdjustmentType === 'in' ? 'font-label-lg text-label-lg text-primary font-bold' : 'font-label-lg text-label-lg text-error font-bold';
+  }
+
+  function confirmAdjustmentModal() {
+    const toast = document.getElementById('successToast');
+    toast.classList.remove('translate-y-32');
+    toast.classList.add('translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0');
+      toast.classList.add('translate-y-32');
+    }, 3200);
+  }
+</script></main></body></html>

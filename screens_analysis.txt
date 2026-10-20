@@ -1,0 +1,280 @@
+1. [vet_add_customer]
+   Title: 
+   Headings: Add Customer | প্রাথমিক তথ্য | খামার ও প্রাণিসম্পদ বিবরণ | বাকির সীমা ও আর্থিক শর্ত | রেফারেন্স ও মন্তব্য
+   Buttons/Actions: arrow_back, search, photo_camera, camera_alt ক্যামেরা, image গ্যালারি, যাচাই করুন
+
+2. [vet_add_expense]
+   Title: 
+   Headings: Add Expense
+   Buttons/Actions: arrow_back, + ৳১০০, + ৳৫০০, + ৳১,০০০, + ৳২,০০০, + ৳৫,০০০
+
+3. [vet_add_medicine]
+   Title: 
+   Headings: Medicine Details | সেকশন ১: মৌলিক তথ্য | সেকশন ২: স্টক ও ব্যাচ | সেকশন ৩: মূল্য ও স্টক | সেকশন ৪: সরবরাহকারী
+   Buttons/Actions: arrow_back, bookmark_border খসড়া রাখুন, photo_camera স্ক্যান, বাতিল, check_circle ওষুধ সংরক্ষণ করুন
+
+4. [vet_backup_restore]
+   Title: 
+   Headings: Backup & Restore Manager | ক্লাউড প্রোটেকশন সক্রিয় | নতুন ব্যাকআপ তৈরি করুন | স্বয়ংক্রিয় ব্যাকআপ শিডিউল | রিস্টোর ও ব্যাকআপ ফাইল
+   Buttons/Actions: arrow_back, sync, পরিবর্তন, restore রিস্টোর করুন (Restore), download .vdb ফাইল, restore রিস্টোর করুন
+
+5. [vet_batch_management]
+   Title: 
+   Headings: Batch Management | Renamycin 100ml | ব্যাচ বারকোড ও QR | স্টক সমন্বয়
+   Buttons/Actions: arrow_back, tune, history, info, সব ব্যাচ (৪), সক্রিয় ব্যাচ (৩)
+
+6. [vet_cashbook]
+   Title: 
+   Headings: Vet সেবা | আজকের লেনদেন খতিয়ান | কাউন্টার ক্যাশ বিক্রি | ভ্যাকসিন ফ্রিজের বিদ্যুৎ বিল | বকেয়া খাতা আদায়
+   Buttons/Actions: history হিসাব মিলান, receipt_long + খরচ এন্ট্রি, add_circle + ড্রয়ারে জমা, remove_circle - ক্যাশ উত্তোলন, lock_clock ক্লোজিং হিসাব, tune
+
+7. [vet_create_account]
+   Title: 
+   Headings: Phone Auth
+   Buttons/Actions: arrow_back, দোকানের মালিক Owner, ম্যানেজার Manager, সেলস কর্মী Sales Staff, visibility, এগিয়ে যান (ওটিপি পাঠান) arrow_forward
+
+8. [vet_create_shop]
+   Title: 
+   Headings: Shop Setup | আপনার ফার্মেসির তথ্য দিন | স্বয়ংক্রিয় মেমো ও বাকির খাতা
+   Buttons/Actions: arrow_back
+
+9. [vet_customer_list]
+   Title: 
+   Headings: Customer List | মোঃ রফিকুল ইসলাম | হাজী মতিন মিয়া | আনোয়ার হোসেন | জামাল শেখ
+   Buttons/Actions: arrow_back, search, close, qr_code_scanner, সব খামারি ১৪২, বকেয়া আছে ২৬
+
+10. [vet_customer_profile]
+   Title: 
+   Headings: Customer Details | মোঃ রফিকুল ইসলাম | আর্থিক সারসংক্ষেপ | সর্বাধিক ক্রয়কৃত পশু ওষুধ | খামারের স্বাস্থ্য সংক্রান্ত তথ্য
+   Buttons/Actions: arrow_back, search, মানচিত্র open_in_new, sms এসএমএস, edit_note এডিট, payments বকেয়া জমা নিন
+
+11. [vet_dashboard_1]
+   Title: বিসমিল্লাহ্ ভেট ফার্মেসি - ড্যাশবোর্ড
+   Headings: বিসমিল্লাহ্ ভেট ফার্মেসি | লো-স্টক সতর্কতা (৩টি ওষুধ রিস্টক প্রয়োজন) | মেয়াদ সতর্কতা (৪টি ওষুধ আগামী ৩০ দিনের মধ্যে মেয়াদোত্তীর্ণ) | আজকের প্রতি ঘণ্টার বিক্রয় ট্রেন্ড | সাম্প্রতিক বিক্রয় তালিকা
+   Buttons/Actions: notifications, refresh রিফ্রেশ, point_of_sale নতুন বিক্রয় (POS), medication ওষুধ যুক্ত করুন, payments বাকি কালেকশন, analytics স্টক রিপোর্ট
+
+12. [vet_dashboard_2]
+   Title: 
+   Headings: বিসমিল্লাহ্ ভেট ফার্মেসি
+   Buttons/Actions: notifications, sync সিঙ্ক করুন, add_shopping_cart নতুন বিক্রয় (POS), medication + ওষুধ, payments বাকি আদায়, shopping_bag ক্রয় এন্ট্রি
+
+13. [vet_data_export_import]
+   Title: 
+   Headings: Data Import & Export Center
+   Buttons/Actions: arrow_back, sync, cloud_download ডেটা এক্সপোর্ট, cloud_upload ডেটা ইমপোর্ট, পরিবর্তন expand_more, সব নির্বাচন করুন
+
+14. [vet_employee_activity_log]
+   Title: 
+   Headings: Employee Activity Log
+   Buttons/Actions: arrow_back, search, sync, logout, view_timeline সকল অ্যাক্টিভিটি, point_of_sale বিক্রি ও ডিসকাউন্ট
+
+15. [vet_employee_management]
+   Title: 
+   Headings: Employee List | মো: শামীম রেজা | রাজীব হোসেন | ডা: রিয়াজ উদ্দিন | সুমন ভৌমিক
+   Buttons/Actions: arrow_back, search, আপগ্রেড, cancel, সকল কর্মী (৪), সক্রিয় (৩)
+
+16. [vet_expiry_stock_valuation]
+   Title: 
+   Headings: Expiry Report Detail | জরুরি মেয়াদ সতর্কতা! | মেয়াদ ফিল্টারিং | জরুরি পদক্ষেপের ওষুধসমূহ | টাইলোসিন টারট্রেট ৫০ মি.লি.
+   Buttons/Actions: arrow_back, tune, সকল ঝুঁকি ১২, ৩০ দিনের মধ্যে ৪, ৬০ দিনের মধ্যে ৫, ৯০ দিনের মধ্যে ৩
+
+17. [vet_export_reports]
+   Title: 
+   Headings: Sales Analytics Detail | বিক্রয় ও কালেকশন স্টেটমেন্ট | লাভ-ক্ষতি ও ব্যয় বিবরণী | মেয়াদোত্তীর্ণ ও অবচয় স্টক রিপোর্ট | খামারি বকেয়া খতিয়ান (Aging Ledger)
+   Buttons/Actions: arrow_back, tune, আরও ৩টি রিপোর্ট দেখুন expand_more, আজ, গত ৭ দিন, চলতি মাস (অক্টোবর)
+
+18. [vet_forgot_password]
+   Title: 
+   Headings: Phone Auth | পাসওয়ার্ড ভুলে গেছেন? | কোড পাঠানো হয়েছে!
+   Buttons/Actions: arrow_back, cancel, যাচাইকরণে যান
+
+19. [vet_global_search]
+   Title: 
+   Headings: Global Search | সাম্প্রতিক সার্চসমূহ | ওষুধ (Medicines) | Renamycin 100ml | Renasol AD3E
+   Buttons/Actions: arrow_back, close, barcode_scanner, grid_view সব (All), vaccines ওষুধ (Medicines), group কাস্টমার / খামারি
+
+20. [vet_help_support_1]
+   Title: 
+   Headings: Help &amp; Support | জরুরি যোগাযোগ ও সহায়তা | সরাসরি ফোন কল সাপোর্ট | হোয়াটসঅ্যাপ লাইভ চ্যাট | ঘন ঘন জিজ্ঞাসিত প্রশ্ন (FAQ)
+   Buttons/Actions: arrow_back, close, ভিডিও দেখুন arrow_forward, send রিপোর্ট পাঠান
+
+21. [vet_help_support_2]
+   Title: 
+   Headings: হেল্প ও সাপোর্ট | কাস্টমার সাপোর্ট টিম অনলাইন | জরুরি যোগাযোগ মাধ্যম | হেল্পলাইন কল | হোয়াটসঅ্যাপ
+   Buttons/Actions: arrow_back, search, close, smart_display ভিডিও দেখুন, add_task টিকেট তৈরি, apps সব বিষয়
+
+22. [vet_initial_stock_setup]
+   Title: 
+   Headings: Shop Setup | আপনার ফার্মেসির ওষুধ যুক্ত করুন | প্রস্তুতকৃত তালিকা থেকে নির্বাচন | এক্সেল বা সিএসভি (Excel/CSV) ফাইল ইমপোর্ট | সরাসরি একটি একটি করে টাইপ করে যোগ
+   Buttons/Actions: arrow_back, সব দেখুন, −, +, download নমুনা ডেমো ফাইল, add কাস্টম ওষুধ ফর্ম খুলুন
+
+23. [vet_invite_employee]
+   Title: 
+   Headings: Add Employee | কর্মীর প্রোফাইল ছবি | প্রাথমিক তথ্য (Personal Details) | পদবী ও দোকান রোল নির্বাচন * | ব্রাঞ্চ ও আউটলেট অ্যাসাইনমেন্ট
+   Buttons/Actions: arrow_back, search, photo_camera, বাতিল, send কর্মী আমন্ত্রণ পাঠান (Invite)
+
+24. [vet_invite_employees]
+   Title: 
+   Headings: Shop Setup | কর্মচারী বা পার্টনার যুক্ত করুন | ফার্মেসি ম্যানেজার (Manager) | সেলসম্যান / ক্যাশিয়ার (Salesperson) | নতুন কর্মীকে আমন্ত্রণ জানান
+   Buttons/Actions: arrow_back, point_of_sale সেলসম্যান, admin_panel_settings ম্যানেজার, sms + ইনভাইটেশন এসএমএস পাঠান, replay, পরে কর্মচারী যোগ করব chevron_right
+
+25. [vet_invoice_printer_settings]
+   Title: 
+   Headings: Thermal Printer Setup | মেসার্স ভাই ভাই ভেটেরিনারি | মেমো পেপার সাইজ (Paper Size) | মেমোতে দৃশ্যমান ফিল্ডসমূহ | মেমো ফুটার বার্তা (Footer Note)
+   Buttons/Actions: arrow_back, receipt_long ক্যাশ মেমো ডিজাইন, print থার্মাল প্রিন্টার, রিসেট, print টেস্ট প্রিন্ট দিন (Test Print), sync স্ক্যান
+
+26. [vet_invoice_receipt]
+   Title: Digital Invoice Receipt
+   Headings: Digital Invoice Receipt | বিসমিল্লাহ্ ভেট ফার্মেসি
+   Buttons/Actions: arrow_back, chat হোয়াটসঅ্যাপে মেমো পাঠান, download পিডিএফ মেমো, point_of_sale নতুন বিক্রি
+
+27. [vet_login]
+   Title: 
+   Headings: Phone Auth | স্বাগতম ফিরে আসার জন্য!
+   Buttons/Actions: arrow_back, visibility, লগইন করুন arrow_forward, sms মোবাইল ওটিপি দিয়ে লগইন
+
+28. [vet_medicine_details]
+   Title: 
+   Headings: Medicine Details | রেনামাইসিন ১০০ মি.লি. | স্টক ও মূল্যায়ন ওভারভিউ | দর ও প্যাকেজিং তথ্য | সক্রিয় ব্যাচ তালিকা (FEFO ক্রম)
+   Buttons/Actions: arrow_back, tune, history, edit_square স্টক সংশোধন, add_circle নতুন ব্যাচ যোগ, barcode_scanner বারকোড প্রিন্ট
+
+29. [vet_medicine_inventory]
+   Title: 
+   Headings: বিসমিল্লাহ্ ভেট ফার্মেসি | মজুদ ওষুধের তালিকা (৪টি প্রদর্শিত) | Renamycin 100ml | Ciprocin Vet 100ml | Astavet Bolus
+   Buttons/Actions: notifications, cancel, barcode_scanner স্ক্যান, সব ২৪৮, অ্যান্টিবায়োটিক ৪২, ভিটামিন ও মিনারেল ৬৪
+
+30. [vet_my_account]
+   Title: 
+   Headings: My Account | ডাঃ রফিকুল ইসলাম | ফার্মেসি ও ব্যবসা সেটিংস | ভ্যাকসিন কোল্ড-চেইন ট্র্যাকার | নিরাপত্তা ও ব্যাকআপ
+   Buttons/Actions: arrow_back, রিনিউয়াল তথ্য arrow_forward, দেখুন, বাংলা, Eng, light_mode লাইট
+
+31. [vet_new_purchase]
+   Title: 
+   Headings: New Purchase | স্টক রিসিভ ভাউচার | ওষুধের তালিকা ও ক্রয় এন্ট্রি | Renamycin 100ml Injection | Ciprocin Vet 100g Powder
+   Buttons/Actions: arrow_back, notifications, visibility দেখুন, barcode_scanner, add, delete_outline
+
+32. [vet_new_sale]
+   Title: Vet Pos Sale
+   Headings: Vet Pos Sale | কার্ট আইটেম | Renamycin 100ml Injection | Ciprocin Vet 100g Powder | Astovet Bolus (স্ট্রিপ)
+   Buttons/Actions: arrow_back, close, barcode_scanner স্ক্যান, edit_square পরিবর্তন, add_circle প্যারাসিটামল বোলাস, add_circle ক্যালসিয়াম জেল
+
+33. [vet_no_internet]
+   Title: 
+   Headings: ইন্টারনেট সংযোগ পাওয়া যাচ্ছে না
+   Buttons/Actions: sync পুনরায় সংযোগ চেষ্টা করুন, অফলাইনে বিল কাটুন arrow_forward, settings_ethernet নেটওয়ার্ক সেটিংস, help_center সহায়তা নির্দেশিকা
+
+34. [vet_no_permission_dialogs]
+   Title: 
+   Headings: হেল্প ও সাপোর্ট | এই সেকশনে প্রবেশের অনুমতি নেই | ফার্মেসি লাভ-ক্ষতি ও পাইকারি ক্রয় রেট | মালিক বা ম্যানেজারের কুইক আনলক | দূরবর্তী পারমিশন রিকোয়েস্ট
+   Buttons/Actions: arrow_back, search, close, ১, ২, ৩
+
+35. [vet_notifications]
+   Title: 
+   Headings: Notifications | আজকে ৪টি নতুন | এই সপ্তাহে | কোনো নোটিফিকেশন নেই
+   Buttons/Actions: arrow_back, done_all সব পঠিত, সব নোটিফিকেশন ৭, মেয়াদ ও স্টক ৩, বাকি তাগাদা ২, সিস্টেম ও ব্যাকআপ ২
+
+36. [vet_otp_verification]
+   Title: 
+   Headings: Otp Verification | ওটিপি কোড যাচাই করুন
+   Buttons/Actions: arrow_back, edit_square নম্বর পরিবর্তন করুন, নতুন কোড অনুরোধ করুন, ১, ২, ৩
+
+37. [vet_payment_checkout]
+   Title: Farmer Payment Checkout
+   Headings: Farmer Payment Checkout | খামারি রফিকুল ইসলাম | পেমেন্ট পদ্ধতি নির্বাচন করুন | প্রেসক্রিপশন রেফারেন্স ও নোট
+   Buttons/Actions: arrow_back, বিবরণ expand_more, sync_alt, ৳৩,৮০০ (সঠিক), ৳৪,০০০, ৳৪,৫০০
+
+38. [vet_purchase_dashboard]
+   Title: 
+   Headings: Purchase Dashboard &amp; Supplier Due | কেনাকাটা ও বকেয়া একনজরে | কোম্পানিভিত্তিক বকেয়া | রেনাটা অ্যানিমেল হেলথ | স্কয়ার এগ্রোভেট
+   Buttons/Actions: notifications, payments দেনা পরিশোধ, assignment_return রিটার্ন / ক্রেডিট নোট, সব দেখুন chevron_right, send_money পেমেন্ট করুন, receipt চালানসমূহ
+
+39. [vet_purchase_details]
+   Title: 
+   Headings: Purchase Details &amp; Payment | #PUR-2024-118 | আর্থিক সারসংক্ষেপ | চালানের ওষুধ তালিকা | Ciprocin Vet 100g Powder
+   Buttons/Actions: arrow_back, notifications, receipt_long আসল চালান, rule_folder স্টক ভেরিফিকেশন, রিটার্ন ফর্ম chevron_right, পূর্ণ বকেয়া (৳১৮,৫০০)
+
+40. [vet_purchase_history]
+   Title: 
+   Headings: Purchase History | কোনো চালান পাওয়া যায়নি
+   Buttons/Actions: notifications, download রিপোর্ট, close, barcode_scanner, পরিবর্তন expand_more, সব চালান ২৮
+
+41. [vet_reports_dashboard]
+   Title: 
+   Headings: Reports | বিক্রি ও মুনাফা সারসংক্ষেপ | রিপোর্ট ডিরেক্টরি ও অডিট বুক | বিক্রি ও মুনাফা রিপোর্ট (Sales &amp; Revenue) | অক্টোবর সেরা পারফর্মিং ক্যাটাগরি
+   Buttons/Actions: notifications, আজ, এই সপ্তাহ, check চলতি মাস, calendar_month নির্দিষ্ট তারিখ, download
+
+42. [vet_roles_permissions]
+   Title: 
+   Headings: Role Permissions | ফার্মেসি অ্যাক্সেস কন্ট্রোল | বিক্রি ও পিওএস | ওষুধ স্টক ও ক্রয় | টাকা-পয়সা ও হিসাব
+   Buttons/Actions: arrow_back, search, add_moderator + নতুন রোল, রিসেট করুন, check, close
+
+43. [vet_sales_history]
+   Title: Sales History
+   Headings: Sales History | ৳২৪,৮৫০.০০ | কোনো মেমো পাওয়া যায়নি
+   Buttons/Actions: arrow_back, sync রিফ্রেশ, download, barcode_scanner, সকল বিক্রি ১৮, পরিশোধিত ১৫
+
+44. [vet_sales_profit_report]
+   Title: 
+   Headings: Sales Analytics Detail | payments পেমেন্ট চ্যানেল বিভাজন | ৭ দিনের বিক্রয় ধারা | শীর্ষ ৫ বিক্রিত ও লাভজনক ওষুধ | রেনামাইসিন ১০০ মি.লি.
+   Buttons/Actions: arrow_back, tune, sync সিঙ্ক সম্পন্ন, calendar_today চলতি মাস (অক্টোবর ২০২৪), ১লা - ২৮শে অক্টোবর edit_calendar, গত মাস
+
+45. [vet_settings_home]
+   Title: 
+   Headings: Settings Home | মেসার্স ভাই ভাই ভেটেরিনারি | ফার্মেসি ও ব্যবসা পরিচালনা | ভাষা ও আঞ্চলিক পছন্দ | নিরাপত্তা ও মাল্টি-ব্রাঞ্চ
+   Buttons/Actions: সিঙ্ক করুন, বাংলা, Eng, কল করুন
+
+46. [vet_shop_profile]
+   Title: 
+   Headings: Pharmacy Profile Settings | ব্যবসায়িক প্রাথমিক তথ্য | ড্রাগ ও ভেটেরিনারি লাইসেন্স | যোগাযোগ ও অবস্থান | জিও-ম্যাপ অবস্থান
+   Buttons/Actions: arrow_back, visibility, আপডেট করুন, বাতিল, save তথ্য সংরক্ষণ করুন (Save)
+
+47. [vet_shop_setup]
+   Title: 
+   Headings: Shop Setup | ফার্মেসি পরিচালনা সেটিংস | মুদ্রার একক (Currency) | চালান/রসিদ ফরম্যাট | এসএমএস নোটিফিকেশন
+   Buttons/Actions: arrow_back, ৩০ দিন আগে, ৬০ দিন আগে, ৯০ দিন আগে, +৫০০, +১০০০
+
+48. [vet_splash]
+   Title: 
+   Headings: 
+   Buttons/Actions: 
+
+49. [vet_stock_adjustment]
+   Title: 
+   Headings: Stock Adjustment | Renamycin 100ml Injection
+   Buttons/Actions: arrow_back, tune, history, cached, add_circle স্টক বৃদ্ধি (+), remove_circle স্টক হ্রাস (-)
+
+50. [vet_stock_transfer]
+   Title: 
+   Headings: Stock Transfer | Renamycin 100ml | Ciprocin Vet 100ml | Astavet Bolus
+   Buttons/Actions: arrow_back, tune, history, barcode_scanner বারকোড স্ক্যান, delete_outline, drafts খসড়া সংরক্ষণ
+
+51. [vet_supplier_details]
+   Title: 
+   Headings: Supplier Details | স্কয়ার এগ্রোভেট ডিভিশন | কোম্পানি দেনা ও ক্রেডিট হিসাব | লেনদেন হিস্ট্রি
+   Buttons/Actions: arrow_back, search, payments দেনা পরিশোধ, add_shopping_cart + নতুন চালান, picture_as_pdf লেজার PDF, হিসাব খতিয়ান / Ledger
+
+52. [vet_sync_conflicts]
+   Title: 
+   Headings: Pending Changes & Conflict Resolution | ৩টি পেন্ডিং রেকর্ড ও ১টি কনফ্লিক্ট সমাধান প্রয়োজন | রেনামাইসিন ১০০ মি.লি. (Renamycin 100ml) | সিঙ্কের অপেক্ষায় থাকা লেনদেন | অফলাইনেও নির্বিঘ্নে বেচাকেনা চালান
+   Buttons/Actions: arrow_back, sync, স্বয়ংক্রিয় সমাধান bolt, সকল কিউ ৪, priority_high কনফ্লিক্ট ১, পেন্ডিং আপলোড ৩
+
+53. [vet_sync_status]
+   Title: 
+   Headings: Sync Status & Offline Hub | লোকাল ডাটাবেস স্টোরেজ | মডিউলভিত্তিক সিঙ্ক স্থিতি | পল্লী ভেটেরিনারি অফলাইন নির্দেশিকা | স্বয়ংক্রিয় সিঙ্ক সেটিংস
+   Buttons/Actions: arrow_back, sync, history সম্পূর্ণ সিঙ্ক হিস্ট্রি লগ, help সহায়তা ডেস্ক, ঠিক আছে
+
+54. [vet_system_maintenance]
+   Title: 
+   Headings: সিস্টেম রক্ষণাবেক্ষণ ও ডাটাবেস অপ্টিমাইজেশন
+   Buttons/Actions: 
+
+55. [vet_system_security]
+   Title: 
+   Headings: Cloud Backup And Sync | সিস্টেম ও ডেটা নিরাপত্তা | নিরাপত্তা ও এক্সেস সিকিউরিটি (Security) | ভাষা ও মুদ্রা সেটিংস (Localization) | নোটিফিকেশন ও স্টক অ্যালার্ট
+   Buttons/Actions: arrow_back, পরিবর্তন, রিসেট, বাংলা (Bangla) check_circle, English check_circle, বাংলা (১২৩৪) check_circle
+
+56. [vet_welcome_get_started]
+   Title: 
+   Headings: Vet সেবা | সহজে ইনভেন্টরি ও ব্যাচ ট্র্যাকিং | দ্রুত বিক্রয় ও প্রিন্ট/এসএমএস রশিদ | খামারিদের নির্ভুল বাকির খাতা
+   Buttons/Actions: translate বাংলা | EN, এড়িয়ে যান, chevron_left, chevron_right, শুরু করুন (Get Started) arrow_forward
+

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#047857", "tertiary-container": "#1e5fe7", "primary": "#005d42", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "on-secondary-container": "#00714d", "surface-container": "#e5eeff", "background": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "tertiary": "#0047bf", "on-secondary-fixed": "#002113", "on-primary-container": "#9ffdd3", "surface-dim": "#cbdbf5", "on-secondary": "#ffffff", "surface": "#f8f9ff", "primary-fixed-dim": "#7bd8b1", "on-tertiary-container": "#e6e9ff", "on-secondary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#003ea8", "secondary-container": "#6cf8bb", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "on-tertiary-fixed": "#00174b", "on-primary-fixed": "#002115", "error": "#ba1a1a", "on-surface": "#0b1c30", "tertiary-fixed": "#dbe1ff", "surface-container-low": "#eff4ff", "secondary": "#006c49", "on-primary-fixed-variant": "#00513a", "surface-tint": "#006c4e", "inverse-on-surface": "#eaf1ff", "inverse-primary": "#7bd8b1", "secondary-fixed-dim": "#4edea3", "secondary-fixed": "#6ffbbe", "primary-fixed": "#97f5cc", "tertiary-fixed-dim": "#b4c5ff", "on-error-container": "#93000a", "outline-variant": "#bdc9c1", "on-background": "#0b1c30", "on-surface-variant": "#3e4943", "outline": "#6e7a73", "on-error": "#ffffff", "surface-variant": "#d3e4fe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "1.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "body-sm": ["Inter"], "currency-display": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, "fontSize": { "headline-sm": ["17px", {"lineHeight": "24px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-lg": ["15px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "currency-display": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}], "headline-lg-mobile": ["22px", {"lineHeight": "30px", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior:none;background-color:#f8f9ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between"><button aria-label="পিছনে যান" class="w-11 h-11 flex items-center justify-center -ml-space-xs text-on-surface-variant hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex-1 px-space-xs text-center"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Shop Setup</h1></div><div class="w-11 h-11 flex items-center justify-end"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full bg-surface pt-14 pb-safe"><div class="flex flex-col w-full pb-8">
+<!-- Interactive Confetti / Ripple Canvas Area -->
+<div class="px-margin-mobile pt-3 pb-2 flex flex-col gap-2">
+<!-- Step Indicator Progress Bar -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-primary-container/10 px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">ধাপ ৪/৫ • সেটআপ অগ্রগতি ৮০%</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">শেষ ধাপ বাকি: ১টি</span>
+</div>
+<!-- Segmented Visual Bar -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden flex gap-1">
+<div class="h-full flex-1 bg-primary-container rounded-full"></div>
+<div class="h-full flex-1 bg-primary-container rounded-full"></div>
+<div class="h-full flex-1 bg-primary-container rounded-full"></div>
+<div class="h-full flex-1 bg-primary-container rounded-full"></div>
+<div class="h-full flex-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Header Block -->
+<div class="mt-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">ফার্মেসি পরিচালনা সেটিংস</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-snug">আপনার ব্যবসা ও কাউন্টার পরিচালনার সুবিধার্থে অপশনগুলো পছন্দমতো নির্ধারণ করুন।</p>
+</div>
+</div>
+<!-- Decorative Pharmacy Visual Insight Banner -->
+<div class="px-margin-mobile my-2">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low shadow-sm flex items-center p-3.5 gap-3">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 shadow-inner bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A modern, warm, high-contrast veterinary pharmacy retail counter in Dhaka with medicine bottles neatly stacked on shelves, soft sunlight filtering through the window, emerald and amber tones, captured in realistic documentary photographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9aBINPB3ceNg0f3GHu8p_orMtXP9sHNwH0AfzuZM7itJK_TsmBs_pRYg38BdFxcs6Lh0m3L3AxhxNyRFlq8Fxk7U06QBvBs8wql4XqW11OeWOBpYfv7_USsZBBXRM7INncsFIhRVvwD4h1bbPL0kKRr0UjAwLsvCNTavh8yamAMqlcVOHdHugWyYCePBfo-17jCrI4bQ5hyZ58luV5bYA9gq-UXOkPyza12b4B9rbXeUzltgtv1Vh"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">স্মার্ট প্রো-ফিচার</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate mt-0.5">অফলাইন-ফার্স্ট অটো ব্যাকআপ</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">ইন্টারনেট না থাকলেও বিক্রয় রশিদ তৈরি হবে এবং স্থানীয়ভাবে সংরক্ষিত থাকবে।</p>
+</div>
+</div>
+</div>
+<!-- Setup Options Form -->
+<div class="px-margin-mobile flex flex-col gap-3.5 mt-2">
+<!-- Card 1: মুদ্রার একক (Currency) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-2.5 transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">মুদ্রার একক (Currency)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">লেনদেন ও হিসাবের প্রধান কারেন্সি</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-full bg-surface-container-low rounded-lg p-3 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-currency-display text-[15px] font-bold">
+            ৳
+          </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">বাংলাদেশি টাকা (৳ BDT)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ডিফল্ট একক হিসেবে সক্রিয়</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container/40 text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">লকড</span>
+</div>
+</div>
+<!-- Card 2: চালান/রসিদ ফরম্যাট (Invoice Format Selector) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">চালান/রসিদ ফরম্যাট</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">মুদ্রণ বা শেয়ার করার ইনভয়েস স্টাইল</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" title="প্রিন্টার অনুযায়ী পরিবর্তনশীল">
+<span class="material-symbols-outlined text-[15px]">print</span>
+</div>
+</div>
+<!-- Format Radio Tabs -->
+<div class="grid grid-cols-2 gap-2" id="invoiceFormatGroup">
+<!-- POS Thermal Option (Selected) -->
+<button class="flex flex-col text-left p-3 rounded-xl bg-surface-container-highest transition-all relative" id="btnFormatThermal" onclick="selectInvoiceFormat('thermal')" type="button">
+<div class="flex items-center justify-between w-full mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">point_of_sale</span>
+<span class="material-symbols-outlined text-primary text-[18px]" id="badgeThermal" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">থার্মাল পিওএস রশিদ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">POS 58mm / 80mm দ্রুত প্রিন্ট</span>
+</button>
+<!-- A4 Invoice Option -->
+<button class="flex flex-col text-left p-3 rounded-xl bg-surface-container-low transition-all relative" id="btnFormatA4" onclick="selectInvoiceFormat('a4')" type="button">
+<div class="flex items-center justify-between w-full mb-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">description</span>
+<span class="material-symbols-outlined text-outline-variant text-[18px]" id="badgeA4">radio_button_unchecked</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">A4 ইনভয়েস কপি</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ফুল পেইজ প্রিন্টার বা PDF</span>
+</button>
+</div>
+<!-- Interactive Micro Preview Box -->
+<div class="bg-surface-container-low/70 rounded-lg p-2.5 flex items-center gap-3" id="previewCard">
+<span class="material-symbols-outlined text-primary text-[22px]">quick_reference</span>
+<div class="flex-1 min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface font-medium truncate" id="previewText">রসিদের প্রস্থ: ৮০ মি.মি.। ছোট ব্লুটুথ থার্মাল প্রিন্টারে সরাসরি কাজ করবে।</p>
+</div>
+</div>
+</div>
+<!-- Card 3: এসএমএস নোটিফিকেশন (SMS Alerts with Interactive Toggle) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">sms</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">এসএমএস নোটিফিকেশন</h3>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-fixed-variant px-1.5 py-0.2 rounded font-semibold">সুপারহিট</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium mt-1">বাকির হিসাব ও বিক্রয় রশিদ স্বয়ংক্রিয় এসএমএস পাঠানো</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ক্রেতার মোবাইলে ট্রানজ্যাকশন শেষে ফ্রি কনফার্মেশন মেসেজ যাবে।</p>
+</div>
+</div>
+<!-- Custom Tactile Switch -->
+<button aria-label="Toggle SMS notifications" class="relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer rounded-full bg-primary-container p-0.5 transition-colors duration-200 ease-in-out focus:outline-none" id="smsToggleBtn" onclick="toggleSmsSwitch()" type="button">
+<span class="pointer-events-none inline-block h-6 w-6 transform rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out translate-x-5" id="smsTogglePill"></span>
+</button>
+</div>
+<!-- SMS Mock Preview Chip -->
+<div class="bg-primary/5 rounded-lg p-2.5 flex items-center gap-2 transition-all" id="smsStatusBox">
+<span class="material-symbols-outlined text-primary text-[18px]">mark_chat_read</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">এসএমএস সক্রিয়: আপনার খামারি ক্রেতারা সাথে সাথে ডিজিটাল রশিদ পাবেন।</span>
+</div>
+</div>
+<!-- Card 4: মেয়াদোত্তীর্ণের অ্যালার্ট সময় (Expiry Alert Days Selector) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-error flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">event_busy</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">মেয়াদোত্তীর্ণের অ্যালার্ট সময়</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ওষুধ নষ্ট হওয়া রোধে সতর্কবার্তা পাওয়ার সময়কাল</p>
+</div>
+</div>
+<!-- 3 Pill Selectors -->
+<div class="grid grid-cols-3 gap-2" id="expiryDaysGroup">
+<button class="py-2.5 px-2 rounded-xl text-center bg-surface-container-low font-label-md text-label-md text-on-surface font-medium transition-all" id="pill30" onclick="selectExpiryDays(30)" type="button">
+          ৩০ দিন আগে
+        </button>
+<button class="py-2.5 px-2 rounded-xl text-center bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-all" id="pill60" onclick="selectExpiryDays(60)" type="button">
+          ৬০ দিন আগে
+        </button>
+<button class="py-2.5 px-2 rounded-xl text-center bg-surface-container-low font-label-md text-label-md text-on-surface font-medium transition-all" id="pill90" onclick="selectExpiryDays(90)" type="button">
+          ৯০ দিন আগে
+        </button>
+</div>
+<div class="flex items-center gap-1.5 px-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ভেটেরিনারি অ্যান্টিবায়োটিক ও ভ্যাকসিনের জন্য ৬০ দিন সেরা।</span>
+</div>
+</div>
+<!-- Card 5: প্রাথমিক ক্যাশ ড্রয়ার ব্যালেন্স (Opening Cash Drawer Balance) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">প্রাথমিক ক্যাশ ড্রয়ার ব্যালেন্স</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">আজকের ক্যাশ ড্রয়ার ওপেনিং ব্যালেন্স (Cash on Hand)</p>
+</div>
+</div>
+<!-- Currency Input Display -->
+<div class="relative flex items-center">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-primary">
+<span class="font-currency-display text-currency-display font-bold">৳</span>
+</div>
+<input class="w-full h-12 bg-surface-container-low rounded-xl pl-10 pr-16 font-currency-display text-currency-display font-bold text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-all" id="cashBalanceInput" placeholder="০" type="text" value="৫,০০০"/>
+<div class="absolute right-3 flex items-center gap-1">
+<button class="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95 text-xs font-bold" onclick="adjustBalance(500)" type="button">+৫০০</button>
+<button class="w-8 h-7 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95 text-xs font-bold" onclick="adjustBalance(1000)" type="button">+১০০০</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant px-1">
+<span class="font-body-sm text-body-sm">কাউন্টার খোলার সময় ক্যাশে রক্ষিত টাকা</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="resetCash()" type="button">রিসেট</button>
+</div>
+</div>
+<!-- Motivational Delight Banner -->
+<div class="p-3 bg-secondary-container/20 rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">sentiment_very_satisfied</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-secondary-fixed font-bold">সবকিছু প্রস্তুত হচ্ছে!</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">পরবর্তী ধাপে আপনি সরাসরি পাইকারি বা রিটেল স্টক তালিকা যুক্ত করবেন।</p>
+</div>
+</div>
+<!-- Primary Action Button pinned inside flow -->
+<div class="mt-2 flex flex-col gap-2">
+<button class="w-full h-12 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md active:translate-y-[0.5px] transition-all" id="submitSetupBtn" onclick="handleSetupSubmit()" type="button">
+<span>সংরক্ষণ ও স্টক সেটআপে যান</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="w-full h-10 rounded-xl bg-transparent text-on-surface-variant font-label-md text-label-md flex items-center justify-center gap-1 hover:text-primary transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>আগের ধাপে ফিরুন</span>
+</button>
+</div>
+</div>
+<!-- Toast Notification Overlay (Micro-interaction delight) -->
+<div class="fixed bottom-6 left-4 right-4 z-50 bg-inverse-surface text-inverse-on-surface p-3.5 rounded-xl shadow-xl flex items-center justify-between pointer-events-none opacity-0 translate-y-4 transition-all duration-300" id="toastNotification">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">task_alt</span>
+<span class="font-body-md text-body-md font-medium" id="toastMsg">ফার্মেসি সেটিংস সফলভাবে সংরক্ষিত হয়েছে!</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">close</span>
+</div>
+</div>
+<script>
+  // Invoice format state management
+  function selectInvoiceFormat(format) {
+    const btnThermal = document.getElementById('btnFormatThermal');
+    const btnA4 = document.getElementById('btnFormatA4');
+    const badgeThermal = document.getElementById('badgeThermal');
+    const badgeA4 = document.getElementById('badgeA4');
+    const previewText = document.getElementById('previewText');
+
+    if (format === 'thermal') {
+      btnThermal.className = 'flex flex-col text-left p-3 rounded-xl bg-surface-container-highest transition-all relative';
+      btnA4.className = 'flex flex-col text-left p-3 rounded-xl bg-surface-container-low transition-all relative';
+      badgeThermal.textContent = 'check_circle';
+      badgeThermal.className = 'material-symbols-outlined text-primary text-[18px]';
+      badgeThermal.style.fontVariationSettings = "'FILL' 1";
+      badgeA4.textContent = 'radio_button_unchecked';
+      badgeA4.className = 'material-symbols-outlined text-outline-variant text-[18px]';
+      badgeA4.style.fontVariationSettings = "'FILL' 0";
+      previewText.textContent = 'রসিদের প্রস্থ: ৮০ মি.মি.। ছোট ব্লুটুথ থার্মাল প্রিন্টারে সরাসরি কাজ করবে।';
+    } else {
+      btnA4.className = 'flex flex-col text-left p-3 rounded-xl bg-surface-container-highest transition-all relative';
+      btnThermal.className = 'flex flex-col text-left p-3 rounded-xl bg-surface-container-low transition-all relative';
+      badgeA4.textContent = 'check_circle';
+      badgeA4.className = 'material-symbols-outlined text-primary text-[18px]';
+      badgeA4.style.fontVariationSettings = "'FILL' 1";
+      badgeThermal.textContent = 'radio_button_unchecked';
+      badgeThermal.className = 'material-symbols-outlined text-outline-variant text-[18px]';
+      badgeThermal.style.fontVariationSettings = "'FILL' 0";
+      previewText.textContent = 'রসিদের সাইজ: A4 ফুল শিট। লেজার বা ডেক্সটপ প্রিন্টারের উপযোগী পূর্ণাঙ্গ চালান।';
+    }
+  }
+
+  // SMS Toggle State
+  let smsEnabled = true;
+  function toggleSmsSwitch() {
+    smsEnabled = !smsEnabled;
+    const btn = document.getElementById('smsToggleBtn');
+    const pill = document.getElementById('smsTogglePill');
+    const statusBox = document.getElementById('smsStatusBox');
+
+    if (smsEnabled) {
+      btn.className = 'relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer rounded-full bg-primary-container p-0.5 transition-colors duration-200 ease-in-out focus:outline-none';
+      pill.className = 'pointer-events-none inline-block h-6 w-6 transform rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out translate-x-5';
+      statusBox.innerHTML = `
+        <span class="material-symbols-outlined text-primary text-[18px]">mark_chat_read</span>
+        <span class="font-body-sm text-body-sm text-primary font-medium">এসএমএস সক্রিয়: আপনার খামারি ক্রেতারা সাথে সাথে ডিজিটাল রশিদ পাবেন।</span>
+      `;
+      statusBox.className = 'bg-primary/5 rounded-lg p-2.5 flex items-center gap-2 transition-all';
+    } else {
+      btn.className = 'relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer rounded-full bg-outline-variant p-0.5 transition-colors duration-200 ease-in-out focus:outline-none';
+      pill.className = 'pointer-events-none inline-block h-6 w-6 transform rounded-full bg-surface-container-lowest shadow-md transition duration-200 ease-in-out translate-x-0';
+      statusBox.innerHTML = `
+        <span class="material-symbols-outlined text-on-surface-variant text-[18px]">comments_disabled</span>
+        <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">এসএমএস নিষ্ক্রিয় করা হয়েছে। কোনো গ্রাহককে মেসেজ পাঠানো হবে না।</span>
+      `;
+      statusBox.className = 'bg-surface-container-low rounded-lg p-2.5 flex items-center gap-2 transition-all';
+    }
+  }
+
+  // Expiry Alert Days Pill Selector
+  function selectExpiryDays(days) {
+    const pills = [
+      { id: 'pill30', val: 30 },
+      { id: 'pill60', val: 60 },
+      { id: 'pill90', val: 90 }
+    ];
+
+    pills.forEach(item => {
+      const el = document.getElementById(item.id);
+      if (item.val === days) {
+        el.className = 'py-2.5 px-2 rounded-xl text-center bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-all';
+      } else {
+        el.className = 'py-2.5 px-2 rounded-xl text-center bg-surface-container-low font-label-md text-label-md text-on-surface font-medium transition-all';
+      }
+    });
+  }
+
+  // Cash Balance Adjustments
+  const bnToEn = str => str.replace(/[০-৯]/g, d => "০১২৩৪৫৬৭৮৯".indexOf(d));
+  const enToBn = n => n.toLocaleString('bn-BD');
+
+  function adjustBalance(amt) {
+    const input = document.getElementById('cashBalanceInput');
+    let raw = input.value.replace(/,/g, '');
+    let enVal = parseInt(bnToEn(raw), 10);
+    if (isNaN(enVal)) enVal = 0;
+    enVal += amt;
+    input.value = enToBn(enVal);
+  }
+
+  function resetCash() {
+    document.getElementById('cashBalanceInput').value = '৫,০০০';
+  }
+
+  // Form Submit Action & Toast Delight
+  function handleSetupSubmit() {
+    const toast = document.getElementById('toastNotification');
+    toast.classList.remove('opacity-0', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'translate-y-4');
+    }, 2800);
+  }
+</script></main></body></html>

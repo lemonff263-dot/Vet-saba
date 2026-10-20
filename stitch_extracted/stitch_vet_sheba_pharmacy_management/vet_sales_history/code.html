@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>Sales History</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Bengali:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "surface-container-high": "#dce9ff", "outline": "#6e7a73", "on-surface": "#0b1c30", "on-secondary-fixed-variant": "#005236", "on-primary": "#ffffff", "on-tertiary-fixed": "#00174b", "surface-container-low": "#eff4ff", "on-tertiary-container": "#e6e9ff", "inverse-surface": "#213145", "surface-dim": "#cbdbf5", "primary-fixed-dim": "#7bd8b1", "tertiary": "#0047bf", "tertiary-fixed": "#dbe1ff", "surface-tint": "#006c4e", "surface": "#f8f9ff", "tertiary-container": "#1e5fe7", "on-tertiary-fixed-variant": "#003ea8", "primary": "#005d42", "secondary-fixed-dim": "#4edea3", "on-surface-variant": "#3e4943", "on-primary-fixed": "#002115", "secondary-container": "#6cf8bb", "inverse-primary": "#7bd8b1", "on-primary-fixed-variant": "#00513a", "on-background": "#0b1c30", "surface-bright": "#f8f9ff", "on-tertiary": "#ffffff", "on-secondary-fixed": "#002113", "inverse-on-surface": "#eaf1ff", "on-error": "#ffffff", "tertiary-fixed-dim": "#b4c5ff", "secondary-fixed": "#6ffbbe", "primary-container": "#047857", "outline-variant": "#bdc9c1", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "on-secondary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "on-secondary-container": "#00714d", "background": "#f8f9ff", "secondary": "#006c49", "on-primary-container": "#9ffdd3", "primary-fixed": "#97f5cc" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter": "1rem", "margin": "1.5rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg": ["Inter", "Noto Sans Bengali"], "headline-lg-mobile": ["Inter", "Noto Sans Bengali"], "body-sm": ["Inter", "Noto Sans Bengali"], "headline-md": ["Inter", "Noto Sans Bengali"], "label-md": ["Inter", "Noto Sans Bengali"], "body-md": ["Inter", "Noto Sans Bengali"], "label-lg": ["Inter", "Noto Sans Bengali"], "label-sm": ["Inter", "Noto Sans Bengali"], "currency-display": ["Inter", "Noto Sans Bengali"], "body-lg": ["Inter", "Noto Sans Bengali"], "headline-sm": ["Inter", "Noto Sans Bengali"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600" }], "currency-display": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs flex-1 min-w-0"><button aria-label="পূর্ববর্তী পাতায় ফিরুন" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Sales History</h1></div><div class="flex items-center gap-space-xs shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-safe bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Dynamic Banner: Sync & Shop Identification -->
+<div class="px-margin-mobile pt-space-xs pb-space-xs">
+<div class="bg-surface-container flex items-center justify-between px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0"></div>
+<p class="font-label-sm text-label-sm text-on-surface truncate">
+          মেসার্স ভাই ভাই ভেটেরিনারি • <span class="text-secondary font-label-md">ক্লাউড সিঙ্ক সক্রিয়</span>
+</p>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-lowest text-primary px-2.5 py-1 rounded-full shadow-sm text-label-sm font-label-sm shrink-0 active:scale-95 transition-transform" onclick="triggerToast('তথ্য রিফ্রেশ ও সিঙ্ক সম্পন্ন!')">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span>রিফ্রেশ</span>
+</button>
+</div>
+</div>
+<!-- Hero Performance & Daily Metric Tiles -->
+<section class="px-margin-mobile py-space-xs">
+<!-- Main Daily Total Card -->
+<div class="bg-primary text-on-primary rounded-xl p-space-md shadow-md relative overflow-hidden">
+<!-- Ambient Decorative Curve -->
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-primary-container/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex justify-between items-start relative z-10">
+<div>
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">event_note</span>
+            আজকের মোট বিক্রি (Daily Turn)
+          </span>
+<div class="flex items-baseline gap-2 mt-1">
+<h2 class="font-currency-display text-currency-display text-on-primary">৳২৪,৮৫০<span class="text-on-primary-container text-body-sm font-body-sm">.০০</span></h2>
+</div>
+</div>
+<div class="bg-primary-container text-on-primary-container px-2.5 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1 shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+<span>১৮টি মেমো</span>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-md relative z-10">
+<div class="bg-surface-container-lowest/15 backdrop-blur-sm p-space-sm rounded-lg">
+<div class="flex items-center gap-1 text-on-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">payments</span>
+<span>নগদ আদায়</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-primary mt-0.5">৳২১,০০০</p>
+<span class="text-on-primary-container font-label-sm text-label-sm">৮৪.৫% সংগৃহীত</span>
+</div>
+<div class="bg-surface-container-lowest/15 backdrop-blur-sm p-space-sm rounded-lg">
+<div class="flex items-center gap-1 text-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">pending_actions</span>
+<span>বকেয়া / বাকি</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-secondary-container mt-0.5">৳৩,৮৫০</p>
+<span class="text-on-primary-container font-label-sm text-label-sm">৩ জন খামারি</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter & Date Controls -->
+<section class="px-margin-mobile py-space-xs flex flex-col gap-space-xs">
+<!-- Date Selector Dropdown Bar -->
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-2 rounded-lg shadow-sm flex-1 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">তারিখ নির্বাচন</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">আজ (২৪ অক্টোবর ২০২৪)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-auto">expand_more</span>
+</div>
+<button class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm text-primary flex items-center justify-center shrink-0 active:bg-surface-container-low transition-colors" onclick="triggerToast('বিক্রি এক্সপোর্ট রিপোর্ট জেনারেট হচ্ছে...')">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Search Input Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md pl-10 pr-10 py-2.5 rounded-lg shadow-sm focus:outline-none focus:bg-surface-container-low transition-all" id="salesSearch" oninput="handleSearch(this.value)" placeholder="মেমো নম্বর বা খামারির নাম দিয়ে সার্চ করুন..." type="search"/>
+<button class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary text-[20px]" onclick="triggerToast('বারকোড স্ক্যানার চালু হচ্ছে...')">
+        barcode_scanner
+      </button>
+</div>
+<!-- Filter Chips Scroll Area -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="filter-btn bg-primary text-on-primary px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap shadow-sm shrink-0 flex items-center gap-1.5 transition-all" onclick="setFilter('all', this)">
+<span>সকল বিক্রি</span>
+<span class="bg-primary-container text-on-primary-container px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">১৮</span>
+</button>
+<button class="filter-btn bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap shadow-sm shrink-0 flex items-center gap-1.5 transition-all" onclick="setFilter('paid', this)">
+<span>পরিশোধিত</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">১৫</span>
+</button>
+<button class="filter-btn bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap shadow-sm shrink-0 flex items-center gap-1.5 transition-all" onclick="setFilter('due', this)">
+<span>বকেয়া/বাকি</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">৩</span>
+</button>
+<button class="filter-btn bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap shadow-sm shrink-0 flex items-center gap-1.5 transition-all" onclick="setFilter('return', this)">
+<span>ফেরত/রিটার্ন</span>
+<span class="bg-surface-container-high text-on-surface px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">১</span>
+</button>
+</div>
+</section>
+<!-- Sales Memo Feed / History List -->
+<section class="px-margin-mobile flex flex-col gap-space-xs mt-space-xs" id="memoListContainer">
+<div class="flex items-center justify-between text-on-surface-variant px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">রিসেন্ট ভাউচার ও মেমো তালিকা</span>
+<span class="font-label-sm text-label-sm">৫টি প্রদর্শিত</span>
+</div>
+<!-- Memo Card 1: Cash Paid -->
+<article class="memo-card bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs active:bg-surface-container-low transition-colors" data-search="INV-2024-8843 রফিকুল ইসলাম গাভী খামার" data-type="paid">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold">#INV-2024-8843</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span> ১২:৪০ PM
+          </span>
+</div>
+<!-- Status Tag -->
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+          নগদ পরিশোধিত
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="min-w-0 pr-2">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">খামারি রফিকুল ইসলাম</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">গাভী খামার • ৩টি ওষুধ আইটেম (রেনামাইসিন, ক্যালসিয়াম)</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">মোট বিল</span>
+<p class="font-headline-sm text-headline-sm text-primary">৳৩,৮০০.০০</p>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-low/50 px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span> সম্পূর্ণ পরিশোধিত
+        </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm hover:text-primary active:scale-95 transition-transform" onclick="triggerToast('মেমো #INV-2024-8843 প্রিন্টারে পাঠানো হচ্ছে...')" title="প্রিন্ট মেমো">
+<span class="material-symbols-outlined text-[17px]">print</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm hover:text-primary active:scale-95 transition-transform" onclick="triggerToast('মেমো ইনভয়েস শেয়ারিং লিংক প্রস্তুত!')" title="হোয়াটসঅ্যাপ শেয়ার">
+<span class="material-symbols-outlined text-[17px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Memo Card 2: bKash Digital Payment -->
+<article class="memo-card bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs active:bg-surface-container-low transition-colors" data-search="INV-2024-8842 আনোয়ার ডেইরি ফার্ম বিকাশ" data-type="paid">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold">#INV-2024-8842</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span> ১১:১৫ AM
+          </span>
+</div>
+<!-- Status Tag Blue -->
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">contactless</span>
+          বিকাশ পেমেন্ট
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="min-w-0 pr-2">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">মেসার্স আনোয়ার ডেইরি ফার্ম</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">৫টি ওষুধ আইটেম • ভেক্সিমকো ভ্যাকসিন ও প্রিমিক্স</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">মোট বিল</span>
+<p class="font-headline-sm text-headline-sm text-primary">৳৮,৪০০.০০</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-low/50 px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> TrxID: BK9X7642LK
+        </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm hover:text-primary active:scale-95 transition-transform" onclick="triggerToast('মেমো #INV-2024-8842 প্রিন্ট হচ্ছে...')" title="প্রিন্ট মেমো">
+<span class="material-symbols-outlined text-[17px]">print</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm hover:text-primary active:scale-95 transition-transform" onclick="triggerToast('মেমো শেয়ারিং প্রস্তুত!')" title="শেয়ার">
+<span class="material-symbols-outlined text-[17px]">share</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Memo Card 3: Partial Due (বাকি) -->
+<article class="memo-card bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs active:bg-surface-container-low transition-colors" data-search="INV-2024-8841 আল-মদিনা পোল্ট্রি বাকি" data-type="due">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold">#INV-2024-8841</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span> ১০:০৫ AM
+          </span>
+</div>
+<!-- Status Tag Due / Amber -->
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-error">error</span>
+          আংশিক বাকি
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="min-w-0 pr-2">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">আল-মদিনা পোল্ট্রি (হাজী মতিন)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">৮টি ওষুধ আইটেম • ভিটামিন ও অ্যান্টিবায়োটিক কোর্স</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">মোট বিল</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">৳৪,৫০০.০০</p>
+</div>
+</div>
+<!-- Outstanding Notice Row -->
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-high/60 px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> বকেয়া বাকি: ৳২,০০০.০০
+        </span>
+<button class="bg-surface-container-lowest text-primary text-label-sm font-label-sm px-2.5 py-1 rounded-md shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="triggerToast('খাতা ও বকেয়া রিমাইন্ডার পাঠানো হয়েছে!')">
+<span class="material-symbols-outlined text-[13px]">sms</span> তাগাদা দিন
+        </button>
+</div>
+</article>
+<!-- Memo Card 4: Walk-in Cash Retail -->
+<article class="memo-card bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs active:bg-surface-container-low transition-colors" data-search="INV-2024-8840 খুচরা ক্যাশ খরিদ্দার" data-type="paid">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold">#INV-2024-8840</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span> ০৯:২০ AM
+          </span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+          নগদ পরিশোধিত
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="min-w-0 pr-2">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">খুচরা ক্যাশ খরিদ্দার</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">১টি আইটেম • কৃমিনাশক বোলাস (ভার্মেক্স)</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">মোট বিল</span>
+<p class="font-headline-sm text-headline-sm text-primary">৳৪৫০.০০</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-low/50 px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">point_of_sale</span> দ্রুত কাউন্টার বিলিং
+        </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center shadow-sm hover:text-primary active:scale-95 transition-transform" onclick="triggerToast('কাউন্টার রসিদ প্রিন্ট হচ্ছে...')" title="প্রিন্ট">
+<span class="material-symbols-outlined text-[17px]">print</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Memo Card 5: Returned Item -->
+<article class="memo-card bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs active:bg-surface-container-low transition-colors" data-search="INV-2024-8839 সেলিম এগ্রো ওষুধ ফেরত রিটার্ন" data-type="return">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-primary font-semibold">#INV-2024-8839</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+            গতকাল
+          </span>
+</div>
+<!-- Status Tag Red -->
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">replay</span>
+          ওষুধ ফেরত (Returned)
+        </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="min-w-0 pr-2">
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">সেলিম এগ্রো ফার্ম</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">২ বোতল ফেরত • সিল অক্ষত অবস্থায় ফেরত নেওয়া হয়েছে</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">ফেরত মূল্য</span>
+<p class="font-headline-sm text-headline-sm text-error">- ৳১,২০০.০০</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-low/50 px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">inventory</span> ইনভেন্টরিতে স্টক পুনরায় যোগ হয়েছে
+        </span>
+<button class="text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-0.5" onclick="triggerToast('রিটার্ন ভাউচার বিস্তারিত প্রদর্শিত হচ্ছে...')">
+          বিস্তারিত
+          <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Empty State Handler -->
+<div class="hidden px-margin-mobile py-space-xl flex-col items-center justify-center text-center" id="emptySearchNotice">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined text-[32px]">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">কোনো মেমো পাওয়া যায়নি</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">
+      অনুগ্রহ করে সঠিক মেমো নম্বর অথবা খামারির নাম দিয়ে পুনরায় অনুসন্ধান করুন।
+    </p>
+</div>
+<!-- Bottom Floating POS Trigger Bar -->
+<aside class="fixed bottom-4 inset-x-margin-mobile z-40 max-w-[390px] mx-auto pointer-events-none">
+<button class="pointer-events-auto w-full bg-primary text-on-primary py-3.5 px-space-md rounded-xl shadow-xl flex items-center justify-between active:scale-[0.98] transition-transform" onclick="triggerToast('নতুন সেলস কাউন্টার ও বিলিং উইন্ডো খুলছে...')">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</div>
+<div class="text-left">
+<span class="font-label-lg text-label-lg leading-tight block font-semibold">+ নতুন বিক্রি শুরু করুন</span>
+<span class="font-label-sm text-label-sm text-on-primary-container block">ক্যাশ কাউন্টার বা বাকি মেমো তৈরি</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-primary text-[22px]">arrow_forward</span>
+</button>
+</aside>
+<!-- Toast / Snack Notification Component -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full font-label-md text-label-md shadow-lg flex items-center gap-2 transition-all opacity-0 pointer-events-none translate-y-2" id="toastNotification">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span id="toastMessage">বিজ্ঞপ্তি বার্তা</span>
+</div>
+</div>
+<script>
+  let activeFilter = 'all';
+
+  function setFilter(type, element) {
+    activeFilter = type;
+    
+    // Update button visual styles
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary');
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      const badge = btn.querySelector('span:last-child');
+      if (badge) {
+        badge.classList.remove('bg-primary-container', 'text-on-primary-container');
+        badge.classList.add('bg-surface-container-high', 'text-on-surface');
+      }
+    });
+
+    element.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    element.classList.add('bg-primary', 'text-on-primary');
+    const activeBadge = element.querySelector('span:last-child');
+    if (activeBadge) {
+      activeBadge.classList.remove('bg-surface-container-high', 'text-on-surface');
+      activeBadge.classList.add('bg-primary-container', 'text-on-primary-container');
+    }
+
+    applyFilters();
+  }
+
+  function handleSearch(query) {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = (document.getElementById('salesSearch').value || '').trim().toLowerCase();
+    const cards = document.querySelectorAll('.memo-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardType = card.getAttribute('data-type');
+      const cardSearchData = (card.getAttribute('data-search') || '').toLowerCase();
+
+      const matchesFilter = (activeFilter === 'all') || (cardType === activeFilter);
+      const matchesSearch = query === '' || cardSearchData.includes(query);
+
+      if (matchesFilter && matchesSearch) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    const emptyNotice = document.getElementById('emptySearchNotice');
+    if (visibleCount === 0) {
+      emptyNotice.classList.remove('hidden');
+      emptyNotice.classList.add('flex');
+    } else {
+      emptyNotice.classList.remove('flex');
+      emptyNotice.classList.add('hidden');
+    }
+  }
+
+  function triggerToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msgElem = document.getElementById('toastMessage');
+    msgElem.textContent = message;
+
+    toast.classList.remove('opacity-0', 'translate-y-2');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'translate-y-2');
+    }, 2400);
+  }
+</script></main></body></html>

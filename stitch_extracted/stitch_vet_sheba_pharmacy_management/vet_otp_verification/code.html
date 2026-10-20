@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="bn"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#047857", "tertiary-container": "#1e5fe7", "primary": "#005d42", "surface-bright": "#f8f9ff", "surface-container-highest": "#d3e4fe", "on-secondary-container": "#00714d", "surface-container": "#e5eeff", "background": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "tertiary": "#0047bf", "on-secondary-fixed": "#002113", "on-primary-container": "#9ffdd3", "surface-dim": "#cbdbf5", "on-secondary": "#ffffff", "surface": "#f8f9ff", "primary-fixed-dim": "#7bd8b1", "on-tertiary-container": "#e6e9ff", "on-secondary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#003ea8", "secondary-container": "#6cf8bb", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "on-tertiary-fixed": "#00174b", "on-primary-fixed": "#002115", "error": "#ba1a1a", "on-surface": "#0b1c30", "tertiary-fixed": "#dbe1ff", "surface-container-low": "#eff4ff", "secondary": "#006c49", "on-primary-fixed-variant": "#00513a", "surface-tint": "#006c4e", "inverse-on-surface": "#eaf1ff", "inverse-primary": "#7bd8b1", "secondary-fixed-dim": "#4edea3", "secondary-fixed": "#6ffbbe", "primary-fixed": "#97f5cc", "tertiary-fixed-dim": "#b4c5ff", "on-error-container": "#93000a", "outline-variant": "#bdc9c1", "on-background": "#0b1c30", "on-surface-variant": "#3e4943", "outline": "#6e7a73", "on-error": "#ffffff", "surface-variant": "#d3e4fe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "1.5rem", "gutter-mobile": "0.75rem" }, "fontFamily": { "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "body-sm": ["Inter"], "currency-display": ["Inter"], "headline-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "headline-lg-mobile": ["Inter"] }, "fontSize": { "headline-sm": ["17px", {"lineHeight": "24px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-lg": ["15px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "currency-display": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}], "headline-lg-mobile": ["22px", {"lineHeight": "30px", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior:none;background-color:#f8f9ff;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between"><button aria-label="পিছনে যান" class="w-11 h-11 flex items-center justify-center -ml-space-xs text-on-surface-variant hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex-1 px-space-xs text-center"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Otp Verification</h1></div><div class="w-11 h-11 flex items-center justify-end"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full bg-surface pt-14 pb-safe"><div class="flex flex-col w-full">
+<div class="px-margin-mobile pt-space-md pb-space-xl flex flex-col items-center">
+<!-- Step Badge & Flow Indicator -->
+<div class="w-full max-w-sm flex items-center justify-between mb-space-lg">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm">ধাপ ২/৫ • নিরাপত্তা যাচাই</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="w-4 h-1.5 rounded-full bg-primary"></div>
+<div class="w-6 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<!-- Animated Security Icon Emblem -->
+<div class="relative flex items-center justify-center mb-space-lg">
+<div class="absolute w-24 h-24 rounded-full bg-secondary-container opacity-40 blur-xl animate-pulse"></div>
+<div class="relative w-20 h-20 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[30px]" style="font-variation-settings: 'FILL' 1;">mark_chat_unread</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-secondary flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">lock</span>
+</div>
+</div>
+</div>
+<!-- Title & Targeted Recipient Description -->
+<div class="text-center w-full max-w-sm mb-space-xl">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-space-xs">
+        ওটিপি কোড যাচাই করুন
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-on-surface">+৮৮০ ১৭১২-৯৮৪৫১২</span> নম্বরে ৪ সংখ্যার একটি গোপন কোড এসএমএস করা হয়েছে।
+      </p>
+<button class="mt-2 inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_square</span>
+<span>নম্বর পরিবর্তন করুন</span>
+</button>
+</div>
+<!-- OTP Input Group -->
+<div class="w-full max-w-sm mb-space-lg">
+<div class="flex items-center justify-center gap-3">
+<!-- Box 1: Filled -->
+<div class="w-14 h-16 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center transition-all">
+<span class="font-currency-display text-currency-display text-primary">৮</span>
+<div class="w-4 h-1 rounded-full bg-primary mt-1"></div>
+</div>
+<!-- Box 2: Filled -->
+<div class="w-14 h-16 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center transition-all">
+<span class="font-currency-display text-currency-display text-primary">৪</span>
+<div class="w-4 h-1 rounded-full bg-primary mt-1"></div>
+</div>
+<!-- Box 3: Filled -->
+<div class="w-14 h-16 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center transition-all">
+<span class="font-currency-display text-currency-display text-primary">২</span>
+<div class="w-4 h-1 rounded-full bg-primary mt-1"></div>
+</div>
+<!-- Box 4: Active Focus State -->
+<div class="relative w-14 h-16 rounded-xl bg-surface-container-lowest shadow-md flex flex-col items-center justify-center bg-gradient-to-b from-surface-container-lowest to-surface-container-low">
+<div class="w-0.5 h-6 bg-primary animate-pulse rounded-full"></div>
+<div class="w-5 h-1 rounded-full bg-primary mt-1"></div>
+</div>
+</div>
+<!-- Resend Timer Feedback -->
+<div class="mt-space-lg text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            কোড পাননি? 
+            <span class="font-semibold text-primary" id="timer-display">পুনরায় পাঠান (০:৪৪)</span>
+</span>
+</div>
+<div class="mt-2">
+<button class="font-label-md text-label-md text-outline cursor-not-allowed transition-colors" disabled="" id="resend-btn" type="button">
+            নতুন কোড অনুরোধ করুন
+          </button>
+</div>
+</div>
+</div>
+<!-- Quick Dialpad for Fast Counter Checkout -->
+<div class="w-full max-w-sm grid grid-cols-3 gap-2 mb-space-xl">
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">১</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">২</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৩</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৪</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৫</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৬</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৭</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৮</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">৯</button>
+<div class="h-12 flex items-center justify-center"></div>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center font-headline-sm text-headline-sm text-on-surface active:bg-surface-container-high transition-colors" type="button">০</button>
+<button class="h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface-variant active:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[22px]">backspace</span>
+</button>
+</div>
+<!-- Primary Action & Security Assurance Banner -->
+<div class="w-full max-w-sm flex flex-col gap-space-md">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg shadow-md active:translate-y-[0.5px] transition-all flex items-center justify-center gap-2" type="button">
+<span>যাচাই করুন ও এগিয়ে যান</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div class="flex-1">
+<p class="font-label-sm text-label-sm text-on-surface">আপনার অ্যাকাউন্ট সম্পূর্ণ নিরাপদ ও এনক্রিপ্ট করা</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Vet সেবা আপনার ফার্মেসি তথ্য ও খাতার হিসাব সুরক্ষায় ব্যাংক-গ্রেড এনক্রিপশন ব্যবহার করে।</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    let timeLeft = 44;
+    const timerElem = document.getElementById('timer-display');
+    const resendBtn = document.getElementById('resend-btn');
+
+    const toBengaliNumber = (num) => {
+      const bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+      return num.toString().split('').map(d => bnDigits[parseInt(d, 10)] ?? d).join('');
+    };
+
+    const timer = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        if (timerElem) timerElem.textContent = 'মেয়াদ উত্তীর্ণ';
+        if (resendBtn) {
+          resendBtn.disabled = false;
+          resendBtn.classList.remove('text-outline', 'cursor-not-allowed');
+          resendBtn.classList.add('text-primary', 'font-semibold', 'hover:underline');
+        }
+      } else {
+        const sec = timeLeft < 10 ? '0' + timeLeft : timeLeft;
+        if (timerElem) {
+          timerElem.textContent = `পুনরায় পাঠান (০:${toBengaliNumber(sec)})`;
+        }
+      }
+    }, 1000);
+  })();
+</script></main></body></html>
