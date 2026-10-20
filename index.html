@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <title>Vet সেবা - ভেটেরিনারি ফার্মেসি ম্যানেজমেন্ট</title>
+  
+  <!-- Google Fonts: Hind Siliguri Bold for all text, Inter for Numbers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&family=Inter:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- React 19 and Babel for standalone rich execution -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#005d42",
+            "primary-container": "#047857",
+            "on-primary": "#ffffff",
+            "secondary": "#006c49",
+            "secondary-container": "#10b981",
+            "surface": "#f8f9ff",
+            "surface-container": "#eff4ff",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#0b1c30",
+            "on-surface-variant": "#3e4943",
+            "outline": "#6e7a73",
+            "outline-variant": "#bdc9c1",
+            "error": "#dc2626",
+            "warning": "#d97706"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Hind Siliguri Bold strictly for ALL Bengali and interface labels */
+    * {
+      font-family: 'Hind Siliguri', sans-serif !important;
+      font-weight: 700 !important;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Icon font override */
+    .material-symbols-outlined, [class*="material-symbols"] {
+      font-family: 'Material Symbols Outlined' !important;
+      font-weight: normal !important;
+      font-style: normal;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    /* English / Tabular Numbers override */
+    .num, .number, .amount, .currency, [data-num], .tabular-nums {
+      font-family: 'Inter', -apple-system, sans-serif !important;
+      font-weight: 700 !important;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.01em;
+    }
+
+    body {
+      background-color: #f8f9ff;
+      color: #0b1c30;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    .pt-safe {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    // Initial Mock Inventory with FEFO Batch & Veterinary specific items
+    const INITIAL_MEDICINES = [
+      {
+        id: "MED-01",
+        name: "Renamycin 100ml",
+        nameBn: "রেনামাইসিন ১০০ মি.লি.",
+        generic: "Oxytetracycline 20%",
+        company: "Renata Animal Health",
+        category: "অ্যান্টিবায়োটিক",
+        price: 450,
+        buyPrice: 380,
+        stock: 3,
+        unit: "বোতল",
+        batchNo: "BAT-2024-09",
+        expiryDate: "12/2024",
+        expiryDays: 25,
+        isLowStock: true,
+        isExpiringSoon: true,
+        dosage: "পশুর ওজনের প্রতি ১০ কেজিতে ১ মি.লি."
+      },
+      {
+        id: "MED-02",
+        name: "Ciprocin Vet 100g",
+        nameBn: "সিপ্রোসিন ভেট ১০০ গ্রাম",
+        generic: "Ciprofloxacin 10%",
+        company: "Square AgroVet",
+        category: "অ্যান্টিবায়োটিক",
+        price: 320,
+        buyPrice: 265,
+        stock: 5,
+        unit: "প্যাক",
+        batchNo: "CIP-882",
+        expiryDate: "04/2025",
+        expiryDays: 140,
+        isLowStock: true,
+        isExpiringSoon: false,
+        dosage: "প্রতি ১ লিটার পানিতে ১ গ্রাম"
+      },
+      {
+        id: "MED-03",
+        name: "Astavet Bolus",
+        nameBn: "অ্যাস্টাভেট বোলাস",
+        generic: "Paracetamol + Meloxicam",
+        company: "ACI Animal Health",
+        category: "ব্যথানাশক ও জ্বর",
+        price: 85,
+        buyPrice: 68,
+        stock: 64,
+        unit: "স্ট্রিপ",
+        batchNo: "AST-441",
+        expiryDate: "11/2024",
+        expiryDays: 15,
+        isLowStock: false,
+        isExpiringSoon: true,
+        dosage: "বড় গরুর জন্য ১-২ টি বোলাস"
+      },
+      {
+        id: "MED-04",
+        name: "Calplex Vet 500ml",
+        nameBn: "ক্যালপ্লেক্স ভেট ৫০০ মি.লি.",
+        generic: "Calcium, Phosphorus, Vitamin D3",
+        company: "Opsonin Pharma",
+        category: "ক্যালসিয়াম ও ভিটামিন",
+        price: 290,
+        buyPrice: 235,
+        stock: 28,
+        unit: "বোতল",
+        batchNo: "CX-889",
+        expiryDate: "11/2024",
+        expiryDays: 28,
+        isLowStock: false,
+        isExpiringSoon: true,
+        dosage: "প্রতিদিন ১০০ মি.লি. দুধের গাভীকে"
+      },
+      {
+        id: "MED-05",
+        name: "Levavet Bolus",
+        nameBn: "লেভাভেট বোলাস",
+        generic: "Levamisole 1000mg",
+        company: "Square AgroVet",
+        category: "কৃমিনাশক",
+        price: 45,
+        buyPrice: 34,
+        stock: 120,
+        unit: "পিস",
+        batchNo: "LV-2024-X",
+        expiryDate: "08/2026",
+        expiryDays: 600,
+        isLowStock: false,
+        isExpiringSoon: false,
+        dosage: "খালি পেটে ১টি বোলাস"
+      },
+      {
+        id: "MED-06",
+        name: "Bio-Zinc Vet Liquid",
+        nameBn: "বায়ো-জিঙ্ক ভেট ১ লিটার",
+        generic: "Zinc Sulphate Heptahydrate",
+        company: "Popular Vet",
+        category: "ভিটামিন ও মিনারেল",
+        price: 520,
+        buyPrice: 430,
+        stock: 18,
+        unit: "বোতল",
+        batchNo: "BZ-901",
+        expiryDate: "06/2025",
+        expiryDays: 210,
+        isLowStock: false,
+        isExpiringSoon: false,
+        dosage: "প্রতিদিন ৫০ মি.লি."
+      }
+    ];
+
+    const INITIAL_CUSTOMERS = [
+      {
+        id: "CUST-01",
+        name: "মোঃ রফিকুল ইসলাম",
+        phone: "01712-345678",
+        village: "চর ঈশ্বরদিয়া, সদর",
+        farmType: "ডেইরি খামার",
+        animalCount: "১২টি গাভী, ৪টি বাছুর",
+        totalDue: 3800,
+        lastTransaction: "আজ, সকাল ১০:২০",
+        dueLimit: 15000
+      },
+      {
+        id: "CUST-02",
+        name: "মেসার্স আনোয়ার ডেইরি",
+        phone: "01823-987654",
+        village: "শম্ভুগঞ্জ",
+        farmType: "বাণিজ্যিক ডেইরি",
+        animalCount: "২৫টি ফ্রিজিয়ান গাভী",
+        totalDue: 8500,
+        lastTransaction: "গতকাল",
+        dueLimit: 25000
+      },
+      {
+        id: "CUST-03",
+        name: "সালাম পোল্ট্রি ফার্ম",
+        phone: "01911-223344",
+        village: "বোরোরচর",
+        farmType: "ব্রয়লার পোল্ট্রি",
+        animalCount: "২,০০০ ব্রয়লার",
+        totalDue: 4200,
+        lastTransaction: "১৮ অক্টোবর",
+        dueLimit: 10000
+      },
+      {
+        id: "CUST-04",
+        name: "হাজী মতিন মিয়া",
+        phone: "01733-556677",
+        village: "ভাবখালী",
+        farmType: "ছাগলের খামার",
+        animalCount: "৩৫টি ব্ল্যাক বেঙ্গল",
+        totalDue: 2200,
+        lastTransaction: "১৫ অক্টোবর",
+        dueLimit: 8000
+      }
+    ];
+
+    const INITIAL_SALES = [
+      {
+        id: "INV-2024-892",
+        customerName: "খামারি রফিকুল ইসলাম",
+        itemsSummary: "Renamycin 100ml, Calplex Vet",
+        itemCount: 3,
+        total: 1850,
+        paid: 1850,
+        due: 0,
+        status: "পরিশোধিত",
+        paymentMethod: "নগদ (Cash)",
+        time: "সকাল ১০:২০"
+      },
+      {
+        id: "INV-2024-891",
+        customerName: "মেসার্স আনোয়ার ডেইরি",
+        itemsSummary: "Bio-Zinc, Levavet Bolus (10pc)",
+        itemCount: 4,
+        total: 3400,
+        paid: 2400,
+        due: 1000,
+        status: "আংশিক বাকি",
+        paymentMethod: "নগদ + বাকি",
+        time: "সকাল ১১:৪৫"
+      },
+      {
+        id: "INV-2024-890",
+        customerName: "সালাম পোল্ট্রি ফার্ম",
+        itemsSummary: "Ciprocin 100g (2 pack)",
+        itemCount: 2,
+        total: 820,
+        paid: 820,
+        due: 0,
+        status: "পরিশোধিত",
+        paymentMethod: "বিকাশ (bKash)",
+        time: "দুপুর ০১:১০"
+      },
+      {
+        id: "INV-2024-889",
+        customerName: "কামাল হোসেন",
+        itemsSummary: "Astavet Bolus, Levavet",
+        itemCount: 2,
+        total: 2150,
+        paid: 2150,
+        due: 0,
+        status: "পরিশোধিত",
+        paymentMethod: "নগদ (Cash)",
+        time: "বিকাল ০৩:৩০"
+      }
+    ];
+
+    function App() {
+      // Navigation Tabs
+      const [currentTab, setCurrentTab] = useState("dashboard"); // dashboard, pos, inventory, dues, reports, settings
+      
+      // Role-Based State (Owner, Manager, Sales Staff)
+      const [currentRole, setCurrentRole] = useState("owner"); // "owner", "manager", "staff"
+      const [showRoleModal, setShowRoleModal] = useState(false);
+      const [showPermissionDeniedModal, setShowPermissionDeniedModal] = useState(false);
+      const [deniedActionText, setDeniedActionText] = useState("");
+
+      // App Data State
+      const [medicines, setMedicines] = useState(INITIAL_MEDICINES);
+      const [customers, setCustomers] = useState(INITIAL_CUSTOMERS);
+      const [sales, setSales] = useState(INITIAL_SALES);
+      const [isOnline, setIsOnline] = useState(true);
+
+      // POS Cart State
+      const [cart, setCart] = useState([
+        { medicine: INITIAL_MEDICINES[0], qty: 1, batch: "BAT-2024-09", rate: 450 },
+        { medicine: INITIAL_MEDICINES[3], qty: 2, batch: "CX-889", rate: 290 }
+      ]);
+      const [selectedCustomer, setSelectedCustomer] = useState(INITIAL_CUSTOMERS[0]);
+      const [posDiscount, setPosDiscount] = useState(0);
+      const [posPaymentType, setPosPaymentType] = useState("cash"); // cash, bkash, due, partial
+      const [posPaidAmount, setPosPaidAmount] = useState(1030);
+      const [showSuccessModal, setShowSuccessModal] = useState(false);
+      const [lastInvoice, setLastInvoice] = useState(null);
+
+      // Inventory Filtering
+      const [inventoryCategory, setInventoryCategory] = useState("সব");
+      const [inventorySearch, setInventorySearch] = useState("");
+      const [showAddMedicineModal, setShowAddMedicineModal] = useState(false);
+
+      // New Medicine Form State
+      const [newMedForm, setNewMedForm] = useState({
+        name: "",
+        nameBn: "",
+        generic: "",
+        company: "Renata Animal Health",
+        category: "অ্যান্টিবায়োটিক",
+        price: "",
+        buyPrice: "",
+        stock: "",
+        unit: "বোতল",
+        batchNo: "BAT-" + new Date().getFullYear(),
+        expiryDate: "12/2026"
+      });
+
+      // Quick Due Collection Modal
+      const [showDueModal, setShowDueModal] = useState(false);
+      const [dueTargetCustomer, setDueTargetCustomer] = useState(null);
+      const [dueCollectionAmount, setDueCollectionAmount] = useState("");
+
+      // Helper to guard actions based on role
+      const checkPermission = (actionName, requiredMinRole = "manager") => {
+        if (currentRole === "owner") return true;
+        if (currentRole === "manager" && requiredMinRole !== "owner") return true;
+        
+        // Denied
+        setDeniedActionText(actionName);
+        setShowPermissionDeniedModal(true);
+        return false;
+      };
+
+      // Cart Calculations
+      const subtotal = useMemo(() => {
+        return cart.reduce((acc, item) => acc + item.rate * item.qty, 0);
+      }, [cart]);
+
+      const grandTotal = useMemo(() => {
+        const val = subtotal - (Number(posDiscount) || 0);
+        return val > 0 ? val : 0;
+      }, [subtotal, posDiscount]);
+
+      const cartDueAmount = useMemo(() => {
+        if (posPaymentType === "due") return grandTotal;
+        if (posPaymentType === "cash" || posPaymentType === "bkash") return 0;
+        const paid = Number(posPaidAmount) || 0;
+        return grandTotal > paid ? grandTotal - paid : 0;
+      }, [grandTotal, posPaymentType, posPaidAmount]);
+
+      // Complete Sale Action
+      const handleCompleteSale = () => {
+        if (cart.length === 0) {
+          alert("কার্টে কোনো ওষুধ নেই!");
+          return;
+        }
+
+        const invId = `INV-2024-${Math.floor(100 + Math.random() * 900)}`;
+        const newSaleRecord = {
+          id: invId,
+          customerName: selectedCustomer ? selectedCustomer.name : "সাধারণ গ্রাহক",
+          itemsSummary: cart.map(i => i.medicine.name).join(", "),
+          itemCount: cart.reduce((acc, i) => acc + i.qty, 0),
+          total: grandTotal,
+          paid: posPaymentType === "due" ? 0 : (posPaymentType === "partial" ? Number(posPaidAmount) : grandTotal),
+          due: cartDueAmount,
+          status: cartDueAmount === 0 ? "পরিশোধিত" : (posPaymentType === "due" ? "বাকি" : "আংশিক বাকি"),
+          paymentMethod: posPaymentType === "cash" ? "নগদ (Cash)" : (posPaymentType === "bkash" ? "বিকাশ (bKash)" : "বাকি"),
+          time: "এইমাত্র"
+        };
+
+        // Deduct stock
+        setMedicines(prev => prev.map(m => {
+          const inCart = cart.find(ci => ci.medicine.id === m.id);
+          if (inCart) {
+            const newStock = Math.max(0, m.stock - inCart.qty);
+            return { ...m, stock: newStock, isLowStock: newStock <= 5 };
+          }
+          return m;
+        }));
+
+        // Update customer due if applicable
+        if (selectedCustomer && cartDueAmount > 0) {
+          setCustomers(prev => prev.map(c => {
+            if (c.id === selectedCustomer.id) {
+              return { ...c, totalDue: c.totalDue + cartDueAmount };
+            }
+            return c;
+          }));
+        }
+
+        setSales([newSaleRecord, ...sales]);
+        setLastInvoice(newSaleRecord);
+        setShowSuccessModal(true);
+        setCart([]);
+      };
+
+      // Add Medicine Submit
+      const handleAddMedicineSubmit = (e) => {
+        e.preventDefault();
+        if (!newMedForm.name || !newMedForm.price) {
+          alert("ওষুধের নাম এবং বিক্রয় মূল্য দিন!");
+          return;
+        }
+        const createdMed = {
+          id: `MED-0${medicines.length + 1}`,
+          name: newMedForm.name,
+          nameBn: newMedForm.nameBn || newMedForm.name,
+          generic: newMedForm.generic || "Veterinary Standard Formula",
+          company: newMedForm.company,
+          category: newMedForm.category,
+          price: Number(newMedForm.price),
+          buyPrice: Number(newMedForm.buyPrice) || Math.round(Number(newMedForm.price) * 0.8),
+          stock: Number(newMedForm.stock) || 10,
+          unit: newMedForm.unit,
+          batchNo: newMedForm.batchNo || "BAT-2024",
+          expiryDate: newMedForm.expiryDate || "12/2026",
+          expiryDays: 500,
+          isLowStock: (Number(newMedForm.stock) || 10) <= 5,
+          isExpiringSoon: false,
+          dosage: "নিবন্ধিত চিকিৎসকের পরামর্শ অনুযায়ী"
+        };
+
+        setMedicines([createdMed, ...medicines]);
+        setShowAddMedicineModal(false);
+        setNewMedForm({
+          name: "",
+          nameBn: "",
+          generic: "",
+          company: "Renata Animal Health",
+          category: "অ্যান্টিবায়োটিক",
+          price: "",
+          buyPrice: "",
+          stock: "",
+          unit: "বোতল",
+          batchNo: "BAT-" + new Date().getFullYear(),
+          expiryDate: "12/2026"
+        });
+      };
+
+      // Handle Due Payment Collection
+      const handleCollectDue = () => {
+        const amt = Number(dueCollectionAmount);
+        if (!amt || amt <= 0 || !dueTargetCustomer) return;
+        setCustomers(prev => prev.map(c => {
+          if (c.id === dueTargetCustomer.id) {
+            return { ...c, totalDue: Math.max(0, c.totalDue - amt) };
+          }
+          return c;
+        }));
+        setShowDueModal(false);
+        setDueCollectionAmount("");
+        alert(`${dueTargetCustomer.name} এর কাছ থেকে ৳${amt} বকেয়া জমা সফল হয়েছে!`);
+      };
+
+      // Filtered medicines
+      const filteredMedicines = useMemo(() => {
+        return medicines.filter(m => {
+          const matchCat = inventoryCategory === "সব" || m.category.includes(inventoryCategory);
+          const matchSearch = !inventorySearch || 
+            m.name.toLowerCase().includes(inventorySearch.toLowerCase()) || 
+            m.nameBn.includes(inventorySearch) ||
+            m.generic.toLowerCase().includes(inventorySearch.toLowerCase()) ||
+            m.batchNo.toLowerCase().includes(inventorySearch.toLowerCase());
+          return matchCat && matchSearch;
+        });
+      }, [medicines, inventoryCategory, inventorySearch]);
+
+      return (
+        <div className="min-h-screen flex flex-col bg-[#f8f9ff] text-[#0b1c30]">
+          
+          {/* =========================================================
+              TOP APP BAR / HEADER (Matching Stitch vet_dashboard_1)
+             ========================================================= */}
+          <header className="fixed top-0 inset-x-0 z-40 bg-[#005d42] text-white shadow-md pt-safe">
+            <div className="h-16 px-4 flex items-center justify-between gap-3 max-w-xl mx-auto w-full">
+              
+              {/* Brand & Active Pharmacy */}
+              <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white border border-white/20 shrink-0">
+                  <span className="material-symbols-outlined text-[24px]">medication</span>
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <div className="flex items-center gap-1.5">
+                    <h1 className="text-base text-white truncate leading-tight tracking-wide">বিসমিল্লাহ্ ভেট ফার্মেসি</h1>
+                  </div>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <span className="text-[11px] text-emerald-200 truncate">শাখা: ময়মনসিংহ সদর</span>
+                    <button 
+                      onClick={() => setIsOnline(!isOnline)} 
+                      title="অনলাইন/অফলাইন মোড পরীক্ষা করুন"
+                      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] transition-all ${
+                        isOnline ? "bg-emerald-800 text-emerald-200" : "bg-red-800 text-red-200"
+                      }`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${isOnline ? "bg-emerald-300 animate-pulse" : "bg-red-400"}`}></span>
+                      <span>{isOnline ? "অনলাইন সিঙ্ক" : "অফলাইন মোড"}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Role Switcher Pill & Notifications */}
+              <div className="flex items-center gap-2 shrink-0">
+                <button 
+                  onClick={() => setShowRoleModal(true)}
+                  className="px-2.5 py-1 bg-white/15 hover:bg-white/25 rounded-lg border border-white/20 text-[11px] flex items-center gap-1 text-white shadow-xs"
+                >
+                  <span className="material-symbols-outlined text-[14px]">shield_person</span>
+                  <span>
+                    {currentRole === "owner" && "মালিক"}
+                    {currentRole === "manager" && "ম্যানেজার"}
+                    {currentRole === "staff" && "সেলসম্যান"}
+                  </span>
+                  <span className="material-symbols-outlined text-[14px]">expand_more</span>
+                </button>
+
+                <button 
+                  onClick={() => alert("আপনার ৪টি জরুরি নোটিফিকেশন রয়েছে:\n১. রেনামাইসিন স্টক শেষ পর্যায়ে (৩ বোতল)\n২. অ্যাস্টাভেট বোলাস ১৫ দিনের মধ্যে মেয়াদ উত্তীর্ণ হবে\n৩. আনোয়ার ডেইরির ১,০০০ টাকা বাকি রয়েছে")}
+                  className="relative w-9 h-9 flex items-center justify-center rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-colors"
+                >
+                  <span className="material-symbols-outlined text-[22px]">notifications</span>
+                  <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-400 ring-2 ring-[#005d42]"></span>
+                </button>
+              </div>
+
+            </div>
+          </header>
+
+          {/* =========================================================
+              MAIN CONTENT CONTAINER (Responsive Mobile Shell)
+             ========================================================= */}
+          <main className="flex-1 flex flex-col pt-20 pb-28 px-3.5 gap-4 max-w-xl mx-auto w-full">
+
+            {/* LIVE SYNC STATUS STRIP */}
+            <div className={`w-full rounded-xl px-3 py-2 flex items-center justify-between border shadow-xs transition-all ${
+              isOnline ? "bg-[#e8f8f0] border-[#a7f3d0] text-[#065f46]" : "bg-amber-50 border-amber-200 text-amber-900"
+            }`}>
+              <div className="flex items-center gap-2 min-w-0">
+                <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${isOnline ? "bg-[#10b981] animate-pulse" : "bg-amber-500"}`}></span>
+                <span className="text-xs truncate">
+                  {isOnline 
+                    ? "লাইভ ক্লাউড সিঙ্ক সক্রিয় • ৫টি ট্রানজাকশন ব্যাকআপ সম্পন্ন"
+                    : "ইন্টারনেট নেই • অফলাইনে নির্বিঘ্নে ক্যাশ মেমো কাটা হচ্ছে"}
+                </span>
+              </div>
+              <button 
+                onClick={() => alert("সব ডাটা সফলভাবে রিফ্রেশ ও সিঙ্ক করা হয়েছে!")} 
+                className="text-xs text-[#005d42] shrink-0 hover:underline flex items-center gap-0.5 ml-2"
+              >
+                <span className="material-symbols-outlined text-sm">refresh</span> রিফ্রেশ
+              </button>
+            </div>
+
+            {/* =====================================================
+                TAB 1: ড্যাশবোর্ড (MAIN DASHBOARD VIEW)
+               ===================================================== */}
+            {currentTab === "dashboard" && (
+              <>
+                {/* 4 KPI METRICS IN 2-COLUMN GRID */}
+                <div className="grid grid-cols-2 gap-3">
+                  
+                  {/* Today Sales (Full Width Hero Card) */}
+                  <div className="col-span-2 bg-gradient-to-br from-[#005d42] to-[#047857] text-white rounded-2xl p-4 shadow-sm relative overflow-hidden">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs text-emerald-200">আজকের মোট বিক্রয় (Today Sales)</span>
+                      <span className="bg-[#00714d] text-emerald-100 text-[11px] px-2 py-0.5 rounded-full flex items-center gap-0.5">
+                        <span className="material-symbols-outlined text-[13px]">trending_up</span> <span className="num">১২%</span> বৃদ্ধি
+                      </span>
+                    </div>
+                    <div className="text-3xl text-white mb-2 flex items-baseline gap-1">
+                      <span>৳</span>
+                      <span className="num">24,850</span>
+                    </div>
+                    <div className="flex items-center justify-between pt-2.5 border-t border-white/20 text-xs text-emerald-100">
+                      <span>ক্যাশ রিসিভ: <b className="text-white">৳<span className="num">21,450</span></b></span>
+                      <span>বাকি বিক্রয়: <b className="text-emerald-200">৳<span className="num">3,400</span></b></span>
+                    </div>
+                  </div>
+
+                  {/* Net Profit (Role-Protected: Hidden for Sales Staff) */}
+                  <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs text-[#3e4943]">আনুমানিক নিট লাভ</span>
+                        <span className="material-symbols-outlined text-[#005d42] text-base">monitoring</span>
+                      </div>
+                      <div className="text-lg text-[#005d42]">
+                        {currentRole === "staff" ? (
+                          <span className="text-xs text-slate-400">মালিকের জন্য সংরক্ষিত</span>
+                        ) : (
+                          <span>৳<span className="num">4,320</span></span>
+                        )}
+                      </div>
+                    </div>
+                    <span className="text-[11px] text-[#6e7a73] mt-1.5">
+                      {currentRole === "staff" ? "লকড" : <span>মার্জিন <span className="num">17.4%</span> (হিসাবকৃত)</span>}
+                    </span>
+                  </div>
+
+                  {/* Total Dues */}
+                  <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs text-red-600">মোট বাকি পাওনা</span>
+                        <span className="material-symbols-outlined text-red-600 text-base">account_balance_wallet</span>
+                      </div>
+                      <div className="text-lg text-red-600">
+                        <span>৳</span><span className="num">18,700</span>
+                      </div>
+                    </div>
+                    <span className="text-[11px] text-red-500 mt-1.5">৮ জন খামারি বাকিদার</span>
+                  </div>
+
+                  {/* Daily Shop Expense */}
+                  <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs text-[#3e4943]">আজকের দোকান খরচ</span>
+                        <span className="material-symbols-outlined text-[#3e4943] text-base">receipt_long</span>
+                      </div>
+                      <div className="text-lg text-[#0b1c30]">
+                        <span>৳</span><span className="num">1,150</span>
+                      </div>
+                    </div>
+                    <span className="text-[11px] text-[#6e7a73] mt-1.5">চা, নাস্তা ও বিদ্যুৎ বিল</span>
+                  </div>
+
+                  {/* Stock Valuation */}
+                  <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs text-[#3e4943]">মোট ইনভেন্টরি মূল্য</span>
+                        <span className="material-symbols-outlined text-[#006c49] text-base">inventory_2</span>
+                      </div>
+                      <div className="text-lg text-[#006c49]">
+                        {currentRole === "staff" ? (
+                          <span className="text-xs text-slate-400">লকড</span>
+                        ) : (
+                          <span>৳<span className="num">3,82,500</span></span>
+                        )}
+                      </div>
+                    </div>
+                    <span className="text-[11px] text-[#6e7a73] mt-1.5">১৪২ ধরনের ওষুধ সক্রিয়</span>
+                  </div>
+
+                </div>
+
+                {/* QUICK ACTIONS SCROLLABLE STRIP */}
+                <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 no-scrollbar">
+                  <button 
+                    onClick={() => setCurrentTab("pos")}
+                    className="flex items-center gap-1.5 px-3.5 py-2.5 bg-[#005d42] text-white rounded-xl shadow-xs text-xs shrink-0 active:scale-95 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-base">point_of_sale</span>
+                    <span>নতুন বিক্রয় (POS)</span>
+                  </button>
+
+                  <button 
+                    onClick={() => {
+                      if (checkPermission("নতুন ওষুধ যোগ করা", "manager")) {
+                        setShowAddMedicineModal(true);
+                      }
+                    }}
+                    className="flex items-center gap-1.5 px-3 py-2.5 bg-white border border-[#bdc9c1]/60 text-[#0b1c30] rounded-xl shadow-xs text-xs shrink-0 active:scale-95 hover:bg-slate-50 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-[#005d42] text-base">medication</span>
+                    <span>ওষুধ যুক্ত করুন</span>
+                  </button>
+
+                  <button 
+                    onClick={() => setCurrentTab("dues")}
+                    className="flex items-center gap-1.5 px-3 py-2.5 bg-white border border-red-200 text-red-600 rounded-xl shadow-xs text-xs shrink-0 active:scale-95 hover:bg-red-50 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-red-600 text-base">payments</span>
+                    <span>বাকি কালেকশন</span>
+                  </button>
+
+                  <button 
+                    onClick={() => setCurrentTab("reports")}
+                    className="flex items-center gap-1.5 px-3 py-2.5 bg-white border border-[#bdc9c1]/60 text-[#3e4943] rounded-xl shadow-xs text-xs shrink-0 active:scale-95 hover:bg-slate-50 transition-all"
+                  >
+                    <span className="material-symbols-outlined text-[#006c49] text-base">analytics</span>
+                    <span>স্টক রিপোর্ট</span>
+                  </button>
+                </div>
+
+                {/* URGENT ALERT BANNERS */}
+                <div className="flex flex-col gap-2.5">
+                  {/* Low Stock Alert */}
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-3 flex items-start gap-2.5 shadow-xs">
+                    <span className="material-symbols-outlined text-red-600 text-xl shrink-0 mt-0.5">warning</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-xs text-red-900">লো-স্টক সতর্কতা (৩টি ওষুধ রিস্টক প্রয়োজন)</h3>
+                        <span className="text-[10px] text-red-700 bg-red-100 px-1.5 py-0.5 rounded">জরুরি</span>
+                      </div>
+                      <p className="text-xs text-red-800 mt-1 leading-snug">
+                        Renamycin 100ml (মাত্র <span className="num">৩</span> বোতল), Ciprocin 10g (<span className="num">৫</span> প্যাক) এবং ক্যালসিয়াম ঘাটতি রয়েছে।
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Expiry Alert */}
+                  <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-start gap-2.5 shadow-xs">
+                    <span className="material-symbols-outlined text-amber-700 text-xl shrink-0 mt-0.5">event_busy</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-xs text-amber-900">মেয়াদ সতর্কতা (৪টি ওষুধ আগামী ৩০ দিনের মধ্যে মেয়াদোত্তীর্ণ)</h3>
+                        <span className="text-[10px] text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded"><span className="num">৩০</span> দিন</span>
+                      </div>
+                      <p className="text-xs text-amber-800 mt-1 leading-snug">
+                        Astavet Bolus (<span className="num">১৫</span> দিন বাকি) এবং Calplex Inj (ব্যাচ #<span className="num">CX-889</span>) দ্রুত বিক্রয়ের ব্যবস্থা নিন।
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* HOURLY SALES TREND BAR CHART */}
+                <div className="w-full bg-white rounded-xl p-4 border border-[#e2e8f0] shadow-xs flex flex-col">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1.5">
+                      <span className="material-symbols-outlined text-[#005d42] text-base">bar_chart</span>
+                      <h3 className="text-xs text-[#0b1c30]">আজকের প্রতি ঘণ্টার বিক্রয় ট্রেন্ড</h3>
+                    </div>
+                    <span className="text-[11px] text-[#6e7a73]">সকাল ৮টা - রাত ৯টা</span>
+                  </div>
+
+                  <div className="w-full h-28 flex items-end justify-between gap-1 pt-4">
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-emerald-100 rounded-t-sm" style={{height: "25%"}}></div>
+                      <span className="text-[9px] text-[#6e7a73]">৮টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-emerald-200 rounded-t-sm" style={{height: "52%"}}></div>
+                      <span className="text-[9px] text-[#6e7a73]">১০টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-[#005d42] rounded-t-sm relative" style={{height: "88%"}}>
+                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] bg-[#005d42] text-white px-1 py-0.2 rounded shadow-xs num">৳6.2k</span>
+                      </div>
+                      <span className="text-[9px] text-[#005d42]">১২টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-emerald-100 rounded-t-sm" style={{height: "35%"}}></div>
+                      <span className="text-[9px] text-[#6e7a73]">২টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-emerald-200 rounded-t-sm" style={{height: "60%"}}></div>
+                      <span className="text-[9px] text-[#6e7a73]">৪টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-[#047857] rounded-t-sm relative" style={{height: "78%"}}>
+                        <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] bg-[#047857] text-white px-1 py-0.2 rounded shadow-xs num">৳5.4k</span>
+                      </div>
+                      <span className="text-[9px] text-[#047857]">৬টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-emerald-200 rounded-t-sm" style={{height: "44%"}}></div>
+                      <span className="text-[9px] text-[#6e7a73]">৮টা</span>
+                    </div>
+                    <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+                      <div className="w-full bg-emerald-100 rounded-t-sm" style={{height: "18%"}}></div>
+                      <span className="text-[9px] text-[#6e7a73]">৯টা</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* RECENT SALES LIST */}
+                <div className="w-full bg-white rounded-xl p-4 border border-[#e2e8f0] shadow-xs flex flex-col">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-1.5">
+                      <span className="material-symbols-outlined text-[#005d42] text-base">receipt</span>
+                      <h3 className="text-xs text-[#0b1c30]">সাম্প্রতিক বিক্রয় তালিকা</h3>
+                    </div>
+                    <button onClick={() => setCurrentTab("pos")} className="text-xs text-[#005d42] hover:underline">
+                      সবগুলো দেখুন
+                    </button>
+                  </div>
+
+                  <div className="divide-y divide-[#e2e8f0]/60">
+                    {sales.map((sale) => (
+                      <div key={sale.id} className="py-2.5 flex items-center justify-between first:pt-0 last:pb-0">
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="w-8 h-8 rounded-full bg-emerald-100 text-[#005d42] text-xs flex items-center justify-center shrink-0">
+                            {sale.customerName.charAt(0)}
+                          </div>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-xs text-[#0b1c30] truncate">{sale.customerName}</span>
+                            <span className="text-[11px] text-[#6e7a73] truncate">
+                              <span className="num">{sale.itemCount}</span>টি ওষুধ • {sale.paymentMethod}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-right shrink-0">
+                          <div className="text-xs text-[#0b1c30]">
+                            <span>৳</span><span className="num">{sale.total.toLocaleString()}</span>
+                          </div>
+                          <span className={`inline-block mt-0.5 text-[10px] px-1.5 py-0.2 rounded ${
+                            sale.status === "পরিশোধিত" ? "text-emerald-800 bg-emerald-100" :
+                            sale.status === "আংশিক বাকি" ? "text-amber-800 bg-amber-100" : "text-red-700 bg-red-100"
+                          }`}>
+                            {sale.status}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* =====================================================
+                TAB 2: ইনভেন্টরি ও স্টক (MEDICINE INVENTORY VIEW)
+               ===================================================== */}
+            {currentTab === "inventory" && (
+              <div className="flex flex-col gap-3">
+                
+                {/* Search & Actions */}
+                <div className="flex items-center gap-2">
+                  <div className="relative flex-1">
+                    <span className="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg">search</span>
+                    <input 
+                      type="text"
+                      placeholder="ওষুধের নাম, জেনেরিক বা ব্যাচ খুঁজুন..."
+                      value={inventorySearch}
+                      onChange={(e) => setInventorySearch(e.target.value)}
+                      className="w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-white border border-[#bdc9c1] focus:ring-2 focus:ring-[#005d42] focus:outline-none"
+                    />
+                  </div>
+                  <button 
+                    onClick={() => {
+                      if (checkPermission("নতুন ওষুধ যোগ করা", "manager")) {
+                        setShowAddMedicineModal(true);
+                      }
+                    }}
+                    className="px-3 py-2 bg-[#005d42] text-white rounded-xl text-xs flex items-center gap-1 shrink-0 shadow-xs active:scale-95"
+                  >
+                    <span className="material-symbols-outlined text-base">add</span>
+                    <span>নতুন ওষুধ</span>
+                  </button>
+                </div>
+
+                {/* Category Pills */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs">
+                  {["সব", "অ্যান্টিবায়োটিক", "ভিটামিন ও মিনারেল", "ব্যথানাশক", "কৃমিনাশক", "ক্যালসিয়াম"].map(cat => (
+                    <button
+                      key={cat}
+                      onClick={() => setInventoryCategory(cat)}
+                      className={`px-3 py-1.5 rounded-lg shrink-0 transition-all ${
+                        inventoryCategory === cat 
+                          ? "bg-[#005d42] text-white shadow-xs" 
+                          : "bg-white text-slate-700 border border-slate-200"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Medicine Count Header */}
+                <div className="flex items-center justify-between text-xs text-slate-500 px-1">
+                  <span>মোট প্রদর্শিত ওষুধ: <b className="text-slate-800 num">{filteredMedicines.length}</b></span>
+                  <span>FEFO ব্যাচ ট্র্যাকিং সক্রিয়</span>
+                </div>
+
+                {/* Medicine Cards List */}
+                <div className="flex flex-col gap-2.5">
+                  {filteredMedicines.map(med => (
+                    <div key={med.id} className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col gap-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <span className="text-[10px] text-emerald-800 tracking-wider uppercase">{med.company}</span>
+                          <h4 className="text-sm text-slate-900 leading-tight">{med.name}</h4>
+                          <span className="text-xs text-slate-500">{med.generic}</span>
+                        </div>
+                        <div className="text-right shrink-0">
+                          <div className="text-sm text-[#005d42]">৳<span className="num">{med.price}</span></div>
+                          {currentRole !== "staff" && (
+                            <span className="text-[10px] text-slate-400">কেনা: ৳<span className="num">{med.buyPrice}</span></span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <div className="flex items-center gap-1.5">
+                          <span className={`px-2 py-0.5 rounded text-[11px] ${
+                            med.stock <= 5 ? "bg-red-100 text-red-700" : "bg-emerald-50 text-emerald-700"
+                          }`}>
+                            স্টক: <b className="num">{med.stock}</b> {med.unit}
+                          </span>
+                          <span className="text-[11px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded num">
+                            #{med.batchNo}
+                          </span>
+                        </div>
+                        <span className={`text-[11px] ${med.expiryDays <= 30 ? "text-amber-700 font-bold" : "text-slate-500"}`}>
+                          মেয়াদ: <span className="num">{med.expiryDate}</span>
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-end gap-2 pt-1">
+                        <button 
+                          onClick={() => {
+                            // Add to cart
+                            const exists = cart.find(ci => ci.medicine.id === med.id);
+                            if (exists) {
+                              setCart(cart.map(ci => ci.medicine.id === med.id ? { ...ci, qty: ci.qty + 1 } : ci));
+                            } else {
+                              setCart([...cart, { medicine: med, qty: 1, batch: med.batchNo, rate: med.price }]);
+                            }
+                            alert(`${med.name} কার্টে যোগ করা হয়েছে!`);
+                          }}
+                          className="px-2.5 py-1 bg-emerald-50 text-[#005d42] border border-emerald-200 rounded-lg text-xs flex items-center gap-1 hover:bg-emerald-100"
+                        >
+                          <span className="material-symbols-outlined text-[14px]">add_shopping_cart</span>
+                          <span>কার্টে নিন</span>
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            )}
+
+            {/* =====================================================
+                TAB 3: পিওএস বিক্রয় (POS SALES COUNTER)
+               ===================================================== */}
+            {currentTab === "pos" && (
+              <div className="flex flex-col gap-3">
+                {/* POS Header info */}
+                <div className="bg-white rounded-xl p-3 border border-[#e2e8f0] shadow-xs flex items-center justify-between">
+                  <div>
+                    <h3 className="text-xs text-slate-800">খামারি নির্বাচন:</h3>
+                    <select 
+                      value={selectedCustomer ? selectedCustomer.id : ""}
+                      onChange={(e) => {
+                        const c = customers.find(item => item.id === e.target.value);
+                        setSelectedCustomer(c || null);
+                      }}
+                      className="text-xs mt-1 border-slate-300 rounded-lg py-1 px-2 focus:ring-[#005d42]"
+                    >
+                      {customers.map(c => (
+                        <option key={c.id} value={c.id}>{c.name} ({c.farmType}) - বাকি: ৳{c.totalDue}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      // Simulating scanner
+                      alert("বারকোড স্ক্যানার সক্রিয়! নমুনা ওষুধ 'Renamycin 100ml' সফলভাবে স্ক্যান হয়েছে।");
+                    }}
+                    className="p-2 bg-emerald-100 text-[#005d42] rounded-xl flex items-center gap-1 text-xs shrink-0"
+                  >
+                    <span className="material-symbols-outlined text-base">barcode_scanner</span>
+                    <span>স্ক্যান</span>
+                  </button>
+                </div>
+
+                {/* Cart Items Box */}
+                <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-100 text-xs">
+                    <span className="text-slate-800">কার্ট আইটেম ({cart.length})</span>
+                    {cart.length > 0 && (
+                      <button onClick={() => setCart([])} className="text-red-500 hover:underline">খালি করুন</button>
+                    )}
+                  </div>
+
+                  {cart.length === 0 ? (
+                    <div className="py-8 text-center text-slate-400 text-xs flex flex-col items-center gap-1">
+                      <span className="material-symbols-outlined text-3xl text-slate-300">shopping_cart</span>
+                      <span>কার্ট খালি! নিচের দ্রুত আইটেম বা ইনভেন্টরি থেকে ওষুধ যোগ করুন।</span>
+                    </div>
+                  ) : (
+                    <div className="divide-y divide-slate-100 my-2">
+                      {cart.map((item, idx) => (
+                        <div key={idx} className="py-2.5 flex items-center justify-between gap-2">
+                          <div className="flex-1 min-w-0">
+                            <h5 className="text-xs text-slate-900 truncate">{item.medicine.name}</h5>
+                            <span className="text-[11px] text-slate-400">ব্যাচ: #{item.batch} • ৳{item.rate}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="flex items-center border border-slate-200 rounded-lg overflow-hidden">
+                              <button 
+                                onClick={() => {
+                                  if (item.qty > 1) {
+                                    setCart(cart.map((c, i) => i === idx ? { ...c, qty: c.qty - 1 } : c));
+                                  } else {
+                                    setCart(cart.filter((_, i) => i !== idx));
+                                  }
+                                }}
+                                className="px-2 py-0.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs"
+                              >-</button>
+                              <span className="px-2.5 text-xs text-slate-900 num">{item.qty}</span>
+                              <button 
+                                onClick={() => {
+                                  setCart(cart.map((c, i) => i === idx ? { ...c, qty: c.qty + 1 } : c));
+                                }}
+                                className="px-2 py-0.5 bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs"
+                              >+</button>
+                            </div>
+                            <span className="text-xs text-[#005d42] min-w-[50px] text-right num">
+                              ৳{(item.rate * item.qty).toLocaleString()}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Quick Add Pills */}
+                  <div className="pt-2 border-t border-slate-100">
+                    <span className="text-[11px] text-slate-500 mb-1.5 block">কুইক অ্যাড ওষুধ:</span>
+                    <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+                      {medicines.slice(0, 4).map(m => (
+                        <button
+                          key={m.id}
+                          onClick={() => {
+                            const exists = cart.find(ci => ci.medicine.id === m.id);
+                            if (exists) {
+                              setCart(cart.map(ci => ci.medicine.id === m.id ? { ...ci, qty: ci.qty + 1 } : ci));
+                            } else {
+                              setCart([...cart, { medicine: m, qty: 1, batch: m.batchNo, rate: m.price }]);
+                            }
+                          }}
+                          className="px-2 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-[#005d42] rounded-lg text-[11px] shrink-0 border border-slate-200 flex items-center gap-1"
+                        >
+                          <span>+</span>
+                          <span>{m.name.split(" ")[0]}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Calculation & Payment Methods */}
+                <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col gap-2.5 text-xs">
+                  <div className="flex justify-between text-slate-600">
+                    <span>মোট সাবটোটাল:</span>
+                    <span className="text-slate-900 num">৳{subtotal.toLocaleString()}</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span>বিশেষ ছাড় / ডিসকাউন্ট:</span>
+                    <div className="flex items-center gap-1">
+                      <span>৳</span>
+                      <input 
+                        type="number"
+                        value={posDiscount}
+                        onChange={(e) => setPosDiscount(e.target.value)}
+                        placeholder="0"
+                        className="w-16 py-0.5 px-2 text-right text-xs rounded border-slate-300 num"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between text-sm text-[#005d42] pt-1.5 border-t border-slate-200">
+                    <span>সর্বমোট প্রদেয়:</span>
+                    <span className="text-base num">৳{grandTotal.toLocaleString()}</span>
+                  </div>
+
+                  {/* Payment Type Selection */}
+                  <div className="pt-2">
+                    <span className="text-[11px] text-slate-500 mb-1 block">পেমেন্ট পদ্ধতি:</span>
+                    <div className="grid grid-cols-4 gap-1.5">
+                      {[
+                        { id: "cash", label: "নগদ", icon: "payments" },
+                        { id: "bkash", label: "বিকাশ", icon: "smartphone" },
+                        { id: "due", label: "বাকি", icon: "pending_actions" },
+                        { id: "partial", label: "আংশিক", icon: "pie_chart" }
+                      ].map(method => (
+                        <button
+                          key={method.id}
+                          onClick={() => setPosPaymentType(method.id)}
+                          className={`py-2 px-1 rounded-xl flex flex-col items-center gap-1 border text-[11px] transition-all ${
+                            posPaymentType === method.id 
+                              ? "bg-emerald-50 border-[#005d42] text-[#005d42] shadow-xs" 
+                              : "border-slate-200 text-slate-600 hover:bg-slate-50"
+                          }`}
+                        >
+                          <span className="material-symbols-outlined text-base">{method.icon}</span>
+                          <span>{method.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {posPaymentType === "partial" && (
+                    <div className="bg-amber-50 p-2.5 rounded-lg border border-amber-200 flex items-center justify-between">
+                      <span>জমা নেওয়া টাকা:</span>
+                      <input 
+                        type="number" 
+                        value={posPaidAmount} 
+                        onChange={(e) => setPosPaidAmount(e.target.value)}
+                        className="w-24 text-right py-0.5 px-2 text-xs rounded border-amber-300 num"
+                      />
+                    </div>
+                  )}
+
+                  {cartDueAmount > 0 && (
+                    <div className="text-xs text-red-600 bg-red-50 p-2 rounded-lg border border-red-200 flex justify-between">
+                      <span>খামারির বাকির খাতায় যোগ হবে:</span>
+                      <b className="num">৳{cartDueAmount.toLocaleString()}</b>
+                    </div>
+                  )}
+
+                  {/* Final Action Button */}
+                  <button 
+                    onClick={handleCompleteSale}
+                    className="w-full py-3 bg-[#005d42] hover:bg-[#047857] text-white rounded-xl text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all mt-1"
+                  >
+                    <span className="material-symbols-outlined">print</span>
+                    <span>বিক্রয় ও মেমো প্রিন্ট করুন (৳{grandTotal})</span>
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* =====================================================
+                TAB 4: খামারি ও বাকির খাতা (DUES & CUSTOMER LEDGER)
+               ===================================================== */}
+            {currentTab === "dues" && (
+              <div className="flex flex-col gap-3">
+                <div className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex items-center justify-between">
+                  <div>
+                    <span className="text-xs text-slate-500">মোট বকেয়া খাতা</span>
+                    <h3 className="text-lg text-red-600">৳<span className="num">18,700</span></h3>
+                  </div>
+                  <span className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-lg">
+                    <span className="num">৪</span> জন বকেয়া খামারি
+                  </span>
+                </div>
+
+                <div className="flex flex-col gap-2.5">
+                  {customers.map(c => (
+                    <div key={c.id} className="bg-white rounded-xl p-3.5 border border-[#e2e8f0] shadow-xs flex flex-col gap-2">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <h4 className="text-sm text-slate-900">{c.name}</h4>
+                          <span className="text-xs text-slate-500">{c.farmType} • {c.village}</span>
+                          <div className="text-[11px] text-slate-400 mt-0.5">{c.animalCount}</div>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-xs text-red-600 block">বাকি: ৳<span className="num">{c.totalDue.toLocaleString()}</span></span>
+                          <span className="text-[10px] text-slate-400">সীমা: ৳<span className="num">{c.dueLimit.toLocaleString()}</span></span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span className="text-[11px] text-slate-500">সর্বশেষ লেনদেন: {c.lastTransaction}</span>
+                        <div className="flex items-center gap-1.5">
+                          <a href={`tel:${c.phone}`} className="p-1.5 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200">
+                            <span className="material-symbols-outlined text-sm">call</span>
+                          </a>
+                          <button 
+                            onClick={() => {
+                              setDueTargetCustomer(c);
+                              setDueCollectionAmount(c.totalDue);
+                              setShowDueModal(true);
+                            }}
+                            className="px-2.5 py-1 bg-emerald-100 text-[#005d42] rounded-lg hover:bg-emerald-200 text-xs flex items-center gap-0.5"
+                          >
+                            <span className="material-symbols-outlined text-[13px]">payments</span>
+                            <span>জমা নিন</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* =====================================================
+                TAB 5: রিপোর্ট ও লাভ-ক্ষতি (REPORTS VIEW)
+               ===================================================== */}
+            {currentTab === "reports" && (
+              <div className="flex flex-col gap-3 text-xs">
+                {/* Period Selector */}
+                <div className="flex items-center justify-between bg-white p-2.5 rounded-xl border border-slate-200">
+                  <span className="text-slate-700">রিপোর্ট সময়কাল:</span>
+                  <div className="flex gap-1">
+                    <span className="px-2.5 py-1 bg-[#005d42] text-white rounded-lg">আজ</span>
+                    <span className="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg">এই সপ্তাহ</span>
+                    <span className="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg">চলতি মাস</span>
+                  </div>
+                </div>
+
+                {/* Audit & Financial Overview */}
+                <div className="bg-white rounded-xl p-4 border border-[#e2e8f0] shadow-xs flex flex-col gap-3">
+                  <h4 className="text-xs text-slate-800 border-b pb-2">আর্থিক বিবরণী ও মুনাফা (P&L Audit)</h4>
+                  
+                  <div className="flex justify-between py-1">
+                    <span className="text-slate-600">মোট বিক্রয় (Gross Sales):</span>
+                    <span className="text-slate-900 num">৳24,850</span>
+                  </div>
+                  <div className="flex justify-between py-1">
+                    <span className="text-slate-600">ওষুধ কেনা খরচ (COGS):</span>
+                    <span className="text-slate-900 num">(-) ৳19,380</span>
+                  </div>
+                  <div className="flex justify-between py-1">
+                    <span className="text-slate-600">মোট লাভ (Gross Profit):</span>
+                    <span className="text-emerald-700 num">(+) ৳5,470</span>
+                  </div>
+                  <div className="flex justify-between py-1">
+                    <span className="text-slate-600">দোকান খরচ (Expense):</span>
+                    <span className="text-red-600 num">(-) ৳1,150</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-t border-slate-200 text-sm text-[#005d42]">
+                    <span>আজকের নিট লাভ (Net Profit):</span>
+                    <span className="text-base num">৳4,320</span>
+                  </div>
+                </div>
+
+                {/* Category Sales Breakdown */}
+                <div className="bg-white rounded-xl p-4 border border-[#e2e8f0] shadow-xs flex flex-col gap-2.5">
+                  <h4 className="text-xs text-slate-800 mb-1">ক্যাটাগরিভিত্তিক বিক্রয় শেয়ার</h4>
+                  {[
+                    { name: "অ্যান্টিবায়োটিক (Antibiotic)", share: "৪২%", color: "bg-[#005d42]", amt: "৳১০,৪০০" },
+                    { name: "ভিটামিন ও ক্যালসিয়াম", share: "২৮%", color: "bg-emerald-500", amt: "৳৬,৯৫০" },
+                    { name: "কৃমিনাশক (Anthelmintic)", share: "১৮%", color: "bg-amber-500", amt: "৳৪,৫০০" },
+                    { name: "ভ্যাকসিন ও অন্যান্য", share: "১২%", color: "bg-blue-500", amt: "৳৩,০০০" }
+                  ].map((c, i) => (
+                    <div key={i} className="flex flex-col gap-1">
+                      <div className="flex justify-between text-[11px]">
+                        <span>{c.name}</span>
+                        <span className="text-slate-700 num">{c.amt} ({c.share})</span>
+                      </div>
+                      <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                        <div className={`h-full ${c.color}`} style={{width: c.share}}></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Export Buttons */}
+                <div className="flex gap-2">
+                  <button 
+                    onClick={() => alert("পিডিএফ বিক্রয় ও অডিট রিপোর্ট ডাউনলোড সম্পন্ন হয়েছে!")}
+                    className="flex-1 py-2.5 bg-slate-800 text-white rounded-xl text-xs flex items-center justify-center gap-1.5"
+                  >
+                    <span className="material-symbols-outlined text-sm">picture_as_pdf</span>
+                    <span>পিডিএফ ডাউনলোড</span>
+                  </button>
+                  <button 
+                    onClick={() => alert("এক্সেল সিএসভি ডাটা এক্সপোর্ট সম্পন্ন হয়েছে!")}
+                    className="flex-1 py-2.5 bg-[#005d42] text-white rounded-xl text-xs flex items-center justify-center gap-1.5"
+                  >
+                    <span className="material-symbols-outlined text-sm">table_view</span>
+                    <span>এক্সেল এক্সপোর্ট</span>
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* =====================================================
+                TAB 6: সেটিংস ও স্টাফ (SETTINGS VIEW)
+               ===================================================== */}
+            {currentTab === "settings" && (
+              <div className="flex flex-col gap-3 text-xs">
+                {/* Profile card */}
+                <div className="bg-white rounded-xl p-4 border border-[#e2e8f0] shadow-xs flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-[#005d42] text-white flex items-center justify-center text-xl">
+                    <span className="material-symbols-outlined">local_pharmacy</span>
+                  </div>
+                  <div>
+                    <h3 className="text-sm text-slate-900">মেসার্স ভাই ভাই ভেটেরিনারি</h3>
+                    <span className="text-xs text-slate-500">লাইসেন্স: DL-VET-2024-9182</span>
+                    <div className="text-[11px] text-emerald-700 mt-0.5">ড্রাগ ও ভেটেরিনারি অধিদপ্তর অনুমোদিত</div>
+                  </div>
+                </div>
+
+                {/* Settings Items */}
+                <div className="bg-white rounded-xl border border-[#e2e8f0] shadow-xs divide-y divide-slate-100">
+                  <div 
+                    onClick={() => setShowRoleModal(true)}
+                    className="p-3.5 flex items-center justify-between cursor-pointer hover:bg-slate-50"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="material-symbols-outlined text-[#005d42]">manage_accounts</span>
+                      <div>
+                        <div className="text-xs text-slate-800">কর্মচারী ও রোল ম্যানেজমেন্ট</div>
+                        <span className="text-[11px] text-slate-400">মালিক, ম্যানেজার ও সেলস কর্মী পারমিশন</span>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+                  </div>
+
+                  <div 
+                    onClick={() => alert("থার্মাল ব্লুটুথ প্রিন্টার সেটিংস (৫৮মিমি / ৮০মিমি) সক্রিয় রয়েছে।")}
+                    className="p-3.5 flex items-center justify-between cursor-pointer hover:bg-slate-50"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="material-symbols-outlined text-[#005d42]">print</span>
+                      <div>
+                        <div className="text-xs text-slate-800">থার্মাল প্রিন্টার ও মেমো ফরম্যাট</div>
+                        <span className="text-[11px] text-slate-400">কাগজের সাইজ ও ফুটার বার্তা কনফিগারেশন</span>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+                  </div>
+
+                  <div 
+                    onClick={() => alert("ক্লাউড ব্যাকআপ সিঙ্ক হয়েছে: অক্টোবর ২০২৪")}
+                    className="p-3.5 flex items-center justify-between cursor-pointer hover:bg-slate-50"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="material-symbols-outlined text-[#005d42]">cloud_sync</span>
+                      <div>
+                        <div className="text-xs text-slate-800">ব্যাকআপ ও রিস্টোর সেন্টার</div>
+                        <span className="text-[11px] text-slate-400">অফলাইন স্টোরেজ ও ক্লাউড ডাটাবেস</span>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+                  </div>
+
+                  <div 
+                    onClick={() => alert("জরুরি হেল্পলাইন: ০১৭০০-০০০০০০ (২৪/৭ ভেট সাপোর্ট টিম)")}
+                    className="p-3.5 flex items-center justify-between cursor-pointer hover:bg-slate-50"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="material-symbols-outlined text-[#005d42]">help</span>
+                      <div>
+                        <div className="text-xs text-slate-800">হেল্প ও কাস্টমার কেয়ার</div>
+                        <span className="text-[11px] text-slate-400">সরাসরি ফোন ও হোয়াটসঅ্যাপ সহায়তা</span>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+                  </div>
+                </div>
+
+                <div className="p-3 text-center text-slate-400 text-[11px]">
+                  Vet সেবা v1.0.4 • ভেটেরিনারি ফার্মেসি ইকোসিস্টেম
+                </div>
+              </div>
+            )}
+
+          </main>
+
+          {/* =========================================================
+              PERSISTENT BOTTOM NAVIGATION (5 Icons + Floating POS)
+             ========================================================= */}
+          <nav className="fixed bottom-0 inset-x-0 z-40 pb-safe bg-white/95 backdrop-blur-xl border-t border-[#e2e8f0]">
+            <div className="flex items-center justify-between h-16 px-1 max-w-xl mx-auto w-full">
+              
+              {/* 1. ড্যাশবোর্ড */}
+              <button 
+                onClick={() => setCurrentTab("dashboard")}
+                className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+                  currentTab === "dashboard" ? "text-[#005d42]" : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                <span className="material-symbols-outlined text-[22px]">grid_view</span>
+                <span className="text-[11px] mt-0.5 leading-none">ড্যাশবোর্ড</span>
+              </button>
+
+              {/* 2. ইনভেন্টরি */}
+              <button 
+                onClick={() => setCurrentTab("inventory")}
+                className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+                  currentTab === "inventory" ? "text-[#005d42]" : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                <span className="material-symbols-outlined text-[22px]">inventory_2</span>
+                <span className="text-[11px] mt-0.5 leading-none">ইনভেন্টরি</span>
+              </button>
+
+              {/* 3. বিক্রয় (POS) Center Floating CTA */}
+              <div className="flex flex-col items-center justify-center px-1 -mt-5">
+                <button 
+                  onClick={() => setCurrentTab("pos")}
+                  aria-label="বিক্রয় POS" 
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-[#005d42] hover:bg-[#047857] text-white shadow-lg active:scale-95 transition-all"
+                >
+                  <span className="material-symbols-outlined text-2xl">point_of_sale</span>
+                </button>
+                <span className="text-[10px] mt-1 leading-none text-slate-800">বিক্রয় POS</span>
+              </div>
+
+              {/* 4. বাকি / খামারি */}
+              <button 
+                onClick={() => setCurrentTab("dues")}
+                className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+                  currentTab === "dues" ? "text-[#005d42]" : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                <span className="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+                <span className="text-[11px] mt-0.5 leading-none">বাকি খাতা</span>
+              </button>
+
+              {/* 5. রিপোর্ট */}
+              <button 
+                onClick={() => setCurrentTab("reports")}
+                className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
+                  currentTab === "reports" ? "text-[#005d42]" : "text-slate-500 hover:text-slate-800"
+                }`}
+              >
+                <span className="material-symbols-outlined text-[22px]">analytics</span>
+                <span className="text-[11px] mt-0.5 leading-none">রিপোর্ট</span>
+              </button>
+
+            </div>
+          </nav>
+
+          {/* =========================================================
+              MODAL: ROLE SWITCHER (Owner / Manager / Staff)
+             ========================================================= */}
+          {showRoleModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+              <div className="bg-white rounded-2xl max-w-sm w-full p-5 shadow-2xl flex flex-col gap-4">
+                <div className="flex items-center justify-between border-b pb-2">
+                  <h3 className="text-sm text-slate-900 flex items-center gap-1.5">
+                    <span className="material-symbols-outlined text-[#005d42]">shield_person</span>
+                    <span>ব্যবহারকারীর রোল পরিবর্তন</span>
+                  </h3>
+                  <button onClick={() => setShowRoleModal(false)} className="text-slate-400 hover:text-slate-700">
+                    <span className="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  {[
+                    { id: "owner", title: "মালিক (Owner)", desc: "সকল পারমিশন, কেনা দাম, নিট লাভ ও সেটিংস উন্মুক্ত" },
+                    { id: "manager", title: "ম্যানেজার (Manager)", desc: "স্টক এন্ট্রি, বাকি খাতা ও বিলিং অনুমোদনযোগ্য" },
+                    { id: "staff", title: "সেলস কর্মী (Sales Staff)", desc: "শুধু বিক্রি ও রসিদ প্রিন্ট; কেনা দাম ও লাভ লুকানো" }
+                  ].map(r => (
+                    <button
+                      key={r.id}
+                      onClick={() => {
+                        setCurrentRole(r.id);
+                        setShowRoleModal(false);
+                      }}
+                      className={`p-3 rounded-xl border text-left flex items-start justify-between transition-all ${
+                        currentRole === r.id 
+                          ? "bg-emerald-50 border-[#005d42] text-[#005d42]" 
+                          : "border-slate-200 hover:bg-slate-50"
+                      }`}
+                    >
+                      <div>
+                        <div className="text-xs">{r.title}</div>
+                        <span className="text-[11px] text-slate-500 font-normal">{r.desc}</span>
+                      </div>
+                      {currentRole === r.id && (
+                        <span className="material-symbols-outlined text-[#005d42] text-sm">check_circle</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+
+                <button 
+                  onClick={() => setShowRoleModal(false)}
+                  className="w-full py-2 bg-slate-100 text-slate-700 rounded-xl text-xs hover:bg-slate-200"
+                >
+                  বন্ধ করুন
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* =========================================================
+              MODAL: PERMISSION DENIED (vet_no_permission_dialogs)
+             ========================================================= */}
+          {showPermissionDeniedModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+              <div className="bg-white rounded-2xl max-w-sm w-full p-5 shadow-2xl flex flex-col items-center text-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-2xl">
+                  <span className="material-symbols-outlined">lock</span>
+                </div>
+                <h3 className="text-sm text-slate-900">এই সেকশনে প্রবেশের অনুমতি নেই</h3>
+                <p className="text-xs text-slate-600 leading-snug">
+                  "{deniedActionText}" অ্যাকশনটি শুধুমাত্র দোকান মালিক বা ম্যানেজারের অনুমোদিত। এগিয়ে যেতে মালিকের পিন প্রবেশ করান।
+                </p>
+                <div className="w-full flex gap-2 mt-2">
+                  <button 
+                    onClick={() => setShowPermissionDeniedModal(false)}
+                    className="flex-1 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs"
+                  >
+                    বাতিল
+                  </button>
+                  <button 
+                    onClick={() => {
+                      setCurrentRole("owner");
+                      setShowPermissionDeniedModal(false);
+                      alert("মালিকের অনুমতি গৃহীত হয়েছে!");
+                    }}
+                    className="flex-1 py-2 bg-[#005d42] text-white rounded-xl text-xs"
+                  >
+                    মালিক হিসেবে আনলক
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* =========================================================
+              MODAL: ADD NEW MEDICINE (vet_add_medicine)
+             ========================================================= */}
+          {showAddMedicineModal && (
+            <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 p-0 sm:p-4">
+              <div className="bg-white rounded-t-2xl sm:rounded-2xl max-w-md w-full p-5 shadow-2xl max-h-[90vh] overflow-y-auto flex flex-col gap-3">
+                <div className="flex items-center justify-between border-b pb-2">
+                  <h3 className="text-sm text-slate-900 flex items-center gap-1.5">
+                    <span className="material-symbols-outlined text-[#005d42]">medication</span>
+                    <span>নতুন ওষুধ যুক্ত করুন</span>
+                  </h3>
+                  <button onClick={() => setShowAddMedicineModal(false)} className="text-slate-400">
+                    <span className="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+
+                <form onSubmit={handleAddMedicineSubmit} className="flex flex-col gap-3 text-xs">
+                  <div>
+                    <label className="text-slate-700 block mb-1">ওষুধের বাণিজ্যিক নাম (English) *</label>
+                    <input 
+                      type="text" 
+                      required
+                      placeholder="e.g. Renamycin 100ml"
+                      value={newMedForm.name}
+                      onChange={(e) => setNewMedForm({...newMedForm, name: e.target.value})}
+                      className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42]"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-slate-700 block mb-1">বাংলা নাম</label>
+                    <input 
+                      type="text" 
+                      placeholder="e.g. রেনামাইসিন ১০০ মি.লি."
+                      value={newMedForm.nameBn}
+                      onChange={(e) => setNewMedForm({...newMedForm, nameBn: e.target.value})}
+                      className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42]"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <label className="text-slate-700 block mb-1">ক্যাটাগরি</label>
+                      <select 
+                        value={newMedForm.category}
+                        onChange={(e) => setNewMedForm({...newMedForm, category: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42]"
+                      >
+                        <option value="অ্যান্টিবায়োটিক">অ্যান্টিবায়োটিক</option>
+                        <option value="ভিটামিন ও মিনারেল">ভিটামিন ও মিনারেল</option>
+                        <option value="কৃমিনাশক">কৃমিনাশক</option>
+                        <option value="ব্যথানাশক ও জ্বর">ব্যথানাশক ও জ্বর</option>
+                        <option value="ক্যালসিয়াম ও সাপ্লিমেন্ট">ক্যালসিয়াম</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-slate-700 block mb-1">কোম্পানি</label>
+                      <select 
+                        value={newMedForm.company}
+                        onChange={(e) => setNewMedForm({...newMedForm, company: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42]"
+                      >
+                        <option value="Renata Animal Health">Renata Animal Health</option>
+                        <option value="Square AgroVet">Square AgroVet</option>
+                        <option value="ACI Animal Health">ACI Animal Health</option>
+                        <option value="Opsonin Pharma">Opsonin Pharma</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <label className="text-slate-700 block mb-1">বিক্রয় মূল্য (MRP ৳) *</label>
+                      <input 
+                        type="number" 
+                        required
+                        placeholder="450"
+                        value={newMedForm.price}
+                        onChange={(e) => setNewMedForm({...newMedForm, price: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42] num"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-slate-700 block mb-1">পাইকারি কেনা দাম (৳)</label>
+                      <input 
+                        type="number" 
+                        placeholder="380"
+                        value={newMedForm.buyPrice}
+                        onChange={(e) => setNewMedForm({...newMedForm, buyPrice: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42] num"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-2">
+                    <div>
+                      <label className="text-slate-700 block mb-1">প্রাথমিক স্টক</label>
+                      <input 
+                        type="number" 
+                        placeholder="20"
+                        value={newMedForm.stock}
+                        onChange={(e) => setNewMedForm({...newMedForm, stock: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42] num"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-slate-700 block mb-1">ব্যাচ নম্বর</label>
+                      <input 
+                        type="text" 
+                        value={newMedForm.batchNo}
+                        onChange={(e) => setNewMedForm({...newMedForm, batchNo: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42] num"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-slate-700 block mb-1">মেয়াদ (MM/YY)</label>
+                      <input 
+                        type="text" 
+                        value={newMedForm.expiryDate}
+                        onChange={(e) => setNewMedForm({...newMedForm, expiryDate: e.target.value})}
+                        className="w-full text-xs rounded-lg border-slate-300 py-1.5 focus:ring-[#005d42] num"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2 pt-2">
+                    <button 
+                      type="button" 
+                      onClick={() => setShowAddMedicineModal(false)}
+                      className="flex-1 py-2 bg-slate-100 text-slate-700 rounded-xl"
+                    >
+                      বাতিল
+                    </button>
+                    <button 
+                      type="submit" 
+                      className="flex-1 py-2 bg-[#005d42] text-white rounded-xl shadow-xs"
+                    >
+                      ওষুধ সংরক্ষণ করুন
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
+
+          {/* =========================================================
+              MODAL: COLLECT DUE (বাকির খাতা জমা)
+             ========================================================= */}
+          {showDueModal && dueTargetCustomer && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+              <div className="bg-white rounded-2xl max-w-sm w-full p-5 shadow-2xl flex flex-col gap-3 text-xs">
+                <div className="flex items-center justify-between border-b pb-2">
+                  <h3 className="text-sm text-slate-900">বকেয়া টাকা জমা গ্রহণ</h3>
+                  <button onClick={() => setShowDueModal(false)} className="text-slate-400">
+                    <span className="material-symbols-outlined">close</span>
+                  </button>
+                </div>
+
+                <div className="bg-slate-50 p-3 rounded-xl border">
+                  <div>খামারি: <b>{dueTargetCustomer.name}</b></div>
+                  <div className="text-slate-500 mt-0.5">{dueTargetCustomer.farmType} • {dueTargetCustomer.village}</div>
+                  <div className="text-red-600 mt-1">বর্তমান বকেয়া: <b>৳{dueTargetCustomer.totalDue}</b></div>
+                </div>
+
+                <div>
+                  <label className="text-slate-700 block mb-1">জমার পরিমাণ (৳):</label>
+                  <input 
+                    type="number"
+                    value={dueCollectionAmount}
+                    onChange={(e) => setDueCollectionAmount(e.target.value)}
+                    className="w-full text-sm rounded-lg border-slate-300 py-2 num"
+                  />
+                </div>
+
+                <div className="flex gap-1.5">
+                  {[500, 1000, 2000].map(amt => (
+                    <button 
+                      key={amt}
+                      type="button"
+                      onClick={() => setDueCollectionAmount(amt)}
+                      className="px-2.5 py-1 bg-slate-100 rounded-lg text-slate-700 border text-xs"
+                    >
+                      +৳{amt}
+                    </button>
+                  ))}
+                  <button 
+                    type="button"
+                    onClick={() => setDueCollectionAmount(dueTargetCustomer.totalDue)}
+                    className="px-2.5 py-1 bg-emerald-50 text-[#005d42] rounded-lg border border-emerald-200 text-xs"
+                  >
+                    পূর্ণ পরিশোধ
+                  </button>
+                </div>
+
+                <div className="flex gap-2 pt-2">
+                  <button 
+                    onClick={() => setShowDueModal(false)}
+                    className="flex-1 py-2 bg-slate-100 text-slate-700 rounded-xl"
+                  >
+                    বাতিল
+                  </button>
+                  <button 
+                    onClick={handleCollectDue}
+                    className="flex-1 py-2 bg-[#005d42] text-white rounded-xl shadow-xs"
+                  >
+                    জমা নিশ্চিত করুন
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* =========================================================
+              MODAL: SUCCESS INVOICE RECEIPT (vet_invoice_receipt)
+             ========================================================= */}
+          {showSuccessModal && lastInvoice && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+              <div className="bg-white rounded-2xl max-w-sm w-full p-5 shadow-2xl flex flex-col gap-3 text-xs">
+                <div className="text-center py-2">
+                  <div className="w-12 h-12 bg-emerald-100 text-[#005d42] rounded-full flex items-center justify-center mx-auto mb-2 text-2xl">
+                    <span className="material-symbols-outlined">check_circle</span>
+                  </div>
+                  <h3 className="text-sm text-slate-900">বিক্রয় সফলভাবে সম্পন্ন হয়েছে!</h3>
+                  <span className="text-slate-500 text-[11px]">মেমো নং: #{lastInvoice.id}</span>
+                </div>
+
+                <div className="bg-slate-50 p-3 rounded-xl border border-dashed border-slate-300 text-xs flex flex-col gap-1.5">
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">গ্রাহক / খামারি:</span>
+                    <span className="text-slate-900">{lastInvoice.customerName}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">মোট আইটেম:</span>
+                    <span className="num">{lastInvoice.itemCount} টি</span>
+                  </div>
+                  <div className="flex justify-between border-t border-slate-200 pt-1.5 font-bold text-slate-900">
+                    <span>মোট বিল:</span>
+                    <span className="num">৳{lastInvoice.total}</span>
+                  </div>
+                  <div className="flex justify-between text-emerald-700">
+                    <span>পরিশোধিত:</span>
+                    <span className="num">৳{lastInvoice.paid}</span>
+                  </div>
+                  {lastInvoice.due > 0 && (
+                    <div className="flex justify-between text-red-600 font-bold">
+                      <span>বাকি পাওনা:</span>
+                      <span className="num">৳{lastInvoice.due}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-2 pt-1">
+                  <button 
+                    onClick={() => alert(`ইনভয়েস #${lastInvoice.id} থার্মাল প্রিন্টারে পাঠানো হয়েছে!`)}
+                    className="w-full py-2.5 bg-[#005d42] text-white rounded-xl flex items-center justify-center gap-1.5 shadow-xs"
+                  >
+                    <span className="material-symbols-outlined text-sm">print</span>
+                    <span>রসিদ প্রিন্ট করুন</span>
+                  </button>
+
+                  <button 
+                    onClick={() => alert("হোয়াটসঅ্যাপে ক্যাশ মেমো পাঠানো হয়েছে!")}
+                    className="w-full py-2.5 bg-emerald-50 text-emerald-800 border border-emerald-300 rounded-xl flex items-center justify-center gap-1.5"
+                  >
+                    <span className="material-symbols-outlined text-sm">chat</span>
+                    <span>হোয়াটসঅ্যাপে মেমো পাঠান</span>
+                  </button>
+
+                  <button 
+                    onClick={() => setShowSuccessModal(false)}
+                    className="w-full py-2 bg-slate-100 text-slate-700 rounded-xl hover:bg-slate-200"
+                  >
+                    নতুন বিক্রি শুরু করুন
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
